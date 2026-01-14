@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Impresión 3D Personalizada · Impresión y Diseño 3D</title>
+  <meta name="description" content="Servicio de impresión y diseño 3D en Colmenar Viejo (Madrid). Documentos, fotos, carteles, flyers, tarjetas, pegatinas y modelado 3D. Presupuesto rápido por WhatsApp." />
+
+  <!-- Open Graph (preview WhatsApp/Redes) -->
+  <meta property="og:title" content="Impresión 3D Personalizada · Impresión y Diseño 3D" />
+  <meta property="og:description" content="Impresión personalizada + diseño 3D a medida. Presupuesto rápido por WhatsApp. Colmenar Viejo (Madrid)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_ES" />
+  <meta property="og:url" content="https://mlg282003.github.io/imprime3d/" />
+
+  <style>
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,.06);
+      --stroke: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.70);
+      --radius: 18px;
+      --max: 1120px;
+      --shadow: 0 14px 40px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--text);
+      background:
+        radial-gradient(900px 400px at 20% 10%, rgba(124,58,237,.35), transparent 60%),
+        radial-gradient(800px 500px at 90% 20%, rgba(34,197,94,.20), transparent 60%),
+        radial-gradient(900px 600px at 40% 90%, rgba(59,130,246,.18), transparent 60%),
+        var(--bg);
+      line-height:1.45;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding:20px}
+    .topbar{
+      position: sticky; top:0; z-index:50;
+      background: rgba(11,18,32,.65);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; padding:14px 20px;
+      max-width:var(--max); margin:0 auto;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900; letter-spacing:.2px;
+      white-space:nowrap;
+    }
+    .logo{
+      width:34px; height:34px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(124,58,237,.9), rgba(34,197,94,.75));
+      box-shadow: 0 10px 30px rgba(124,58,237,.18);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+    .navlinks{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end}
+    .navlinks a{
+      text-decoration:none;
+      padding:9px 10px;
+      border-radius: 12px;
+      color: var(--muted);
+      border: 1px solid transparent;
+    }
+    .navlinks a:hover{
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.10);
+    }
+    .hero{padding: 32px 0 18px}
+    .grid{display:grid; gap:16px}
+    @media (min-width: 920px){
+      .grid-2{grid-template-columns: 1.15fr .85fr;}
+      .grid-3{grid-template-columns: repeat(3, 1fr);}
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+    }
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:999px;
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.10);
+      color: var(--muted);
+      font-size: 13px;
+    }
+    h1{
+      margin: 12px 0 10px;
+      font-size: clamp(28px, 4.2vw, 46px);
+      line-height:1.08;
+      letter-spacing: -0.6px;
+    }
+    h2{
+      margin: 0 0 10px;
+      font-size: 20px;
+      letter-spacing: -0.2px;
+    }
+    p{margin:0 0 10px; color: var(--muted)}
+    .lead{font-size: 16px; color: rgba(255,255,255,.82)}
+    .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      text-decoration:none;
+      font-weight: 800;
+      cursor:pointer;
+      transition: transform .08s ease, background .12s ease, border-color .12s ease;
+      user-select:none;
+      background: rgba(255,255,255,.06);
+    }
+    .btn:hover{transform: translateY(-1px)}
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(124,58,237,.95), rgba(124,58,237,.70));
+      border-color: rgba(124,58,237,.55);
+    }
+    .btn.whatsapp{
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(34,197,94,.70));
+      border-color: rgba(34,197,94,.55);
+      color: #06210f;
+    }
+    .btn.ghost{ background: rgba(255,255,255,.06); }
+    .list{margin:0; padding-left: 18px; color: rgba(255,255,255,.80)}
+    .list li{margin: 6px 0}
+    .kpi{
+      display:grid; gap:10px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .kpi .mini{
+      padding: 12px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .kpi b{display:block; font-size: 16px; color: rgba(255,255,255,.92)}
+    .kpi span{font-size: 12.5px; color: rgba(255,255,255,.70)}
+    .section{margin-top:16px}
+    .divider{height:1px; background: rgba(255,255,255,.10); margin: 16px 0}
+    .priceGrid{display:grid; gap:12px}
+    @media(min-width:920px){ .priceGrid{grid-template-columns: repeat(3,1fr);} }
+    .price{
+      padding: 14px;
+      border-radius: 16px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+    }
+    .price .big{font-size: 20px; font-weight: 900; color: rgba(255,255,255,.95)}
+    details{
+      border-radius: 14px;
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.10);
+      padding: 12px 14px;
+    }
+    summary{cursor:pointer; font-weight: 800; color: rgba(255,255,255,.92)}
+    details p{margin-top:10px}
+    footer{
+      margin: 22px 0 6px;
+      color: rgba(255,255,255,.62);
+      font-size: 13px;
+      text-align:center;
+    }
+    .copyRow{
+      display:flex; gap:10px; flex-wrap:wrap; align-items:center;
+      margin-top: 10px;
+    }
+    .input{
+      flex:1;
+      min-width: 220px;
+      padding: 12px 12px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.18);
+      color: rgba(255,255,255,.90);
+      outline: none;
+    }
+    .note{
+      padding: 10px 12px;
+      border-radius: 14px;
+      border: 1px dashed rgba(255,255,255,.18);
+      background: rgba(255,255,255,.04);
+      color: rgba(255,255,255,.72);
+    }
+    .icon{width:18px; height:18px; display:inline-block}
+    .icon svg{width:18px; height:18px; display:block}
+  </style>
+
+  <!-- Schema (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"Impresión 3D Personalizada",
+    "description":"Impresión personalizada y diseño 3D a medida. Documentos, fotos, carteles, flyers, tarjetas, pegatinas y modelado 3D.",
+    "areaServed":"Colmenar Viejo, Madrid 28770",
+    "telephone":"+34644382702",
+    "url":"https://mlg282003.github.io/imprime3d/"
+  }
+  </script>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <span>Impresión 3D Personalizada</span>
+      </div>
+      <div class="navlinks">
+        <a href="#servicios">Servicios</a>
+        <a href="#precios">Precios</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero grid grid-2">
+      <div class="card">
+        <span class="pill">📍 Colmenar Viejo, Madrid 28770 · Respuesta rápida por WhatsApp</span>
+        <h1>Impresión personalizada y diseño 3D a medida</h1>
+        <p class="lead">
+          Documentos (B/N y color) en A4 y A3, fotos, carteles, flyers, tarjetas e invitaciones.
+          Además: <b>diseño 3D</b>, renders y preparación de archivos listos para imprimir.
+        </p>
+
+        <div class="ctaRow">
+          <a class="btn whatsapp" href="https://wa.me/34644382702?text=Hola%2C%20quiero%20presupuesto%20para%20impresi%C3%B3n%20/%20dise%C3%B1o%203D.%20%F0%9F%98%8A" target="_blank" rel="noreferrer">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 11.9a8 8 0 0 1-12.1 6.9L4 20l1.3-3.7A8 8 0 1 1 20 11.9Z" stroke="currentColor" stroke-width="1.6"/><path d="M9.4 8.8c-.2-.4-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9s.8 2.2.9 2.4c.1.2 1.6 2.6 4 3.5 2 .7 2.4.6 2.8.6.4 0 1.3-.5 1.5-1 .2-.5.2-.9.1-1-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.1l-.7.9c-.1.2-.3.2-.5.1-.2-.1-.9-.3-1.7-1-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.4.1-.5l.5-.6c.1-.2.1-.3.2-.5l-.7-1.5Z" fill="currentColor" opacity=".85"/></svg>
+            </span>
+            Pedir presupuesto
+          </a>
+
+          <a class="btn ghost" href="#servicios">Ver servicios</a>
+          <a class="btn primary" href="https://es.wallapop.com/item/impresion-personalizada-rapida-y-economica-1218842862" target="_blank" rel="noreferrer">Ver en Wallapop</a>
+        </div>
+
+        <div class="badges">
+          <span class="pill">✅ Calidad cuidada</span>
+          <span class="pill">⚡ Rápido (según trabajo)</span>
+          <span class="pill">🤝 Entrega en mano</span>
+          <span class="pill">📦 Envío disponible</span>
+          <span class="pill">🧾 Presupuesto sin compromiso</span>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="kpi" aria-label="Resumen">
+          <div class="mini"><b>Impresión</b><span>A4/A3 · B/N y color</span></div>
+          <div class="mini"><b>Diseño 3D</b><span>Modelado · renders</span></div>
+          <div class="mini"><b>Entrega</b><span>En mano o envío</span></div>
+        </div>
+      </div>
+
+      <aside class="card">
+        <h2>Qué necesito para darte precio</h2>
+        <ul class="list">
+          <li><b>Impresión:</b> tamaño (A4/A3…), color o B/N, cantidad y 1 cara / 2 caras.</li>
+          <li><b>Diseño 3D:</b> idea + medidas + referencia (foto/dibujo). Si ya tienes archivo, me lo pasas.</li>
+        </ul>
+        <div class="divider"></div>
+        <h2>Horario</h2>
+        <p class="muted">Todos los días</p>
+        <div class="divider"></div>
+        <p class="note small">
+          Para más confianza: sube 4–6 fotos reales de trabajos (ejemplos) y pon este enlace en Wallapop e Instagram.
+        </p>
+      </aside>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" class="section grid grid-3">
+      <div class="card">
+        <h2>Impresión</h2>
+        <ul class="list">
+          <li>Documentos A4 (B/N y color)</li>
+          <li>Documentos A3</li>
+          <li>Fotos</li>
+          <li>Carteles / pósters</li>
+          <li>Flyers / folletos</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Personalizados</h2>
+        <ul class="list">
+          <li>Tarjetas de visita</li>
+          <li>Invitaciones</li>
+          <li>Pegatinas / etiquetas (según material)</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Diseño 3D</h2>
+        <ul class="list">
+          <li>Modelado 3D a medida</li>
+          <li>Renders / imágenes</li>
+          <li>Ajustes y limpieza de modelos</li>
+          <li>Exportación STL / OBJ (listo para imprimir)</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section id="precios" class="section card">
+      <h2>Precios orientativos</h2>
+      <p class="muted">Depende de tamaño, cantidad y acabado. Te digo el precio exacto por WhatsApp.</p>
+
+      <div class="priceGrid">
+        <div class="price">
+          <div class="big">Desde 0,10€</div>
+          <div class="muted small">Documento B/N (según cantidad)</div>
+        </div>
+        <div class="price">
+          <div class="big">Desde 0,30€</div>
+          <div class="muted small">Documento color (según cantidad)</div>
+        </div>
+        <div class="price">
+          <div class="big">Desde 15€</div>
+          <div class="muted small">Diseño 3D sencillo (según complejidad)</div>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+      <p class="note small">Si prefieres, puedo dejar los precios como “A consultar” para evitar malentendidos.</p>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section id="como" class="section grid grid-2">
+      <div class="card">
+        <h2>Cómo funciona</h2>
+        <ol class="list">
+          <li>Me envías lo que necesitas (archivo/idea + detalles).</li>
+          <li>Te paso presupuesto y tiempo.</li>
+          <li>Entrega en mano o envío (según zona).</li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h2>Entrega</h2>
+        <ul class="list">
+          <li><b>En mano:</b> Colmenar Viejo (Madrid) y alrededores</li>
+          <li><b>Envío:</b> disponible (según zona / coste)</li>
+          <li><b>Opciones:</b> ambas</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section card">
+      <h2>Preguntas frecuentes</h2>
+      <div class="grid">
+        <details>
+          <summary>¿Qué tengo que enviar para imprimir?</summary>
+          <p class="muted">Mejor PDF. También vale JPG/PNG. Indica tamaño, cantidad y si es color o B/N.</p>
+        </details>
+
+        <details>
+          <summary>¿Haces maquetación o preparación de archivos?</summary>
+          <p class="muted">Sí, ajustes y preparación para que imprima perfecto.</p>
+        </details>
+
+        <details>
+          <summary>¿Qué incluye el diseño 3D?</summary>
+          <p class="muted">Modelado a medida, ajustes, exportación (STL/OBJ) y, si quieres, renders/imágenes.</p>
+        </details>
+
+        <details>
+          <summary>¿Cuánto tardas?</summary>
+          <p class="muted">Depende del encargo y cantidad. Muchos trabajos salen el mismo día o al siguiente.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section grid grid-2">
+      <div class="card">
+        <h2>Contacto directo</h2>
+        <p class="muted">WhatsApp es lo más rápido. También puedes escribirme por email.</p>
+
+        <div class="ctaRow">
+          <a class="btn whatsapp" href="https://wa.me/644382702?text=Hola%2C%20quiero%20presupuesto%20para%20impresi%C3%B3n%20/%20dise%C3%B1o%203D.%20%F0%9F%98%8A" target="_blank" rel="noreferrer">WhatsApp</a>
+          <a class="btn ghost" href="mailto:miguelamozamora@gmail.com">Email</a>
+          <a class="btn primary" href="https://es.wallapop.com/item/impresion-personalizada-rapida-y-economica-1218842862" target="_blank" rel="noreferrer">Wallapop</a>
+        </div>
+
+        <div class="divider"></div>
+        <p class="small muted"><b>Zona:</b> Colmenar Viejo, Madrid 28770</p>
+        <p class="small muted"><b>Email:</b> miguelamozamora@gmail.com</p>
+      </div>
+
+      <div class="card">
+        <h2>Copiar enlace de tu web</h2>
+        <p class="muted small">Útil para ponerlo en Wallapop, Instagram y WhatsApp.</p>
+
+        <div class="copyRow">
+          <input class="input" id="siteLink" readonly />
+          <button class="btn primary" id="copyBtn" type="button">Copiar</button>
+        </div>
+
+        <div class="divider"></div>
+        <p class="note small">Tip: pega el enlace en la descripción de tu anuncio de Wallapop y en tu bio.</p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="y"></span> Impresión 3D Personalizada · Impresión y Diseño 3D
+    </footer>
+  </main>
+
+  <script>
+    // Año
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // Enlace actual en el input
+    const siteLink = document.getElementById("siteLink");
+    siteLink.value = window.location.href;
+
+    // Copiar enlace
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(siteLink.value);
+        const btn = document.getElementById("copyBtn");
+        const old = btn.textContent;
+        btn.textContent = "Copiado ✓";
+        setTimeout(()=> btn.textContent = old, 1100);
+      } catch (e) {
+        alert("No se pudo copiar automáticamente. Copia el enlace manualmente.");
+      }
+    });
+  </script>
+</body>
+</html>
