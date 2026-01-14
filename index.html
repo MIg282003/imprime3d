@@ -4,80 +4,93 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-  <title>Impresión 3D Personalizada | Piezas 3D y Diseño 3D en Colmenar Viejo</title>
-  <meta name="description" content="Impresión 3D de piezas a medida y diseño 3D. Prototipos, repuestos, piezas personalizadas. Colmenar Viejo (Madrid) · Envío o entrega en mano. Presupuesto rápido por WhatsApp." />
-
+  <title>imprime3d | Impresión 3D de piezas y Diseño 3D en Colmenar Viejo</title>
+  <meta name="description" content="Impresión 3D de piezas a medida y diseño 3D. Envío o entrega en mano en Colmenar Viejo (Madrid). Presupuesto rápido por WhatsApp." />
   <link rel="canonical" href="https://mig282003.github.io/imprime3d/" />
   <meta name="robots" content="index,follow" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Impresión 3D Personalizada | Piezas 3D + Diseño 3D" />
-  <meta property="og:description" content="Impresión 3D de piezas y diseño 3D. Presupuesto rápido por WhatsApp. Colmenar Viejo (Madrid)." />
+  <meta property="og:title" content="imprime3d | Impresión 3D de piezas + Diseño 3D" />
+  <meta property="og:description" content="Piezas en impresión 3D y diseño 3D a medida. Presupuesto rápido por WhatsApp." />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="es_ES" />
   <meta property="og:url" content="https://mig282003.github.io/imprime3d/" />
 
-  <!-- (Opcional) favicon mínimo -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs/%3E%3Crect width='64' height='64' rx='14' fill='%230b1220'/%3E%3Cpath d='M18 40c0-10 8-18 18-18h10v6H36c-6 0-12 6-12 12v2h-6v-2z' fill='%237c3aed'/%3E%3Cpath d='M46 42H30c-2 0-4 2-4 4v2h-6v-2c0-6 4-10 10-10h16v6z' fill='%2322c55e'/%3E%3C/svg%3E" />
-
   <style>
     :root{
-      --bg:#0b1220;
-      --card:rgba(255,255,255,.06);
-      --stroke:rgba(255,255,255,.12);
-      --text:rgba(255,255,255,.92);
-      --muted:rgba(255,255,255,.70);
-      --soft:rgba(255,255,255,.08);
-      --accent:#7c3aed;
-      --accent2:#22c55e;
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --text:#0f172a;
+      --muted:#475569;
+      --stroke:rgba(15,23,42,.10);
+      --shadow:0 18px 40px rgba(2,6,23,.08);
+      --accent:#4f46e5;
+      --accent2:#0ea5e9;
       --radius:18px;
       --max:1120px;
-      --shadow:0 14px 40px rgba(0,0,0,.35);
     }
     *{box-sizing:border-box}
-    html,body{height:100%}
     body{
       margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
       color:var(--text);
       background:
-        radial-gradient(900px 420px at 18% 8%, rgba(124,58,237,.35), transparent 60%),
-        radial-gradient(860px 520px at 92% 20%, rgba(34,197,94,.18), transparent 60%),
-        radial-gradient(900px 640px at 40% 92%, rgba(59,130,246,.14), transparent 60%),
+        radial-gradient(900px 420px at 15% 0%, rgba(79,70,229,.10), transparent 60%),
+        radial-gradient(860px 520px at 95% 10%, rgba(14,165,233,.10), transparent 60%),
         var(--bg);
-      line-height:1.45;
+      line-height:1.5;
     }
     a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:20px}
     .topbar{
       position:sticky; top:0; z-index:50;
-      background:rgba(11,18,32,.65);
-      backdrop-filter:blur(10px);
-      border-bottom:1px solid rgba(255,255,255,.08);
+      background:rgba(246,247,251,.8);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--stroke);
     }
     .nav{
-      max-width:var(--max); margin:0 auto; padding:14px 20px;
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
     }
-    .brand{display:flex; align-items:center; gap:10px; font-weight:900; letter-spacing:.2px; white-space:nowrap}
-    .logo{
-      width:34px; height:34px; border-radius:12px;
-      background:linear-gradient(135deg, rgba(124,58,237,.9), rgba(34,197,94,.78));
-      border:1px solid rgba(255,255,255,.14);
-      box-shadow:0 10px 30px rgba(124,58,237,.18);
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:900; letter-spacing:.2px; white-space:nowrap;
     }
-    .navlinks{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end}
-    .navlinks a{
-      text-decoration:none; padding:9px 10px; border-radius:12px;
-      color:var(--muted); border:1px solid transparent;
+    .logoimg{
+      width:34px; height:34px;
+      border-radius:12px;
+      object-fit:cover;
+      border:1px solid rgba(15,23,42,.12);
+      box-shadow:0 14px 30px rgba(79,70,229,.14);
+      background:#fff;
+      display:block;
     }
-    .navlinks a:hover{color:var(--text); background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.10)}
+
+    .links{display:flex; gap:6px; flex-wrap:wrap; justify-content:flex-end}
+    .links a{
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius:12px;
+      color:var(--muted);
+      border:1px solid transparent;
+    }
+    .links a:hover{
+      color:var(--text);
+      background:rgba(15,23,42,.04);
+      border-color:rgba(15,23,42,.08);
+    }
+
+    .wrap{max-width:var(--max); margin:0 auto; padding:22px 18px}
     .grid{display:grid; gap:16px}
     @media(min-width:920px){
       .grid-2{grid-template-columns:1.15fr .85fr}
       .grid-3{grid-template-columns:repeat(3,1fr)}
       .grid-4{grid-template-columns:repeat(4,1fr)}
     }
+
     .card{
       background:var(--card);
       border:1px solid var(--stroke);
@@ -88,109 +101,101 @@
     .pill{
       display:inline-flex; align-items:center; gap:8px;
       padding:8px 10px; border-radius:999px;
-      background:rgba(255,255,255,.06);
-      border:1px solid rgba(255,255,255,.10);
-      color:var(--muted); font-size:13px;
+      background:rgba(15,23,42,.04);
+      border:1px solid rgba(15,23,42,.08);
+      color:var(--muted);
+      font-size:13px;
     }
     h1{
       margin:12px 0 10px;
       font-size:clamp(28px, 4.2vw, 46px);
-      line-height:1.08; letter-spacing:-.6px;
+      line-height:1.08;
+      letter-spacing:-.6px;
     }
     h2{margin:0 0 10px; font-size:20px; letter-spacing:-.2px}
-    h3{margin:0 0 6px; font-size:16px}
     p{margin:0 0 10px; color:var(--muted)}
-    .lead{font-size:16px; color:rgba(255,255,255,.82)}
-    .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:12px}
-    .ctaRow{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .lead{font-size:16px; color:#334155}
+
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
     .btn{
       display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 14px; border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      text-decoration:none; font-weight:800;
-      background:rgba(255,255,255,.06);
-      transition:transform .08s ease, background .12s ease, border-color .12s ease;
+      padding:12px 14px;
+      border-radius:14px;
+      border:1px solid rgba(15,23,42,.12);
+      background:#fff;
+      text-decoration:none;
+      font-weight:900;
+      cursor:pointer;
+      transition:transform .08s ease, box-shadow .12s ease;
       user-select:none;
     }
-    .btn:hover{transform:translateY(-1px)}
+    .btn:hover{transform:translateY(-1px); box-shadow:0 10px 25px rgba(2,6,23,.08)}
     .btn.primary{
-      background:linear-gradient(135deg, rgba(124,58,237,.95), rgba(124,58,237,.70));
-      border-color:rgba(124,58,237,.55);
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      border-color:transparent;
+      color:#fff;
     }
-    .btn.whatsapp{
+    .btn.wa{
       background:linear-gradient(135deg, rgba(34,197,94,.95), rgba(34,197,94,.70));
-      border-color:rgba(34,197,94,.55);
+      border-color:transparent;
       color:#06210f;
     }
-    .btn.ghost{background:rgba(255,255,255,.06)}
-    .divider{height:1px; background:rgba(255,255,255,.10); margin:16px 0}
-    .list{margin:0; padding-left:18px; color:rgba(255,255,255,.80)}
-    .list li{margin:6px 0}
-    .kpi{display:grid; gap:10px; grid-template-columns:repeat(3,1fr)}
-    .kpi .mini{
-      padding:12px; border-radius:14px;
-      background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
-    }
-    .kpi b{display:block; font-size:16px; color:rgba(255,255,255,.92)}
-    .kpi span{font-size:12.5px; color:rgba(255,255,255,.70)}
-    .section{margin-top:16px}
-    .note{
-      padding:10px 12px; border-radius:14px;
-      border:1px dashed rgba(255,255,255,.18);
-      background:rgba(255,255,255,.04);
-      color:rgba(255,255,255,.72);
-    }
 
-    /* Form */
+    .divider{height:1px; background:rgba(15,23,42,.10); margin:16px 0}
+    .list{margin:0; padding-left:18px; color:#334155}
+    .list li{margin:6px 0}
+
     .formGrid{display:grid; gap:12px}
     @media(min-width:920px){ .formGrid{grid-template-columns:1fr 1fr} }
-    .field label{display:block; font-size:13px; color:rgba(255,255,255,.75); margin:0 0 6px}
-    .input, .select, .textarea{
+    label{display:block; font-size:13px; color:#475569; margin:0 0 6px}
+    input, select, textarea{
       width:100%;
       padding:12px 12px;
       border-radius:14px;
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(0,0,0,.18);
-      color:rgba(255,255,255,.92);
+      border:1px solid rgba(15,23,42,.14);
+      background:#fff;
+      color:var(--text);
       outline:none;
     }
-    .textarea{min-height:110px; resize:vertical}
-    .hint{font-size:12.5px; color:rgba(255,255,255,.62); margin-top:6px}
+    textarea{min-height:120px; resize:vertical}
+    .hint{font-size:12.5px; color:#64748b; margin-top:6px}
+    .note{
+      padding:10px 12px;
+      border-radius:14px;
+      border:1px dashed rgba(15,23,42,.18);
+      background:rgba(15,23,42,.03);
+      color:#475569;
+    }
 
-    /* Gallery */
     .gallery{display:grid; gap:12px}
-    @media(min-width:920px){ .gallery{grid-template-columns:repeat(3,1fr)} }
+    @media(min-width:920px){ .gallery{grid-template-columns:repeat(4,1fr)} }
     .shot{
       border-radius:16px;
       overflow:hidden;
-      border:1px solid rgba(255,255,255,.12);
-      background:rgba(255,255,255,.04);
+      border:1px solid rgba(15,23,42,.10);
+      background:#fff;
     }
-    .shot img{
-      width:100%; height:220px; object-fit:cover; display:block;
-      filter:saturate(1.05) contrast(1.02);
-    }
-    .shot .cap{padding:10px 12px; color:rgba(255,255,255,.78); font-size:13px}
+    .shot img{width:100%; height:190px; object-fit:cover; display:block}
+    .cap{padding:10px 12px; font-size:13px; color:#334155}
 
     details{
-      border-radius:14px; background:rgba(255,255,255,.05);
-      border:1px solid rgba(255,255,255,.10);
+      border-radius:14px;
+      background:rgba(15,23,42,.03);
+      border:1px solid rgba(15,23,42,.10);
       padding:12px 14px;
     }
-    summary{cursor:pointer; font-weight:900; color:rgba(255,255,255,.92)}
+    summary{cursor:pointer; font-weight:900; color:#0f172a}
     details p{margin-top:10px}
 
-    footer{margin:22px 0 6px; color:rgba(255,255,255,.62); font-size:13px; text-align:center}
+    footer{margin:22px 0 6px; text-align:center; color:#64748b; font-size:13px}
     .mono{font-variant-numeric: tabular-nums}
   </style>
 
-  <!-- Schema (SEO local) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"LocalBusiness",
-    "name":"Impresión 3D Personalizada",
+    "name":"imprime3d",
     "description":"Impresión 3D de piezas a medida y diseño 3D. Prototipos, repuestos y piezas personalizadas.",
     "areaServed":"Colmenar Viejo, Madrid 28770",
     "telephone":"+34644382702",
@@ -201,349 +206,321 @@
 </head>
 
 <body>
+  <script>
+    const CONFIG = {
+      brand: "imprime3d",
+      tagline: "Impresión 3D de piezas y Diseño 3D",
+      city: "Colmenar Viejo, Madrid 28770",
+      phoneVisible: "644 382 702",
+      whatsappE164: "34644382702",
+      email: "miguelamozamora@gmail.com",
+      wallapop: "https://es.wallapop.com/item/impresion-personalizada-rapida-y-economica-1218842862"
+    };
+  </script>
+
   <div class="topbar">
     <div class="nav">
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <span>Impresión 3D Personalizada</span>
+        <!-- ✅ LOGO PNG -->
+        <img class="logoimg" src="img/logo.png" alt="Logo imprime3d"
+             onerror="this.onerror=null;this.src='img/logo%20.png';" />
+        <span id="brand"></span>
       </div>
-      <div class="navlinks">
+      <div class="links">
         <a href="#servicios">Servicios</a>
-        <a href="#como">Cómo funciona</a>
-        <a href="#galeria">Galería</a>
+        <a href="#galeria">Trabajos</a>
         <a href="#presupuesto">Presupuesto</a>
+        <a href="#faq">FAQ</a>
         <a href="#contacto">Contacto</a>
       </div>
     </div>
   </div>
 
   <main class="wrap">
-    <!-- HERO -->
-    <section class="section grid grid-2">
+    <section class="grid grid-2">
       <div class="card">
-        <span class="pill">📍 Colmenar Viejo (Madrid) · Entrega en mano o envío</span>
-        <h1>Impresión 3D de piezas + diseño 3D a medida</h1>
+        <span class="pill">📍 <span id="city"></span> · Envío o entrega en mano</span>
+
+        <h1>Piezas en impresión 3D, hechas a medida</h1>
+
+        <!-- ✅ FRASE SEO -->
+        <p class="pill">🔎 Impresión 3D en Colmenar Viejo (Madrid): piezas a medida y diseño 3D.</p>
+
         <p class="lead">
-          Hago <b>piezas en 3D</b> (prototipos, repuestos, piezas personalizadas) y también <b>diseño/modelado 3D</b> y <b>renders</b>.
-          Me mandas tu idea o archivo y te paso presupuesto rápido.
+          Envíame tu <b>STL/OBJ</b> y lo imprimo. ¿No tienes archivo? También hago <b>diseño/modelado 3D</b> y preparo el modelo para imprimir.
         </p>
 
-        <div class="ctaRow">
-          <a class="btn whatsapp" id="waHero" href="https://wa.me/34644382702?text=Hola%2C%20quiero%20presupuesto%20para%20una%20pieza%20en%203D.%20%F0%9F%98%8A" target="_blank" rel="noreferrer">WhatsApp: 644 382 702</a>
+        <div class="btnrow">
+          <a class="btn wa" id="waTop" target="_blank" rel="noreferrer">WhatsApp: <span id="phone"></span></a>
           <a class="btn primary" href="#presupuesto">Pedir presupuesto</a>
-          <a class="btn ghost" href="https://es.wallapop.com/item/impresion-personalizada-rapida-y-economica-1218842862" target="_blank" rel="noreferrer">Ver en Wallapop</a>
-        </div>
-
-        <div class="badges">
-          <span class="pill">✅ Piezas a medida</span>
-          <span class="pill">🧩 Diseño 3D (si no tienes archivo)</span>
-          <span class="pill">🛠️ Reparación de modelos (STL)</span>
-          <span class="pill">📦 Envío o entrega en mano</span>
-          <span class="pill">🧾 Presupuesto sin compromiso</span>
+          <a class="btn" id="wallapop" target="_blank" rel="noreferrer">Wallapop</a>
         </div>
 
         <div class="divider"></div>
-
-        <div class="kpi" aria-label="Resumen">
-          <div class="mini"><b>Impresión 3D</b><span>piezas · prototipos · repuestos</span></div>
-          <div class="mini"><b>Diseño 3D</b><span>modelado · ajustes · STL</span></div>
-          <div class="mini"><b>Renders</b><span>imágenes para enseñar tu idea</span></div>
-        </div>
-
-        <div class="divider"></div>
-        <p class="note">
-          <b>Importante:</b> no hago impresiones “normales” (documentos, flyers, etc.). Solo trabajos de <b>impresión 3D</b> y <b>diseño 3D</b>.
-        </p>
+        <p class="note"><b>Solo 3D:</b> no imprimo documentos (A4, flyers, etc.). Me centro en piezas 3D y diseño 3D.</p>
       </div>
 
       <aside class="card">
-        <h2>Materiales y acabados</h2>
-        <p class="muted">Trabajo con materiales habituales para piezas funcionales y prototipos. Si necesitas algo específico, lo vemos.</p>
+        <h2>Para darte precio rápido</h2>
         <ul class="list">
-          <li><b>Materiales:</b> PLA / PETG (otros a consultar)</li>
-          <li><b>Acabado:</b> estándar o mejorado (según pieza)</li>
-          <li><b>Color:</b> según disponibilidad</li>
+          <li><b>Archivo</b> (STL/OBJ) o <b>foto + medidas</b> si no lo tienes</li>
+          <li><b>Tamaño</b> aproximado y <b>cantidad</b></li>
+          <li><b>Uso</b>: decorativo o funcional</li>
+          <li><b>Entrega</b>: envío o en mano</li>
         </ul>
         <div class="divider"></div>
-        <h2>Horario</h2>
-        <p class="muted">Todos los días</p>
-        <div class="divider"></div>
-        <p class="muted">
-          Si ya tienes archivo: <b>STL/OBJ</b>. <br/>
-          Si no tienes: me mandas una foto, medidas y te lo diseño.
-        </p>
+        <p><b>Email:</b> <span class="mono" id="email"></span></p>
+        <p><b>Zona:</b> <span id="city2"></span></p>
       </aside>
     </section>
 
-    <!-- SERVICIOS -->
-    <section id="servicios" class="section grid grid-3">
+    <section id="servicios" class="grid grid-3" style="margin-top:16px">
       <div class="card">
         <h2>Impresión 3D de piezas</h2>
+        <p>Repuestos, prototipos y piezas personalizadas.</p>
         <ul class="list">
-          <li>Repuestos y piezas a medida</li>
-          <li>Prototipos rápidos</li>
-          <li>Piezas funcionales y personalizadas</li>
-          <li>Series cortas (a consultar)</li>
+          <li>Piezas sueltas o series cortas</li>
+          <li>Prototipado rápido</li>
+          <li>Piezas decorativas y funcionales</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>Diseño / Modelado 3D</h2>
+        <h2>Diseño / modelado 3D</h2>
+        <p>Si no tienes archivo, lo creo contigo.</p>
         <ul class="list">
           <li>Modelado desde cero</li>
-          <li>Adaptar una idea a medidas reales</li>
-          <li>Reparación/optimización de STL</li>
-          <li>Preparación para imprimir</li>
+          <li>Ajuste a medidas reales</li>
+          <li>Listo para imprimir</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>Renders (imágenes)</h2>
+        <h2>Preparación de archivos</h2>
+        <p>Arreglo/optimización para que imprima bien.</p>
         <ul class="list">
-          <li>Renders para enseñar tu producto</li>
-          <li>Imágenes para anuncios o portfolio</li>
-          <li>Variantes de color/material</li>
-          <li>Entrega en PNG/JPG</li>
+          <li>Reparación de STL/OBJ</li>
+          <li>Escalado y tolerancias</li>
+          <li>Revisión antes de imprimir</li>
         </ul>
       </div>
     </section>
 
-    <!-- CÓMO FUNCIONA -->
-    <section id="como" class="section card">
-      <h2>¿Cómo funciona?</h2>
-      <div class="grid grid-4">
-        <div class="card" style="box-shadow:none">
-          <h3>1) Envíame tu idea</h3>
-          <p class="muted">Archivo STL/OBJ o foto + medidas.</p>
-        </div>
-        <div class="card" style="box-shadow:none">
-          <h3>2) Presupuesto</h3>
-          <p class="muted">Te digo precio y plazo según material/tamaño.</p>
-        </div>
-        <div class="card" style="box-shadow:none">
-          <h3>3) Fabricación</h3>
-          <p class="muted">Imprimo la pieza y hago control básico.</p>
-        </div>
-        <div class="card" style="box-shadow:none">
-          <h3>4) Entrega</h3>
-          <p class="muted">En mano (Colmenar Viejo) o envío.</p>
-        </div>
-      </div>
-      <div class="divider"></div>
-      <p class="note">Si no tienes claro el material o el acabado, te recomiendo una opción según el uso (decorativo/funcional).</p>
-    </section>
+    <section id="galeria" class="card" style="margin-top:16px">
+      <h2>Trabajos / ejemplos</h2>
+      <p>Fotos desde la carpeta <b>img/</b> del repo.</p>
 
-    <!-- GALERÍA -->
-    <section id="galeria" class="section card">
-      <h2>Galería</h2>
-      <p class="muted">Fotos de ejemplo (puedes sustituirlas por tus fotos subiéndolas al repo). Ideal: piezas reales tuyas.</p>
-
-      <div class="gallery" aria-label="Galería de impresión 3D">
-        <!-- Imágenes de ejemplo: funcionan sin subir archivos. Puedes cambiarlas por tus fotos locales -->
+      <div class="gallery">
         <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?3d,printer" alt="Impresora 3D trabajando" />
-          <div class="cap">Impresión 3D de piezas</div>
-        </div>
-        <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?filament,3d" alt="Bobina de filamento para impresión 3D" />
-          <div class="cap">Materiales y filamentos</div>
-        </div>
-        <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?prototype,3d" alt="Prototipo impreso en 3D" />
-          <div class="cap">Prototipos rápidos</div>
-        </div>
-        <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?cad,design" alt="Diseño CAD en ordenador" />
-          <div class="cap">Diseño / modelado 3D</div>
-        </div>
-        <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?engineering,3d" alt="Pieza técnica en entorno de trabajo" />
-          <div class="cap">Piezas funcionales</div>
-        </div>
-        <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?maker,3dprinting" alt="Mesa de trabajo maker" />
-          <div class="cap">Fabricación a medida</div>
+          <img loading="lazy" src="img/muro.png" alt="Organizador de pared impreso en 3D"
+               onerror="this.onerror=null;this.src='img/muro%20.png';" />
+          <div class="cap">Organizador de pared</div>
         </div>
 
         <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?product,render" alt="Render de producto" />
-          <div class="cap">Renders para presentar ideas</div>
-        </div>
-        <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?workshop,tools" alt="Herramientas de taller" />
-          <div class="cap">Acabado y revisión</div>
-        </div>
-        <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?plastic,parts" alt="Piezas de plástico" />
-          <div class="cap">Repuestos y piezas pequeñas</div>
+          <img loading="lazy" src="img/lampara.png" alt="Pantallas de lámpara impresas en 3D"
+               onerror="this.onerror=null;this.src='img/lampara%20.png';" />
+          <div class="cap">Iluminación / pantallas</div>
         </div>
 
         <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?model,3d" alt="Modelo 3D en pantalla" />
-          <div class="cap">Preparación de STL/OBJ</div>
+          <img loading="lazy" src="img/bici.png" alt="Soporte para accesorios de ciclismo impreso en 3D"
+               onerror="this.onerror=null;this.src='img/bici%20.png';" />
+          <div class="cap">Soportes (ciclismo)</div>
         </div>
+
         <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?technology,prototype" alt="Tecnología y prototipado" />
-          <div class="cap">Iteración de prototipos</div>
+          <img loading="lazy" src="img/maceta-feliz.png" alt="Maceta creativa impresa en 3D"
+               onerror="this.onerror=null;this.src='img/maceta%20feliz.png';" />
+          <div class="cap">Maceta creativa</div>
         </div>
+
         <div class="shot">
-          <img loading="lazy" src="https://source.unsplash.com/900x700/?packaging,shipping" alt="Paquete listo para envío" />
-          <div class="cap">Envío o entrega en mano</div>
+          <img loading="lazy" src="img/perro.png" alt="Figura decorativa impresa en 3D"
+               onerror="this.onerror=null;this.src='img/perro%20.png';" />
+          <div class="cap">Figura decorativa</div>
+        </div>
+
+        <div class="shot">
+          <img loading="lazy" src="img/maceta-1.png" alt="Macetas impresas en 3D"
+               onerror="this.onerror=null;this.src='img/maceta%201.png';" />
+          <div class="cap">Macetas / hogar</div>
+        </div>
+
+        <div class="shot">
+          <img loading="lazy" src="img/dragon.png" alt="Figura de dragón impresa en 3D"
+               onerror="this.onerror=null;this.src='img/dragon%20.png';" />
+          <div class="cap">Figura detallada</div>
+        </div>
+
+        <div class="shot">
+          <img loading="lazy" src="img/diseno-3d.png" alt="Diseño 3D en software CAD"
+               onerror="this.onerror=null;this.src='img/diseno%203d.png';" />
+          <div class="cap">Diseño 3D (CAD)</div>
         </div>
       </div>
 
       <div class="divider"></div>
-      <p class="hint">
-        Para poner tus propias fotos: súbelas al repo en una carpeta <b>img/</b> y cambia el src a algo como <span class="mono">img/mi-pieza-1.jpg</span>.
-      </p>
+      <p class="hint">Si alguna no sale, suele ser por el nombre exacto del archivo en GitHub. Con este código también funciona si tienes espacios (ej: <span class="mono">maceta feliz.png</span>).</p>
     </section>
 
-    <!-- PRESUPUESTO -->
-    <section id="presupuesto" class="section grid grid-2">
+    <section id="presupuesto" class="grid grid-2" style="margin-top:16px">
       <div class="card">
         <h2>Pedir presupuesto</h2>
-        <p class="muted">Rellena esto y te lo preparo. Al darle al botón, se abre WhatsApp con el mensaje listo.</p>
+        <p>Rellena esto y se abre WhatsApp con el mensaje listo.</p>
 
         <div class="divider"></div>
 
         <div class="formGrid">
-          <div class="field">
+          <div>
             <label for="tipo">¿Qué necesitas?</label>
-            <select class="select" id="tipo">
-              <option value="Impresión 3D de pieza">Impresión 3D de pieza</option>
-              <option value="Diseño 3D (no tengo archivo)">Diseño 3D (no tengo archivo)</option>
-              <option value="Ajuste/Reparación de STL">Ajuste/Reparación de STL</option>
-              <option value="Renders / imágenes">Renders / imágenes</option>
+            <select id="tipo">
+              <option>Impresión 3D de pieza</option>
+              <option>Diseño 3D (no tengo archivo)</option>
+              <option>Arreglo / ajuste de STL</option>
             </select>
           </div>
 
-          <div class="field">
+          <div>
             <label for="archivo">¿Tienes archivo 3D?</label>
-            <select class="select" id="archivo">
-              <option value="Sí (STL/OBJ)">Sí (STL/OBJ)</option>
-              <option value="No, solo idea/foto">No, solo idea/foto</option>
+            <select id="archivo">
+              <option>Sí (STL/OBJ)</option>
+              <option>No, solo idea/foto</option>
             </select>
           </div>
 
-          <div class="field">
+          <div>
             <label for="tam">Tamaño aprox. (cm)</label>
-            <input class="input" id="tam" placeholder="Ej: 10x6x4" />
-            <div class="hint">Si no sabes, pon “no sé”.</div>
+            <input id="tam" placeholder="Ej: 10x6x4 (si no sabes, pon 'no sé')" />
           </div>
 
-          <div class="field">
+          <div>
             <label for="qty">Cantidad</label>
-            <input class="input" id="qty" type="number" min="1" value="1" />
+            <input id="qty" type="number" min="1" value="1" />
           </div>
 
-          <div class="field">
-            <label for="mat">Material (si lo sabes)</label>
-            <select class="select" id="mat">
-              <option value="A recomendar (según uso)">A recomendar (según uso)</option>
-              <option value="PLA">PLA</option>
-              <option value="PETG">PETG</option>
-              <option value="Otro (a consultar)">Otro (a consultar)</option>
+          <div>
+            <label for="uso">Uso</label>
+            <select id="uso">
+              <option>Decorativa</option>
+              <option>Funcional (uso normal)</option>
+              <option>Funcional (más resistencia)</option>
+              <option>No lo sé</option>
             </select>
           </div>
 
-          <div class="field">
+          <div>
             <label for="entrega">Entrega</label>
-            <select class="select" id="entrega">
-              <option value="Entrega en mano (Colmenar Viejo)">Entrega en mano (Colmenar Viejo)</option>
-              <option value="Envío">Envío</option>
-              <option value="Me da igual">Me da igual</option>
+            <select id="entrega">
+              <option>Entrega en mano</option>
+              <option>Envío</option>
+              <option>Me da igual</option>
             </select>
           </div>
         </div>
 
-        <div class="field" style="margin-top:12px">
-          <label for="desc">Descripción / uso de la pieza</label>
-          <textarea class="textarea" id="desc" placeholder="Cuéntame para qué es, si necesita resistencia, si es decorativa, etc."></textarea>
-          <div class="hint">Si puedes, adjunta fotos/archivo directamente en WhatsApp o por email.</div>
+        <div style="margin-top:12px">
+          <label for="desc">Detalles</label>
+          <textarea id="desc" placeholder="Describe la pieza, para qué sirve, medidas, si encaja con otra pieza, etc."></textarea>
+          <div class="hint">Adjunta el STL/OBJ o fotos después en WhatsApp.</div>
         </div>
 
-        <div class="ctaRow">
-          <button class="btn whatsapp" id="sendWA" type="button">Enviar por WhatsApp</button>
-          <a class="btn ghost" href="mailto:miguelamozamora@gmail.com?subject=Presupuesto%20Impresi%C3%B3n%203D&body=Hola,%0AQuiero%20presupuesto%20para:%20(Describe%20la%20pieza/idea%20y%20adjunta%20archivos%20si%20puedes)" target="_blank" rel="noreferrer">Enviar por email</a>
+        <div class="btnrow">
+          <button class="btn wa" id="sendWA" type="button">Enviar por WhatsApp</button>
+          <a class="btn" id="sendMail" target="_blank" rel="noreferrer">Enviar por email</a>
         </div>
-
-        <div class="divider"></div>
-        <p class="note">
-          <b>Tip:</b> si tienes STL/OBJ, mándamelo por WhatsApp y te doy precio más rápido.
-        </p>
       </div>
 
-      <aside class="card" id="contacto">
+      <aside id="contacto" class="card">
         <h2>Contacto</h2>
-        <p class="muted">Te respondo lo más rápido posible.</p>
+        <p><b>WhatsApp/Tel:</b> <span class="mono" id="phone2"></span></p>
+        <p><b>Email:</b> <span class="mono" id="email2"></span></p>
+        <p><b>Zona:</b> <span id="city3"></span></p>
+
         <div class="divider"></div>
-        <p class="muted"><b>WhatsApp / Tel:</b> <span class="mono">644 382 702</span></p>
-        <p class="muted"><b>Email:</b> <span class="mono">miguelamozamora@gmail.com</span></p>
-        <p class="muted"><b>Zona:</b> Colmenar Viejo, Madrid 28770</p>
-        <p class="muted"><b>Entrega:</b> en mano o envío</p>
-        <div class="divider"></div>
-        <div class="ctaRow">
-          <a class="btn whatsapp" href="https://wa.me/34644382702?text=Hola%2C%20quiero%20presupuesto%20para%20una%20pieza%20en%203D.%20%F0%9F%98%8A" target="_blank" rel="noreferrer">Abrir WhatsApp</a>
-          <a class="btn primary" href="https://es.wallapop.com/item/impresion-personalizada-rapida-y-economica-1218842862" target="_blank" rel="noreferrer">Ver anuncio</a>
+        <div class="btnrow">
+          <a class="btn wa" id="waBottom" target="_blank" rel="noreferrer">Abrir WhatsApp</a>
+          <a class="btn primary" id="wallapop2" target="_blank" rel="noreferrer">Ver Wallapop</a>
         </div>
 
         <div class="divider"></div>
-        <h2>FAQ</h2>
-        <div class="grid" style="gap:10px">
-          <details>
-            <summary>¿Puedo pedir una pieza sin archivo?</summary>
-            <p class="muted">Sí. Me mandas una foto, medidas y una explicación, y puedo diseñarla en 3D.</p>
-          </details>
-          <details>
-            <summary>¿Haces piezas resistentes?</summary>
-            <p class="muted">Depende del uso. Te recomiendo material y configuración según si es decorativa o funcional.</p>
-          </details>
-          <details>
-            <summary>¿Haces envíos?</summary>
-            <p class="muted">Sí. También entrega en mano en Colmenar Viejo y alrededores.</p>
-          </details>
-        </div>
+        <section id="faq">
+          <h2>FAQ</h2>
+          <div class="grid" style="gap:10px">
+            <details>
+              <summary>¿Puedo pedir una pieza sin archivo?</summary>
+              <p>Sí. Con foto/boceto y medidas puedo diseñarla en 3D.</p>
+            </details>
+            <details>
+              <summary>¿Cómo te envío el archivo?</summary>
+              <p>Por WhatsApp o por email (STL/OBJ). Si pesa mucho, te digo alternativa.</p>
+            </details>
+            <details>
+              <summary>¿Haces envíos?</summary>
+              <p>Sí. También puedo entregar en mano por la zona.</p>
+            </details>
+          </div>
+        </section>
       </aside>
     </section>
 
     <footer>
-      © <span id="y"></span> Impresión 3D Personalizada · Colmenar Viejo (Madrid)
+      © <span id="year"></span> <span id="brand2"></span> · <span id="tagline"></span>
     </footer>
   </main>
 
   <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("brand").textContent = CONFIG.brand;
+    document.getElementById("brand2").textContent = CONFIG.brand;
+    document.getElementById("tagline").textContent = CONFIG.tagline;
+    document.getElementById("city").textContent = CONFIG.city;
+    document.getElementById("city2").textContent = CONFIG.city;
+    document.getElementById("city3").textContent = CONFIG.city;
+    document.getElementById("email").textContent = CONFIG.email;
+    document.getElementById("email2").textContent = CONFIG.email;
+    document.getElementById("phone").textContent = CONFIG.phoneVisible;
+    document.getElementById("phone2").textContent = CONFIG.phoneVisible;
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    const WA = "34644382702"; // prefijo +34 y número, sin espacios
+    const baseWA = `https://wa.me/${CONFIG.whatsappE164}`;
+    const hiMsg = encodeURIComponent("Hola, quiero presupuesto para una pieza en 3D 🙂");
+    document.getElementById("waTop").href = `${baseWA}?text=${hiMsg}`;
+    document.getElementById("waBottom").href = `${baseWA}?text=${hiMsg}`;
+    document.getElementById("wallapop").href = CONFIG.wallapop;
+    document.getElementById("wallapop2").href = CONFIG.wallapop;
 
-    function buildMessage() {
+    document.getElementById("sendMail").href =
+      `mailto:${CONFIG.email}?subject=${encodeURIComponent("Presupuesto impresión 3D / diseño 3D")}`;
+
+    function buildMessage(){
       const tipo = document.getElementById("tipo").value;
       const archivo = document.getElementById("archivo").value;
       const tam = document.getElementById("tam").value || "No sé";
       const qty = document.getElementById("qty").value || "1";
-      const mat = document.getElementById("mat").value;
+      const uso = document.getElementById("uso").value;
       const entrega = document.getElementById("entrega").value;
       const desc = document.getElementById("desc").value || "-";
 
       return [
-        "Hola, quiero presupuesto 😊",
+        "Hola, quiero presupuesto:",
         "",
-        "✅ Trabajo: " + tipo,
+        "✅ Servicio: " + tipo,
         "📦 Archivo: " + archivo,
-        "📏 Tamaño aprox: " + tam,
+        "📏 Tamaño aprox (cm): " + tam,
         "🔢 Cantidad: " + qty,
-        "🧱 Material: " + mat,
+        "🧩 Uso: " + uso,
         "🚚 Entrega: " + entrega,
         "",
         "📝 Detalles:",
-        desc
+        desc,
+        "",
+        "Adjunto fotos/archivo por aquí."
       ].join("\n");
     }
 
     document.getElementById("sendWA").addEventListener("click", () => {
       const msg = encodeURIComponent(buildMessage());
-      const url = `https://wa.me/${WA}?text=${msg}`;
-      window.open(url, "_blank", "noopener,noreferrer");
+      window.open(`${baseWA}?text=${msg}`, "_blank", "noopener,noreferrer");
     });
   </script>
 </body>
