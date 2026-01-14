@@ -88,7 +88,6 @@
     @media(min-width:920px){
       .grid-2{grid-template-columns:1.15fr .85fr}
       .grid-3{grid-template-columns:repeat(3,1fr)}
-      .grid-4{grid-template-columns:repeat(4,1fr)}
     }
 
     .card{
@@ -221,9 +220,7 @@
   <div class="topbar">
     <div class="nav">
       <div class="brand">
-        <!-- ✅ LOGO PNG -->
-        <img class="logoimg" src="img/logo.png" alt="Logo imprime3d"
-             onerror="this.onerror=null;this.src='img/logo%20.png';" />
+        <img class="logoimg" src="img/logo.png" alt="Logo imprime3d" />
         <span id="brand"></span>
       </div>
       <div class="links">
@@ -243,7 +240,6 @@
 
         <h1>Piezas en impresión 3D, hechas a medida</h1>
 
-        <!-- ✅ FRASE SEO -->
         <p class="pill">🔎 Impresión 3D en Colmenar Viejo (Madrid): piezas a medida y diseño 3D.</p>
 
         <p class="lead">
@@ -311,57 +307,19 @@
       <p>Fotos desde la carpeta <b>img/</b> del repo.</p>
 
       <div class="gallery">
-        <div class="shot">
-          <img loading="lazy" src="img/muro.png" alt="Organizador de pared impreso en 3D"
-               onerror="this.onerror=null;this.src='img/muro%20.png';" />
-          <div class="cap">Organizador de pared</div>
-        </div>
+        <div class="shot"><img loading="lazy" src="img/muro.png" alt="Organizador de pared impreso en 3D"><div class="cap">Organizador de pared</div></div>
+        <div class="shot"><img loading="lazy" src="img/lampara.png" alt="Pantallas de lámpara impresas en 3D"><div class="cap">Iluminación / pantallas</div></div>
+        <div class="shot"><img loading="lazy" src="img/bici.png" alt="Soporte para accesorios de ciclismo impreso en 3D"><div class="cap">Soportes (ciclismo)</div></div>
+        <div class="shot"><img loading="lazy" src="img/maceta%20feliz.png" alt="Maceta creativa impresa en 3D"><div class="cap">Maceta creativa</div></div>
 
-        <div class="shot">
-          <img loading="lazy" src="img/lampara.png" alt="Pantallas de lámpara impresas en 3D"
-               onerror="this.onerror=null;this.src='img/lampara%20.png';" />
-          <div class="cap">Iluminación / pantallas</div>
-        </div>
-
-        <div class="shot">
-          <img loading="lazy" src="img/bici.png" alt="Soporte para accesorios de ciclismo impreso en 3D"
-               onerror="this.onerror=null;this.src='img/bici%20.png';" />
-          <div class="cap">Soportes (ciclismo)</div>
-        </div>
-
-        <div class="shot">
-          <img loading="lazy" src="img/maceta-feliz.png" alt="Maceta creativa impresa en 3D"
-               onerror="this.onerror=null;this.src='img/maceta%20feliz.png';" />
-          <div class="cap">Maceta creativa</div>
-        </div>
-
-        <div class="shot">
-          <img loading="lazy" src="img/perro.png" alt="Figura decorativa impresa en 3D"
-               onerror="this.onerror=null;this.src='img/perro%20.png';" />
-          <div class="cap">Figura decorativa</div>
-        </div>
-
-        <div class="shot">
-          <img loading="lazy" src="img/maceta-1.png" alt="Macetas impresas en 3D"
-               onerror="this.onerror=null;this.src='img/maceta%201.png';" />
-          <div class="cap">Macetas / hogar</div>
-        </div>
-
-        <div class="shot">
-          <img loading="lazy" src="img/dragon.png" alt="Figura de dragón impresa en 3D"
-               onerror="this.onerror=null;this.src='img/dragon%20.png';" />
-          <div class="cap">Figura detallada</div>
-        </div>
-
-        <div class="shot">
-          <img loading="lazy" src="img/diseno-3d.png" alt="Diseño 3D en software CAD"
-               onerror="this.onerror=null;this.src='img/diseno%203d.png';" />
-          <div class="cap">Diseño 3D (CAD)</div>
-        </div>
+        <div class="shot"><img loading="lazy" src="img/perro.png" alt="Figura decorativa impresa en 3D"><div class="cap">Figura decorativa</div></div>
+        <div class="shot"><img loading="lazy" src="img/maceta%201.png" alt="Macetas impresas en 3D"><div class="cap">Macetas / hogar</div></div>
+        <div class="shot"><img loading="lazy" src="img/dragon.png" alt="Figura de dragón impresa en 3D"><div class="cap">Figura detallada</div></div>
+        <div class="shot"><img loading="lazy" src="img/diseno%203d.png" alt="Diseño 3D en software CAD"><div class="cap">Diseño 3D (CAD)</div></div>
       </div>
 
       <div class="divider"></div>
-      <p class="hint">Si alguna no sale, suele ser por el nombre exacto del archivo en GitHub. Con este código también funciona si tienes espacios (ej: <span class="mono">maceta feliz.png</span>).</p>
+      <p class="hint">Importante: como tus archivos tienen espacios, usamos <span class="mono">%20</span> en las rutas (ej: <span class="mono">maceta%201.png</span>).</p>
     </section>
 
     <section id="presupuesto" class="grid grid-2" style="margin-top:16px">
@@ -502,7 +460,7 @@
       const desc = document.getElementById("desc").value || "-";
 
       return [
-        "Hola, quiero presupuesto:",
+        "Hola, quiero presupuesto 🙂",
         "",
         "✅ Servicio: " + tipo,
         "📦 Archivo: " + archivo,
