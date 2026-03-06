@@ -35,11 +35,11 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('hero')}>
             <img
-              src="https://customer-assets.emergentagent.com/job_build-reality-2/artifacts/yjqf6swi_Captura%20de%20pantalla%202026-03-06%20171233.png"
+              src="https://customer-assets.emergentagent.com/job_build-reality-2/artifacts/ebndaji5_image.png"
               alt="Matrix3D Logo"
-              className="h-10 w-10 object-contain"
+              className="h-12 w-12 object-contain"
             />
-            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-300 via-lime-400 to-orange-400 bg-clip-text text-transparent">
               Matrix3D
             </span>
           </div>
@@ -48,25 +48,31 @@ const Header = () => {
           <nav className="hidden lg:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection('servicios')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
             >
               Servicios
             </button>
             <button
+              onClick={() => scrollToSection('portfolio')}
+              className="text-gray-300 hover:text-lime-300 transition-colors duration-200 font-medium"
+            >
+              Portfolio
+            </button>
+            <button
               onClick={() => scrollToSection('materiales')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-gray-300 hover:text-orange-300 transition-colors duration-200 font-medium"
             >
               Materiales
             </button>
             <button
               onClick={() => scrollToSection('proceso')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-gray-300 hover:text-purple-300 transition-colors duration-200 font-medium"
             >
               Proceso
             </button>
             <button
               onClick={() => scrollToSection('contacto')}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+              className="text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
             >
               Contacto
             </button>
@@ -83,7 +89,7 @@ const Header = () => {
             </a>
             <Button
               onClick={() => scrollToSection('contacto')}
-              className="bg-gradient-to-r from-cyan-500 to-orange-500 hover:from-cyan-600 hover:to-orange-600 text-white font-semibold px-6 py-2 rounded-lg shadow-lg shadow-cyan-500/20 transition-all duration-300 hover:shadow-cyan-500/40 hover:scale-105"
+              className="bg-gradient-to-r from-cyan-400 to-orange-400 hover:from-cyan-300 hover:to-orange-300 text-white font-semibold px-6 py-2 rounded-lg shadow-lg shadow-cyan-400/30 transition-all duration-300 hover:shadow-cyan-400/50 hover:scale-105"
             >
               Solicitar Presupuesto
             </Button>
@@ -103,25 +109,31 @@ const Header = () => {
           <div className="lg:hidden py-4 space-y-4 border-t border-cyan-500/10 bg-gray-950/95 backdrop-blur-lg">
             <button
               onClick={() => scrollToSection('servicios')}
-              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/5 rounded transition-colors"
+              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/5 rounded transition-colors"
             >
               Servicios
             </button>
             <button
+              onClick={() => scrollToSection('portfolio')}
+              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-lime-300 hover:bg-lime-500/5 rounded transition-colors"
+            >
+              Portfolio
+            </button>
+            <button
               onClick={() => scrollToSection('materiales')}
-              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/5 rounded transition-colors"
+              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-orange-300 hover:bg-orange-500/5 rounded transition-colors"
             >
               Materiales
             </button>
             <button
               onClick={() => scrollToSection('proceso')}
-              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/5 rounded transition-colors"
+              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-purple-300 hover:bg-purple-500/5 rounded transition-colors"
             >
               Proceso
             </button>
             <button
               onClick={() => scrollToSection('contacto')}
-              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-400 hover:bg-cyan-500/5 rounded transition-colors"
+              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/5 rounded transition-colors"
             >
               Contacto
             </button>
@@ -135,7 +147,7 @@ const Header = () => {
               </a>
               <Button
                 onClick={() => scrollToSection('contacto')}
-                className="w-full bg-gradient-to-r from-cyan-500 to-orange-500 hover:from-cyan-600 hover:to-orange-600 text-white font-semibold"
+                className="w-full bg-gradient-to-r from-cyan-400 to-orange-400 hover:from-cyan-300 hover:to-orange-300 text-white font-semibold"
               >
                 Solicitar Presupuesto
               </Button>

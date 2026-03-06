@@ -52,7 +52,7 @@ const MaterialsSection = () => {
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Amplia Gama de
-            <span className="bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent"> Materiales</span>
+            <span className="bg-gradient-to-r from-cyan-300 via-lime-400 to-orange-400 bg-clip-text text-transparent"> Materiales</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Desde plásticos básicos hasta compuestos de ingeniería de alto rendimiento

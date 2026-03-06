@@ -39,7 +39,7 @@ const HeroSection = () => {
 
           {/* Main Heading */}
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="bg-gradient-to-r from-cyan-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-cyan-300 via-lime-400 to-orange-400 bg-clip-text text-transparent animate-gradient">
               Transformamos Ideas
             </span>
             <br />
@@ -55,22 +55,22 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-cyan-300 bg-clip-text text-transparent mb-2">
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent mb-2">
                 10+
               </div>
-              <div className="text-gray-400 text-sm sm:text-base">Materiales Técnicos</div>
+              <div className="text-gray-300 text-sm sm:text-base">Materiales Técnicos</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-green-400 to-green-300 bg-clip-text text-transparent mb-2">
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-lime-300 to-lime-400 bg-clip-text text-transparent mb-2">
                 24h
               </div>
-              <div className="text-gray-400 text-sm sm:text-base">Entrega Rápida</div>
+              <div className="text-gray-300 text-sm sm:text-base">Entrega Rápida</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-400 to-orange-300 bg-clip-text text-transparent mb-2">
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent mb-2">
                 100%
               </div>
-              <div className="text-gray-400 text-sm sm:text-base">Precisión</div>
+              <div className="text-gray-300 text-sm sm:text-base">Precisión</div>
             </div>
           </div>
 
@@ -79,7 +79,7 @@ const HeroSection = () => {
             <Button
               onClick={scrollToContact}
               size="lg"
-              className="bg-gradient-to-r from-cyan-500 to-orange-500 hover:from-cyan-600 hover:to-orange-600 text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-2xl shadow-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/50 hover:scale-105 group"
+              className="bg-gradient-to-r from-cyan-400 to-orange-400 hover:from-cyan-300 hover:to-orange-300 text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-2xl shadow-cyan-400/40 transition-all duration-300 hover:shadow-cyan-400/60 hover:scale-105 group"
             >
               Solicitar Presupuesto
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -91,7 +91,7 @@ const HeroSection = () => {
               }}
               size="lg"
               variant="outline"
-              className="border-2 border-cyan-500/30 text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-500 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all duration-300"
+              className="border-2 border-cyan-400/40 text-cyan-300 hover:bg-cyan-400/10 hover:border-cyan-400 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all duration-300"
             >
               Ver Servicios
             </Button>

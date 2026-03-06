@@ -1,6 +1,7 @@
 import React from 'react';
 import HeroSection from '../components/HeroSection';
 import ServicesSection from '../components/ServicesSection';
+import PortfolioSection from '../components/PortfolioSection';
 import MaterialsSection from '../components/MaterialsSection';
 import ProcessSection from '../components/ProcessSection';
 import ContactSection from '../components/ContactSection';
@@ -13,6 +14,7 @@ const Home = () => {
       <Header />
       <HeroSection />
       <ServicesSection />
+      <PortfolioSection />
       <MaterialsSection />
       <ProcessSection />
       <ContactSection />

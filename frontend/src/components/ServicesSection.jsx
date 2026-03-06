@@ -65,7 +65,7 @@ const ServicesSection = () => {
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Soluciones de Fabricación
-            <span className="bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent"> Avanzada</span>
+            <span className="bg-gradient-to-r from-cyan-300 to-orange-400 bg-clip-text text-transparent"> Avanzada</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Tecnología de punta para llevar tus proyectos de la idea a la realidad

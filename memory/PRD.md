@@ -152,3 +152,75 @@ Crear una landing page profesional y moderna para empresa de impresión 3D con:
 - Logo: https://customer-assets.emergentagent.com/job_build-reality-2/artifacts/yjqf6swi_Captura%20de%20pantalla%202026-03-06%20171233.png
 - Imágenes: 8 imágenes profesionales de Unsplash (impresoras, piezas, filamentos)
 
+
+---
+## Actualización: 6 de Marzo, 2026 - Iteración 2
+
+### Cambios Implementados
+
+#### 1. Logo Actualizado
+- Reemplazado logo anterior por versión sin fondo (imagen.png)
+- Mejor integración con el fondo oscuro de la página
+- Tamaño aumentado en header (h-12) y footer (h-14)
+
+#### 2. Colores Más Vivos y Vibrantes
+- Gradientes actualizados de cyan-500/orange-500 a cyan-300/orange-400
+- Nuevo color lime-400 agregado para mayor variedad
+- Gradientes principales: `from-cyan-300 via-lime-400 to-orange-400`
+- Shadows más intensos para botones (shadow-cyan-400/40 a shadow-cyan-400/60 on hover)
+- Stats en hero con colores más brillantes (cyan-300, lime-300, orange-300)
+
+#### 3. Nueva Sección: Portfolio / Proyectos Realizados ✨
+**Ubicación**: Entre Servicios y Materiales
+
+**Contenido**:
+- Grid de 6 proyectos con imágenes reales de trabajos 3D
+- Categorías: Ingeniería, Diseño, Industrial, Consumo, Fabricación, Arte
+- Cada proyecto muestra:
+  * Imagen de alta calidad
+  * Título descriptivo
+  * Categoría (badge)
+  * Material utilizado
+  * Efecto hover con icono de "ver"
+  * Bordes animados con colores únicos
+
+**Proyectos Mostrados**:
+1. Prototipos Funcionales (Nylon PA12) - Cyan
+2. Figuras Decorativas (PLA Multi-color) - Orange
+3. Piezas de Precisión (Fibra de Carbono) - Lime
+4. Juguetes Personalizados (PLA) - Pink
+5. Herramientas Custom (PETG) - Purple
+6. Modelos Detallados (Resina) - Green
+
+**Stats al Final**:
+- 500+ Proyectos Completados
+- 98% Satisfacción Cliente
+- 15+ Materiales Disponibles
+- 24h Entrega Express
+
+#### 4. Navegación Actualizada
+- Nuevo link "Portfolio" agregado en header desktop y mobile
+- Hover colors diferenciados por sección:
+  * Servicios: cyan-300
+  * Portfolio: lime-300
+  * Materiales: orange-300
+  * Proceso: purple-300
+  * Contacto: cyan-300
+
+#### 5. Mejoras Visuales Globales
+- Todos los títulos principales con gradiente vivid
+- Botones CTA con colores más brillantes y shadows intensos
+- Animación gradient-shift en texto hero (animate-gradient)
+- Footer con social icons hover más vibrantes
+- Mejor contraste en todos los elementos interactivos
+
+### Assets Adicionales
+- 10 nuevas imágenes de piezas impresas en 3D de Unsplash/Pexels
+- Variedad de colores y estilos para mostrar versatilidad
+
+### Impacto en UX
+- Página más vibrante y energética
+- Mayor engagement visual
+- Portfolio demuestra experiencia y calidad
+- Navegación más intuitiva con sección dedicada a trabajos
+

@@ -50,11 +50,11 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <img
-                src="https://customer-assets.emergentagent.com/job_build-reality-2/artifacts/yjqf6swi_Captura%20de%20pantalla%202026-03-06%20171233.png"
+                src="https://customer-assets.emergentagent.com/job_build-reality-2/artifacts/ebndaji5_image.png"
                 alt="Matrix3D Logo"
-                className="h-12 w-12 object-contain"
+                className="h-14 w-14 object-contain"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 via-green-400 to-orange-400 bg-clip-text text-transparent">
+              <span className="text-2xl font-bold bg-gradient-to-r from-cyan-300 via-lime-400 to-orange-400 bg-clip-text text-transparent">
                 Matrix3D
               </span>
             </div>
@@ -166,7 +166,7 @@ const Footer = () => {
                   key={index}
                   href={social.href}
                   aria-label={social.label}
-                  className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-cyan-500 hover:to-orange-500 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110"
+                  className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-orange-400 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-400/30"
                 >
                   {social.icon}
                 </a>

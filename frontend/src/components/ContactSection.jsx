@@ -85,7 +85,7 @@ Enviado desde matrix3d.com
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
             Hablemos de tu
-            <span className="bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent"> Proyecto</span>
+            <span className="bg-gradient-to-r from-cyan-300 via-lime-400 to-orange-400 bg-clip-text text-transparent"> Proyecto</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Completa el formulario y te responderemos en menos de 24 horas
@@ -196,7 +196,7 @@ Enviado desde matrix3d.com
                 <Button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-cyan-500 to-orange-500 hover:from-cyan-600 hover:to-orange-600 text-white font-semibold py-6 text-lg rounded-xl shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:shadow-cyan-500/50 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  className="w-full bg-gradient-to-r from-cyan-400 to-orange-400 hover:from-cyan-300 hover:to-orange-300 text-white font-semibold py-6 text-lg rounded-xl shadow-lg shadow-cyan-400/40 transition-all duration-300 hover:shadow-cyan-400/60 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   {isSubmitting ? (
                     <>
