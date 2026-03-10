@@ -12,6 +12,7 @@
         @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
         @keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(6,182,212,0.3)}50%{box-shadow:0 0 40px rgba(6,182,212,0.6)}}
         @keyframes shimmer{0%{background-position:-1000px 0}100%{background-position:1000px 0}}
+        @keyframes scroll-left{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
         
         .animate-gradient{background-size:200% 200%;animation:gradient-shift 3s ease infinite}
         .animate-float{animation:float 3s ease-in-out infinite}
@@ -58,7 +59,6 @@
         
         .hover-glow{
             transition:all 0.3s ease;
-            position:relative;
         }
         .hover-glow:hover{
             box-shadow:0 0 30px rgba(6,182,212,0.6);
@@ -154,7 +154,7 @@
         }
         
         .product-card:hover::before{
-            height:60px;
+            height:70px;
         }
         
         .product-image-container{
@@ -165,7 +165,7 @@
         
         .product-card:hover .product-image-container{
             opacity:0;
-            transform:scale(0.95);
+            transform:scale(0.9);
         }
         
         .product-content{
@@ -175,7 +175,30 @@
         }
         
         .product-card:hover .product-content{
-            transform:translateY(-40px);
+            transform:translateY(-50px);
+        }
+        
+        /* Logos strip animation */
+        .logo-strip{
+            display:flex;
+            animation:scroll-left 30s linear infinite;
+        }
+        
+        .logo-strip:hover{
+            animation-play-state:paused;
+        }
+        
+        .company-logo{
+            filter:grayscale(100%) brightness(0) invert(1);
+            opacity:0.5;
+            transition:all 0.3s ease;
+            mix-blend-mode:lighten;
+        }
+        
+        .company-logo:hover{
+            opacity:1;
+            filter:grayscale(0%) brightness(1) invert(0);
+            transform:scale(1.1);
         }
     </style>
 </head>
@@ -380,65 +403,78 @@
         <div class="relative" data-aos="fade-up" data-aos-delay="200">
             <div id="productCarousel" class="carousel-container flex gap-6 pb-4">
                 <div class="carousel-item flex-shrink-0 w-full md:w-[45%] lg:w-[30%]">
-                    <div class="product-card bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden" style="background:linear-gradient(to bottom, #a855f7 0%, #a855f7 4px, rgba(31, 41, 55, 0.5) 4px);">
-                        <div class="product-image-container relative h-48 bg-gray-800 flex items-center justify-center">
-                            <p class="text-gray-600 text-sm">Espacio para imagen</p>
-                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/40 text-xs text-purple-300">Accesorios</div>
+                    <div class="product-card bg-gray-800/50 border border-gray-700/50 rounded-2xl overflow-hidden shadow-xl" style="background:linear-gradient(to bottom, #a855f7 0%, #a855f7 4px, rgba(17, 24, 39, 0.8) 4px);">
+                        <div class="product-image-container relative h-64 bg-gradient-to-br from-purple-900/20 to-gray-900 flex items-center justify-center p-6">
+                            <img src="https://images.unsplash.com/photo-1679278966804-e5fa87fd6221?w=600&q=80" alt="Llavero 3D" class="w-full h-full object-contain drop-shadow-2xl">
+                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-500/30 backdrop-blur-sm border border-purple-400/50 text-xs text-purple-200 font-semibold">Accesorios</div>
                         </div>
-                        <div class="product-content p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Llaveros Personalizados</h3>
-                            <p class="text-gray-400 text-sm mb-4">Diseños únicos</p>
-                            <div class="flex items-center justify-between">
+                        <div class="product-content p-6 bg-gradient-to-b from-gray-800/90 to-gray-900/90 backdrop-blur-sm">
+                            <h3 class="text-2xl font-bold text-white mb-2">Llaveros Personalizados</h3>
+                            <p class="text-gray-400 text-sm mb-4">Diseños únicos con tu logo o nombre</p>
+                            <div class="flex items-center justify-between gap-3">
                                 <span class="text-2xl font-bold gradient-text">Desde 5€</span>
-                                <button onclick="openWhatsApp('¡Hola! Me interesan los *Llaveros Personalizados*. ¿Podríais darme más información? Gracias.')" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/50 hover-shine">Lo quiero →</button>
+                                <button onclick="openWhatsApp('¡Hola! Me interesan los *Llaveros Personalizados*. ¿Podríais darme más información? Gracias.')" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/50 hover-shine whitespace-nowrap">Lo quiero →</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item flex-shrink-0 w-full md:w-[45%] lg:w-[30%]">
-                    <div class="product-card bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden" style="background:linear-gradient(to bottom, #ec4899 0%, #ec4899 4px, rgba(31, 41, 55, 0.5) 4px);">
-                        <div class="product-image-container relative h-48 bg-gray-800 flex items-center justify-center">
-                            <p class="text-gray-600 text-sm">Espacio para imagen</p>
-                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-pink-500/20 border border-pink-500/40 text-xs text-pink-300">Decoración</div>
+                    <div class="product-card bg-gray-800/50 border border-gray-700/50 rounded-2xl overflow-hidden shadow-xl" style="background:linear-gradient(to bottom, #ec4899 0%, #ec4899 4px, rgba(17, 24, 39, 0.8) 4px);">
+                        <div class="product-image-container relative h-64 bg-gradient-to-br from-pink-900/20 to-gray-900 flex items-center justify-center p-6">
+                            <div class="w-full h-full flex items-center justify-center">
+                                <div class="relative">
+                                    <div class="w-40 h-40 bg-gradient-to-br from-pink-500/20 to-purple-500/20 rounded-lg backdrop-blur-sm border border-pink-400/30 flex items-center justify-center">
+                                        <svg class="w-24 h-24 text-pink-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-pink-500/30 backdrop-blur-sm border border-pink-400/50 text-xs text-pink-200 font-semibold">Decoración</div>
                         </div>
-                        <div class="product-content p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Lámparas Litofanía</h3>
-                            <p class="text-gray-400 text-sm mb-4">Tus fotos en 3D</p>
-                            <div class="flex items-center justify-between">
+                        <div class="product-content p-6 bg-gradient-to-b from-gray-800/90 to-gray-900/90 backdrop-blur-sm">
+                            <h3 class="text-2xl font-bold text-white mb-2">Lámparas Litofanía</h3>
+                            <p class="text-gray-400 text-sm mb-4">Tus fotos iluminadas en 3D</p>
+                            <div class="flex items-center justify-between gap-3">
                                 <span class="text-2xl font-bold gradient-text">Desde 20€</span>
-                                <button onclick="openWhatsApp('¡Hola! Estoy interesado/a en las *Lámparas Litofanía*. ¿Cómo funciona el proceso? Gracias.')" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/50 hover-shine">Lo quiero →</button>
+                                <button onclick="openWhatsApp('¡Hola! Estoy interesado/a en las *Lámparas Litofanía*. ¿Cómo funciona el proceso? Gracias.')" class="bg-gradient-to-r from-pink-500 to-rose-500 hover:from-pink-600 hover:to-rose-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-pink-500/50 hover-shine whitespace-nowrap">Lo quiero →</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item flex-shrink-0 w-full md:w-[45%] lg:w-[30%]">
-                    <div class="product-card bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden" style="background:linear-gradient(to bottom, #10b981 0%, #10b981 4px, rgba(31, 41, 55, 0.5) 4px);">
-                        <div class="product-image-container relative h-48 bg-gray-800 flex items-center justify-center">
-                            <p class="text-gray-600 text-sm">Espacio para imagen</p>
-                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-green-500/20 border border-green-500/40 text-xs text-green-300">Hogar</div>
+                    <div class="product-card bg-gray-800/50 border border-gray-700/50 rounded-2xl overflow-hidden shadow-xl" style="background:linear-gradient(to bottom, #10b981 0%, #10b981 4px, rgba(17, 24, 39, 0.8) 4px);">
+                        <div class="product-image-container relative h-64 bg-gradient-to-br from-green-900/20 to-gray-900 flex items-center justify-center p-6">
+                            <img src="https://images.unsplash.com/photo-1692719968184-1f149cea1464?w=600&q=80" alt="Macetas 3D" class="w-full h-full object-contain drop-shadow-2xl scale-110">
+                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-green-500/30 backdrop-blur-sm border border-green-400/50 text-xs text-green-200 font-semibold">Hogar</div>
                         </div>
-                        <div class="product-content p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Macetas Geométricas</h3>
-                            <p class="text-gray-400 text-sm mb-4">Diseños modernos</p>
-                            <div class="flex items-center justify-between">
+                        <div class="product-content p-6 bg-gradient-to-b from-gray-800/90 to-gray-900/90 backdrop-blur-sm">
+                            <h3 class="text-2xl font-bold text-white mb-2">Macetas Geométricas</h3>
+                            <p class="text-gray-400 text-sm mb-4">Diseños modernos y minimalistas</p>
+                            <div class="flex items-center justify-between gap-3">
                                 <span class="text-2xl font-bold gradient-text">Desde 8€</span>
-                                <button onclick="openWhatsApp('¡Hola! Me interesan las *Macetas Geométricas*. ¿Qué tamaños tenéis? Gracias.')" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/50 hover-shine">Lo quiero →</button>
+                                <button onclick="openWhatsApp('¡Hola! Me interesan las *Macetas Geométricas*. ¿Qué tamaños tenéis? Gracias.')" class="bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/50 hover-shine whitespace-nowrap">Lo quiero →</button>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="carousel-item flex-shrink-0 w-full md:w-[45%] lg:w-[30%]">
-                    <div class="product-card bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden" style="background:linear-gradient(to bottom, #f59e0b 0%, #f59e0b 4px, rgba(31, 41, 55, 0.5) 4px);">
-                        <div class="product-image-container relative h-48 bg-gray-800 flex items-center justify-center">
-                            <p class="text-gray-600 text-sm">Espacio para imagen</p>
-                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-xs text-amber-300">Oficina</div>
+                    <div class="product-card bg-gray-800/50 border border-gray-700/50 rounded-2xl overflow-hidden shadow-xl" style="background:linear-gradient(to bottom, #f59e0b 0%, #f59e0b 4px, rgba(17, 24, 39, 0.8) 4px);">
+                        <div class="product-image-container relative h-64 bg-gradient-to-br from-amber-900/20 to-gray-900 flex items-center justify-center p-6">
+                            <div class="w-full h-full flex items-center justify-center">
+                                <div class="grid grid-cols-2 gap-4 w-full px-4">
+                                    <div class="w-full h-24 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-lg backdrop-blur-sm border border-amber-400/30"></div>
+                                    <div class="w-full h-24 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-lg backdrop-blur-sm border border-amber-400/30"></div>
+                                    <div class="w-full h-24 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-lg backdrop-blur-sm border border-amber-400/30"></div>
+                                    <div class="w-full h-24 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-lg backdrop-blur-sm border border-amber-400/30"></div>
+                                </div>
+                            </div>
+                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-amber-500/30 backdrop-blur-sm border border-amber-400/50 text-xs text-amber-200 font-semibold">Oficina</div>
                         </div>
-                        <div class="product-content p-6">
-                            <h3 class="text-xl font-bold text-white mb-2">Organizadores Escritorio</h3>
-                            <p class="text-gray-400 text-sm mb-4">Orden con estilo</p>
-                            <div class="flex items-center justify-between">
+                        <div class="product-content p-6 bg-gradient-to-b from-gray-800/90 to-gray-900/90 backdrop-blur-sm">
+                            <h3 class="text-2xl font-bold text-white mb-2">Organizadores Escritorio</h3>
+                            <p class="text-gray-400 text-sm mb-4">Orden con estilo profesional</p>
+                            <div class="flex items-center justify-between gap-3">
                                 <span class="text-2xl font-bold gradient-text">Desde 12€</span>
-                                <button onclick="openWhatsApp('¡Hola! Quiero info sobre *Organizadores de Escritorio*. Gracias.')" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold px-4 py-2 rounded-lg transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/50 hover-shine">Lo quiero →</button>
+                                <button onclick="openWhatsApp('¡Hola! Quiero info sobre *Organizadores de Escritorio*. Gracias.')" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-amber-500/50 hover-shine whitespace-nowrap">Lo quiero →</button>
                             </div>
                         </div>
                     </div>
@@ -454,8 +490,33 @@
     </div>
 </section>
 
+<!-- Trusted Companies Section -->
+<section class="py-16 bg-gray-950 border-y border-gray-800/50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <h2 class="text-2xl font-bold text-gray-400 mb-2">Empresas que confían en nosotros</h2>
+        </div>
+        <div class="relative overflow-hidden">
+            <div class="flex items-center justify-center gap-16 py-8">
+                <div class="logo-strip flex items-center gap-16">
+                    <img src="https://logo.clearbit.com/nike.com" alt="Company 1" class="company-logo h-12 w-auto object-contain">
+                    <img src="https://logo.clearbit.com/adidas.com" alt="Company 2" class="company-logo h-12 w-auto object-contain">
+                    <img src="https://logo.clearbit.com/sony.com" alt="Company 3" class="company-logo h-12 w-auto object-contain">
+                    <img src="https://logo.clearbit.com/microsoft.com" alt="Company 4" class="company-logo h-12 w-auto object-contain">
+                    <img src="https://logo.clearbit.com/apple.com" alt="Company 5" class="company-logo h-12 w-auto object-contain">
+                    <img src="https://logo.clearbit.com/samsung.com" alt="Company 6" class="company-logo h-12 w-auto object-contain">
+                    <img src="https://logo.clearbit.com/nike.com" alt="Company 1" class="company-logo h-12 w-auto object-contain">
+                    <img src="https://logo.clearbit.com/adidas.com" alt="Company 2" class="company-logo h-12 w-auto object-contain">
+                    <img src="https://logo.clearbit.com/sony.com" alt="Company 3" class="company-logo h-12 w-auto object-contain">
+                    <img src="https://logo.clearbit.com/microsoft.com" alt="Company 4" class="company-logo h-12 w-auto object-contain">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Portfolio Section -->
-<section id="portfolio" class="py-24 bg-gray-950">
+<section id="portfolio" class="py-24 bg-gray-900">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12" data-aos="fade-up">
             <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Proyectos <span class="gradient-text">Realizados</span></h2>
