@@ -18,7 +18,8 @@ const ProductCatalogSection = () => {
       description: 'Diseños únicos y personalizables para regalar o uso personal',
       price: 'Desde 5€',
       category: 'Accesorios',
-      placeholder: true
+      placeholder: true,
+      whatsappMessage: '¡Hola! Me interesan los *Llaveros Personalizados*. ¿Podríais darme más información sobre diseños disponibles, precios y plazos de entrega? Gracias.'
     },
     {
       id: 2,
@@ -26,7 +27,8 @@ const ProductCatalogSection = () => {
       description: 'Convierte tus fotos en lámparas con efecto 3D',
       price: 'Desde 20€',
       category: 'Decoración',
-      placeholder: true
+      placeholder: true,
+      whatsappMessage: '¡Hola! Estoy interesado/a en las *Lámparas Litofanía*. Me gustaría saber cómo funciona el proceso para enviar mis fotos, qué tamaños tenéis disponibles y cuál sería el precio. Gracias.'
     },
     {
       id: 3,
@@ -34,7 +36,8 @@ const ProductCatalogSection = () => {
       description: 'Diseños modernos para tus plantas favoritas',
       price: 'Desde 8€',
       category: 'Hogar',
-      placeholder: true
+      placeholder: true,
+      whatsappMessage: '¡Hola! Me interesan las *Macetas Geométricas*. ¿Qué tamaños y colores tenéis disponibles? ¿Cuál sería el precio final con envío? Gracias.'
     },
     {
       id: 4,
@@ -42,7 +45,8 @@ const ProductCatalogSection = () => {
       description: 'Mantén tu espacio ordenado con estilo',
       price: 'Desde 12€',
       category: 'Oficina',
-      placeholder: true
+      placeholder: true,
+      whatsappMessage: '¡Hola! Quiero información sobre los *Organizadores de Escritorio*. ¿Qué modelos tenéis? ¿Se pueden personalizar colores o compartimentos? Muchas gracias.'
     },
     {
       id: 5,
@@ -50,7 +54,8 @@ const ProductCatalogSection = () => {
       description: 'Personajes, animales y diseños artísticos',
       price: 'Desde 15€',
       category: 'Coleccionables',
-      placeholder: true
+      placeholder: true,
+      whatsappMessage: '¡Hola! Me gustaría saber más sobre las *Figuras Decorativas*. ¿Qué diseños tenéis disponibles? ¿Hacéis figuras personalizadas? Gracias.'
     },
     {
       id: 6,
@@ -58,13 +63,14 @@ const ProductCatalogSection = () => {
       description: 'Prácticos y ergonómicos para tu dispositivo',
       price: 'Desde 10€',
       category: 'Tech',
-      placeholder: true
+      placeholder: true,
+      whatsappMessage: '¡Hola! Necesito un *Soporte para Móvil/Tablet*. ¿Qué modelos tenéis? ¿Son ajustables? ¿Cuál es el precio y el tiempo de fabricación? Gracias.'
     }
   ];
 
-  const handleOrderProduct = (productTitle) => {
+  const handleOrderProduct = (product) => {
     const whatsappNumber = '34644382702';
-    const message = encodeURIComponent(`¡Hola! Me interesa el producto: "${productTitle}". ¿Podrías darme más información?`);
+    const message = encodeURIComponent(product.whatsappMessage);
     window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
   };
 
@@ -142,7 +148,7 @@ const ProductCatalogSection = () => {
                           </span>
                         </div>
                         <Button
-                          onClick={() => handleOrderProduct(product.title)}
+                          onClick={() => handleOrderProduct(product)}
                           className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold px-6 py-2 rounded-lg shadow-lg shadow-purple-500/30 transition-all duration-300 hover:shadow-purple-500/50 hover:scale-105 group"
                         >
                           Lo quiero
