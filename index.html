@@ -133,6 +133,50 @@
         .material-card:hover::after{
             opacity:1;
         }
+        
+        /* Product card special hover effect */
+        .product-card{
+            position:relative;
+            overflow:hidden;
+            transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .product-card::before{
+            content:'';
+            position:absolute;
+            top:0;
+            left:0;
+            right:0;
+            height:4px;
+            background:inherit;
+            transition:height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index:10;
+        }
+        
+        .product-card:hover::before{
+            height:60px;
+        }
+        
+        .product-image-container{
+            position:relative;
+            transition:opacity 0.5s ease, transform 0.5s ease;
+            z-index:1;
+        }
+        
+        .product-card:hover .product-image-container{
+            opacity:0;
+            transform:scale(0.95);
+        }
+        
+        .product-content{
+            position:relative;
+            z-index:2;
+            transition:transform 0.5s ease;
+        }
+        
+        .product-card:hover .product-content{
+            transform:translateY(-40px);
+        }
     </style>
 </head>
 <body class="bg-gray-950 text-white">
@@ -336,12 +380,12 @@
         <div class="relative" data-aos="fade-up" data-aos-delay="200">
             <div id="productCarousel" class="carousel-container flex gap-6 pb-4">
                 <div class="carousel-item flex-shrink-0 w-full md:w-[45%] lg:w-[30%]">
-                    <div class="bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-purple-500/50 card-hover material-card">
-                        <div class="relative h-48 bg-gray-800 flex items-center justify-center">
+                    <div class="product-card bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden" style="background:linear-gradient(to bottom, #a855f7 0%, #a855f7 4px, rgba(31, 41, 55, 0.5) 4px);">
+                        <div class="product-image-container relative h-48 bg-gray-800 flex items-center justify-center">
                             <p class="text-gray-600 text-sm">Espacio para imagen</p>
                             <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/40 text-xs text-purple-300">Accesorios</div>
                         </div>
-                        <div class="p-6">
+                        <div class="product-content p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Llaveros Personalizados</h3>
                             <p class="text-gray-400 text-sm mb-4">Diseños únicos</p>
                             <div class="flex items-center justify-between">
@@ -352,12 +396,12 @@
                     </div>
                 </div>
                 <div class="carousel-item flex-shrink-0 w-full md:w-[45%] lg:w-[30%]">
-                    <div class="bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-purple-500/50 card-hover material-card">
-                        <div class="relative h-48 bg-gray-800 flex items-center justify-center">
+                    <div class="product-card bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden" style="background:linear-gradient(to bottom, #ec4899 0%, #ec4899 4px, rgba(31, 41, 55, 0.5) 4px);">
+                        <div class="product-image-container relative h-48 bg-gray-800 flex items-center justify-center">
                             <p class="text-gray-600 text-sm">Espacio para imagen</p>
-                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/40 text-xs text-purple-300">Decoración</div>
+                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-pink-500/20 border border-pink-500/40 text-xs text-pink-300">Decoración</div>
                         </div>
-                        <div class="p-6">
+                        <div class="product-content p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Lámparas Litofanía</h3>
                             <p class="text-gray-400 text-sm mb-4">Tus fotos en 3D</p>
                             <div class="flex items-center justify-between">
@@ -368,12 +412,12 @@
                     </div>
                 </div>
                 <div class="carousel-item flex-shrink-0 w-full md:w-[45%] lg:w-[30%]">
-                    <div class="bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-purple-500/50 card-hover material-card">
-                        <div class="relative h-48 bg-gray-800 flex items-center justify-center">
+                    <div class="product-card bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden" style="background:linear-gradient(to bottom, #10b981 0%, #10b981 4px, rgba(31, 41, 55, 0.5) 4px);">
+                        <div class="product-image-container relative h-48 bg-gray-800 flex items-center justify-center">
                             <p class="text-gray-600 text-sm">Espacio para imagen</p>
-                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-purple-500/20 border border-purple-500/40 text-xs text-purple-300">Hogar</div>
+                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-green-500/20 border border-green-500/40 text-xs text-green-300">Hogar</div>
                         </div>
-                        <div class="p-6">
+                        <div class="product-content p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Macetas Geométricas</h3>
                             <p class="text-gray-400 text-sm mb-4">Diseños modernos</p>
                             <div class="flex items-center justify-between">
@@ -384,11 +428,12 @@
                     </div>
                 </div>
                 <div class="carousel-item flex-shrink-0 w-full md:w-[45%] lg:w-[30%]">
-                    <div class="bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden hover:border-purple-500/50 card-hover material-card">
-                        <div class="relative h-48 bg-gray-800 flex items-center justify-center">
+                    <div class="product-card bg-gray-800/50 border border-gray-700 rounded-2xl overflow-hidden" style="background:linear-gradient(to bottom, #f59e0b 0%, #f59e0b 4px, rgba(31, 41, 55, 0.5) 4px);">
+                        <div class="product-image-container relative h-48 bg-gray-800 flex items-center justify-center">
                             <p class="text-gray-600 text-sm">Espacio para imagen</p>
+                            <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/40 text-xs text-amber-300">Oficina</div>
                         </div>
-                        <div class="p-6">
+                        <div class="product-content p-6">
                             <h3 class="text-xl font-bold text-white mb-2">Organizadores Escritorio</h3>
                             <p class="text-gray-400 text-sm mb-4">Orden con estilo</p>
                             <div class="flex items-center justify-between">
