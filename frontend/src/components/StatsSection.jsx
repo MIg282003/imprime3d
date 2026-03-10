@@ -5,27 +5,21 @@ const StatsSection = () => {
   const stats = [
     {
       icon: <Package className="w-8 h-8" />,
-      number: '500+',
-      label: 'Proyectos Completados',
+      number: '50+',
+      label: 'Proyectos Realizados',
       color: 'cyan'
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      number: '98%',
-      label: 'Satisfacción Cliente',
+      icon: <TrendingUp className="w-8 h-8" />,
+      number: '8+',
+      label: 'Materiales Disponibles',
       color: 'lime'
     },
     {
-      icon: <TrendingUp className="w-8 h-8" />,
-      number: '15+',
-      label: 'Materiales Disponibles',
-      color: 'orange'
-    },
-    {
       icon: <Zap className="w-8 h-8" />,
-      number: '24h',
-      label: 'Entrega Express',
-      color: 'purple'
+      number: '24-48h',
+      label: 'Tiempo de Entrega',
+      color: 'orange'
     }
   ];
 
@@ -65,7 +59,7 @@ const StatsSection = () => {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {stats.map((stat, index) => {
             const colors = colorClasses[stat.color];
             return (

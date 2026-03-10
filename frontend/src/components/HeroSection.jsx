@@ -12,14 +12,10 @@ const HeroSection = () => {
 
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Image with Overlay */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="https://images.unsplash.com/photo-1603974739172-4ad6a3117e40?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwM0QlMjBwcmludGVyfGVufDB8fHx8MTc3MjgxMzc5N3ww&ixlib=rb-4.1.0&q=85"
-          alt="Impresión 3D Industrial"
-          className="w-full h-full object-cover opacity-30"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-950/70 via-gray-950/80 to-gray-950"></div>
+      {/* Background Placeholder */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
+        {/* Subtle pattern overlay */}
+        <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
       </div>
 
       {/* Animated Background Elements */}
@@ -56,15 +52,15 @@ const HeroSection = () => {
           <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent mb-2">
-                15+
+                8+
               </div>
-              <div className="text-gray-300 text-sm sm:text-base">Materiales Técnicos</div>
+              <div className="text-gray-300 text-sm sm:text-base">Materiales Disponibles</div>
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-lime-300 to-lime-400 bg-clip-text text-transparent mb-2">
-                24h
+                24-48h
               </div>
-              <div className="text-gray-300 text-sm sm:text-base">Entrega Rápida</div>
+              <div className="text-gray-300 text-sm sm:text-base">Entrega</div>
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent mb-2">

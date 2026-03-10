@@ -1,5 +1,5 @@
 import React from 'react';
-import { Layers, Sparkles } from 'lucide-react';
+import { Layers } from 'lucide-react';
 
 const MaterialsSection = () => {
   const materials = [
@@ -7,37 +7,19 @@ const MaterialsSection = () => {
       name: 'PLA',
       description: 'Biodegradable, ideal para prototipos',
       color: 'from-cyan-400 to-cyan-500',
-      image: 'https://images.unsplash.com/photo-1642969164999-979483e21601?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwxfHwzRCUyMHByaW50aW5nJTIwZmlsYW1lbnR8ZW58MHx8fHwxNzcyODEzODA1fDA&ixlib=rb-4.1.0&q=85'
+      placeholder: true
     },
     {
       name: 'PETG',
       description: 'Resistente y duradero',
       color: 'from-green-400 to-green-500',
-      image: 'https://images.unsplash.com/photo-1702863361902-93c51bfbd923?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2MjJ8MHwxfHNlYXJjaHwzfHwzRCUyMHByaW50aW5nJTIwZmlsYW1lbnR8ZW58MHx8fHwxNzcyODEzODA1fDA&ixlib=rb-4.1.0&q=85'
+      placeholder: true
     },
     {
-      name: 'ABS',
-      description: 'Alta resistencia al impacto',
-      color: 'from-orange-400 to-orange-500',
-      image: 'https://images.unsplash.com/photo-1726219836525-7038d30f8219?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxpbmR1c3RyaWFsJTIwM0QlMjBwcmludGVyfGVufDB8fHx8MTc3MjgxMzc5N3ww&ixlib=rb-4.1.0&q=85'
-    },
-    {
-      name: 'TPU',
-      description: 'Flexible y elástico',
+      name: 'TPU (Flexible 95A)',
+      description: 'Material flexible y elástico',
       color: 'from-purple-400 to-purple-500',
-      image: 'https://images.unsplash.com/photo-1700830151586-d0df2714cb28?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwyfHxtZWNoYW5pY2FsJTIwcGFydHMlMjBlbmdpbmVlcmluZ3xlbnwwfHx8fDE3NzI4MTM4MDF8MA&ixlib=rb-4.1.0&q=85'
-    },
-    {
-      name: 'Nylon PA12',
-      description: 'Resistencia química superior',
-      color: 'from-blue-400 to-blue-500',
-      image: 'https://images.unsplash.com/photo-1758873263428-f4b2edb45fe1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHwzfHxtZWNoYW5pY2FsJTIwcGFydHMlMjBlbmdpbmVlcmluZ3xlbnwwfHx8fDE3NzI4MTM4MDF8MA&ixlib=rb-4.1.0&q=85'
-    },
-    {
-      name: 'Fibra de Carbono',
-      description: 'Máxima resistencia estructural',
-      color: 'from-gray-400 to-gray-600',
-      image: 'https://images.unsplash.com/photo-1769971361854-9e0927a2d8dc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA2ODl8MHwxfHNlYXJjaHw0fHxtZWNoYW5pY2FsJTIwcGFydHMlMjBlbmdpbmVlcmluZ3xlbnwwfHx8fDE3NzI4MTM4MDF8MA&ixlib=rb-4.1.0&q=85'
+      placeholder: true
     }
   ];
 
@@ -48,41 +30,41 @@ const MaterialsSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 mb-4">
             <Layers className="w-4 h-4 text-orange-400 mr-2" />
-            <span className="text-orange-400 text-sm font-medium">Materiales Técnicos</span>
+            <span className="text-orange-400 text-sm font-medium">Materiales Disponibles</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Amplia Gama de
-            <span className="bg-gradient-to-r from-cyan-300 via-lime-400 to-orange-400 bg-clip-text text-transparent"> Materiales</span>
+            Materiales que
+            <span className="bg-gradient-to-r from-cyan-300 via-lime-400 to-orange-400 bg-clip-text text-transparent"> Trabajamos</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Desde plásticos básicos hasta compuestos de ingeniería de alto rendimiento
+            Selección de materiales de calidad para tus proyectos
           </p>
         </div>
 
         {/* Materials Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto">
           {materials.map((material, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-2xl aspect-square cursor-pointer"
+              className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"
             >
-              {/* Background Image */}
-              <div className="absolute inset-0">
-                <img
-                  src={material.image}
-                  alt={material.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
+              {/* Placeholder Background */}
+              <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
+                <div className="text-center p-6">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gray-700/50 flex items-center justify-center">
+                    <Layers className="w-10 h-10 text-gray-500" />
+                  </div>
+                  <p className="text-gray-600 text-sm">Espacio para tu imagen</p>
+                </div>
               </div>
 
-              {/* Content */}
-              <div className="relative h-full flex flex-col justify-end p-4">
+              {/* Content Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
+
+              <div className="relative h-full flex flex-col justify-end p-6">
                 <div className={`w-12 h-1 rounded-full bg-gradient-to-r ${material.color} mb-3 group-hover:w-full transition-all duration-300`}></div>
-                <h3 className="text-white font-bold text-lg mb-1">{material.name}</h3>
-                <p className="text-gray-400 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {material.description}
-                </p>
+                <h3 className="text-white font-bold text-2xl mb-1">{material.name}</h3>
+                <p className="text-gray-400 text-sm">{material.description}</p>
               </div>
 
               {/* Hover Border Effect */}
@@ -91,35 +73,13 @@ const MaterialsSection = () => {
           ))}
         </div>
 
-        {/* Additional Info Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-cyan-500/5 to-cyan-600/5 border border-cyan-500/20 rounded-2xl p-6 backdrop-blur-sm hover:border-cyan-500/40 transition-all duration-300">
-            <div className="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center mb-4">
-              <Sparkles className="w-6 h-6 text-cyan-400" />
-            </div>
-            <h3 className="text-white font-semibold text-lg mb-2">Alta Precisión</h3>
-            <p className="text-gray-400 text-sm">
-              Tolerancias de hasta ±0.1mm para piezas de precisión industrial
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-green-500/5 to-green-600/5 border border-green-500/20 rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300">
-            <div className="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center mb-4">
-              <Layers className="w-6 h-6 text-green-400" />
-            </div>
-            <h3 className="text-white font-semibold text-lg mb-2">Variedad de Acabados</h3>
-            <p className="text-gray-400 text-sm">
-              Pulido, pintado, metalizado y tratamientos superficiales especiales
-            </p>
-          </div>
-
-          <div className="bg-gradient-to-br from-orange-500/5 to-orange-600/5 border border-orange-500/20 rounded-2xl p-6 backdrop-blur-sm hover:border-orange-500/40 transition-all duration-300">
-            <div className="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center mb-4">
-              <Sparkles className="w-6 h-6 text-orange-400" />
-            </div>
-            <h3 className="text-white font-semibold text-lg mb-2">Certificaciones</h3>
-            <p className="text-gray-400 text-sm">
-              Materiales certificados para aplicaciones industriales y médicas
+        {/* Info Note */}
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
+            <p className="text-gray-400 text-sm leading-relaxed">
+              <span className="text-cyan-400 font-semibold">Nota:</span> Trabajamos con materiales de calidad certificada. 
+              Si necesitas información específica sobre propiedades técnicas o compatibilidad para tu proyecto, 
+              no dudes en consultarnos.
             </p>
           </div>
         </div>

@@ -35,9 +35,9 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 cursor-pointer" onClick={() => scrollToSection('hero')}>
             <img
-              src="https://customer-assets.emergentagent.com/job_build-reality-2/artifacts/ebndaji5_image.png"
+              src="https://customer-assets.emergentagent.com/job_build-reality-2/artifacts/vlaerbh6_Captura_de_pantalla_2026-03-01_161738-removebg-preview.png"
               alt="Matrix3D Logo"
-              className="h-12 w-12 object-contain"
+              className="h-14 w-14 object-contain"
             />
             <span className="text-2xl font-bold bg-gradient-to-r from-cyan-300 via-lime-400 to-orange-400 bg-clip-text text-transparent">
               Matrix3D
@@ -47,16 +47,16 @@ const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
             <button
+              onClick={() => scrollToSection('hero')}
+              className="text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
+            >
+              Inicio
+            </button>
+            <button
               onClick={() => scrollToSection('servicios')}
               className="text-gray-300 hover:text-cyan-300 transition-colors duration-200 font-medium"
             >
               Servicios
-            </button>
-            <button
-              onClick={() => scrollToSection('portfolio')}
-              className="text-gray-300 hover:text-lime-300 transition-colors duration-200 font-medium"
-            >
-              Portfolio
             </button>
             <button
               onClick={() => scrollToSection('materiales')}
@@ -65,10 +65,10 @@ const Header = () => {
               Materiales
             </button>
             <button
-              onClick={() => scrollToSection('proceso')}
-              className="text-gray-300 hover:text-purple-300 transition-colors duration-200 font-medium"
+              onClick={() => scrollToSection('portfolio')}
+              className="text-gray-300 hover:text-lime-300 transition-colors duration-200 font-medium"
             >
-              Proceso
+              Portfolio
             </button>
             <button
               onClick={() => scrollToSection('contacto')}
@@ -108,16 +108,16 @@ const Header = () => {
         {isMobileMenuOpen && (
           <div className="lg:hidden py-4 space-y-4 border-t border-cyan-500/10 bg-gray-950/95 backdrop-blur-lg">
             <button
+              onClick={() => scrollToSection('hero')}
+              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/5 rounded transition-colors"
+            >
+              Inicio
+            </button>
+            <button
               onClick={() => scrollToSection('servicios')}
               className="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/5 rounded transition-colors"
             >
               Servicios
-            </button>
-            <button
-              onClick={() => scrollToSection('portfolio')}
-              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-lime-300 hover:bg-lime-500/5 rounded transition-colors"
-            >
-              Portfolio
             </button>
             <button
               onClick={() => scrollToSection('materiales')}
@@ -126,10 +126,10 @@ const Header = () => {
               Materiales
             </button>
             <button
-              onClick={() => scrollToSection('proceso')}
-              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-purple-300 hover:bg-purple-500/5 rounded transition-colors"
+              onClick={() => scrollToSection('portfolio')}
+              className="block w-full text-left px-4 py-2 text-gray-300 hover:text-lime-300 hover:bg-lime-500/5 rounded transition-colors"
             >
-              Proceso
+              Portfolio
             </button>
             <button
               onClick={() => scrollToSection('contacto')}

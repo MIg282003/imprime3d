@@ -6,46 +6,46 @@ const PortfolioSection = () => {
 
   const projects = [
     {
-      title: 'Prototipos Funcionales',
-      image: 'https://images.unsplash.com/photo-1563520240533-66480a3916fe',
+      title: 'Proyecto 1',
       category: 'Ingeniería',
-      material: 'Nylon PA12',
-      color: 'cyan'
+      material: 'PLA',
+      color: 'cyan',
+      placeholder: true
     },
     {
-      title: 'Figuras Decorativas',
-      image: 'https://images.unsplash.com/photo-1767498051832-47727a2e2267',
+      title: 'Proyecto 2',
       category: 'Diseño',
-      material: 'PLA Multi-color',
-      color: 'orange'
+      material: 'PETG',
+      color: 'orange',
+      placeholder: true
     },
     {
-      title: 'Piezas de Precisión',
-      image: 'https://images.unsplash.com/photo-1758873263428-f4b2edb45fe1',
+      title: 'Proyecto 3',
       category: 'Industrial',
-      material: 'Fibra de Carbono',
-      color: 'lime'
+      material: 'TPU',
+      color: 'lime',
+      placeholder: true
     },
     {
-      title: 'Juguetes Personalizados',
-      image: 'https://images.pexels.com/photos/59720/pexels-photo-59720.jpeg',
+      title: 'Proyecto 4',
       category: 'Consumo',
       material: 'PLA',
-      color: 'pink'
+      color: 'pink',
+      placeholder: true
     },
     {
-      title: 'Herramientas Custom',
-      image: 'https://images.unsplash.com/photo-1761454165168-cfdf007c6a31',
+      title: 'Proyecto 5',
       category: 'Industrial',
       material: 'PETG',
-      color: 'purple'
+      color: 'purple',
+      placeholder: true
     },
     {
-      title: 'Modelos Detallados',
-      image: 'https://images.unsplash.com/photo-1760446411816-f5484549fb51',
+      title: 'Proyecto 6',
       category: 'Arte',
-      material: 'Resina',
-      color: 'green'
+      material: 'PLA',
+      color: 'green',
+      placeholder: true
     }
   ];
 
@@ -151,12 +151,15 @@ const PortfolioSection = () => {
                 className={`group relative overflow-hidden rounded-2xl border ${colors.border} bg-gray-900/50 backdrop-blur-sm hover:scale-105 transition-all duration-500 ${colors.shadow} hover:shadow-2xl`}
               >
                 {/* Image Container */}
-                <div className="relative h-64 overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
+                <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
+                  {/* Placeholder */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="text-center p-6">
+                      <Eye className="w-16 h-16 text-gray-600 mx-auto mb-4" />
+                      <p className="text-gray-600 text-sm">Espacio para tu imagen</p>
+                    </div>
+                  </div>
+                  
                   {/* Gradient Overlay */}
                   <div className={`absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/60 to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300`}></div>
                   

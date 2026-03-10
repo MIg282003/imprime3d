@@ -1,36 +1,20 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     servicios: [
-      { name: 'Impresión 3D Pro', href: '#servicios' },
+      { name: 'Impresión 3D', href: '#servicios' },
       { name: 'Diseño y Modelado', href: '#servicios' },
-      { name: 'Soluciones a Medida', href: '#servicios' },
       { name: 'Materiales', href: '#materiales' }
     ],
     empresa: [
-      { name: 'Sobre Nosotros', href: '#' },
-      { name: 'Proceso', href: '#proceso' },
-      { name: 'Contacto', href: '#contacto' },
-      { name: 'Presupuesto', href: '#contacto' }
-    ],
-    legal: [
-      { name: 'Política de Privacidad', href: '#' },
-      { name: 'Términos y Condiciones', href: '#' },
-      { name: 'Política de Cookies', href: '#' },
-      { name: 'Aviso Legal', href: '#' }
+      { name: 'Portfolio', href: '#portfolio' },
+      { name: 'Contacto', href: '#contacto' }
     ]
   };
-
-  const socialLinks = [
-    { icon: <Facebook className="w-5 h-5" />, href: '#', label: 'Facebook' },
-    { icon: <Instagram className="w-5 h-5" />, href: '#', label: 'Instagram' },
-    { icon: <Linkedin className="w-5 h-5" />, href: '#', label: 'LinkedIn' },
-    { icon: <Twitter className="w-5 h-5" />, href: '#', label: 'Twitter' }
-  ];
 
   const scrollToSection = (href) => {
     if (href.startsWith('#')) {
@@ -45,12 +29,12 @@ const Footer = () => {
     <footer className="bg-gray-950 border-t border-cyan-500/10">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <img
-                src="https://customer-assets.emergentagent.com/job_build-reality-2/artifacts/ebndaji5_image.png"
+                src="https://customer-assets.emergentagent.com/job_build-reality-2/artifacts/vlaerbh6_Captura_de_pantalla_2026-03-01_161738-removebg-preview.png"
                 alt="Matrix3D Logo"
                 className="h-14 w-14 object-contain"
               />
@@ -59,8 +43,8 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Expertos en impresión 3D industrial. Transformamos tus ideas en realidad con 
-              tecnología de vanguardia y materiales de alto rendimiento.
+              Taller local de impresión 3D. Transformamos tus ideas en realidad con 
+              tecnología de calidad y materiales fiables.
             </p>
 
             {/* Contact Info */}
@@ -116,7 +100,7 @@ const Footer = () => {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Empresa</h3>
+            <h3 className="text-white font-semibold text-lg mb-6">Enlaces</h3>
             <ul className="space-y-3">
               {footerLinks.empresa.map((link, index) => (
                 <li key={index}>
@@ -130,48 +114,16 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Legal Links */}
-          <div>
-            <h3 className="text-white font-semibold text-lg mb-6">Legal</h3>
-            <ul className="space-y-3">
-              {footerLinks.legal.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-gray-400 hover:text-green-400 transition-colors text-sm"
-                  >
-                    {link.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </div>
 
       {/* Bottom Bar */}
       <div className="border-t border-cyan-500/10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            {/* Copyright */}
-            <p className="text-gray-500 text-sm text-center md:text-left">
+          <div className="text-center">
+            <p className="text-gray-500 text-sm">
               © {currentYear} Matrix3D. Todos los derechos reservados.
             </p>
-
-            {/* Social Links */}
-            <div className="flex items-center space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  aria-label={social.label}
-                  className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-r hover:from-cyan-400 hover:to-orange-400 rounded-lg flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-400/30"
-                >
-                  {social.icon}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </div>
