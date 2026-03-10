@@ -3,25 +3,25 @@ import { Layers } from 'lucide-react';
 
 const MaterialsSection = () => {
   const materials = [
-    {
-      name: 'PLA',
-      description: 'Biodegradable, ideal para prototipos',
-      color: 'from-cyan-400 to-cyan-500',
-      placeholder: true
-    },
-    {
-      name: 'PETG',
-      description: 'Resistente y duradero',
-      color: 'from-green-400 to-green-500',
-      placeholder: true
-    },
-    {
-      name: 'TPU (Flexible 95A)',
-      description: 'Material flexible y elástico',
-      color: 'from-purple-400 to-purple-500',
-      placeholder: true
-    }
-  ];
+  {
+    name: 'PLA',
+    description: 'Biodegradable, ideal para prototipos',
+    color: 'from-cyan-400 to-cyan-500',
+    placeholder: true
+  },
+  {
+    name: 'PETG',
+    description: 'Resistente y duradero',
+    color: 'from-green-400 to-green-500',
+    placeholder: true
+  },
+  {
+    name: 'TPU (Flexible 95A)',
+    description: 'Material flexible y elástico',
+    color: 'from-purple-400 to-purple-500',
+    placeholder: true
+  }];
+
 
   return (
     <section id="materiales" className="py-24 relative bg-gradient-to-b from-gray-950 to-gray-900">
@@ -43,11 +43,11 @@ const MaterialsSection = () => {
 
         {/* Materials Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-5xl mx-auto">
-          {materials.map((material, index) => (
-            <div
-              key={index}
-              className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300"
-            >
+          {materials.map((material, index) =>
+          <div
+            key={index}
+            className="group relative overflow-hidden rounded-2xl aspect-[4/3] cursor-pointer border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300">
+
               {/* Placeholder Background */}
               <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
                 <div className="text-center p-6">
@@ -70,22 +70,22 @@ const MaterialsSection = () => {
               {/* Hover Border Effect */}
               <div className={`absolute inset-0 border-2 border-transparent group-hover:bg-gradient-to-r ${material.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300 rounded-2xl`}></div>
             </div>
-          ))}
+          )}
         </div>
 
         {/* Info Note */}
         <div className="max-w-3xl mx-auto text-center">
           <div className="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
             <p className="text-gray-400 text-sm leading-relaxed">
-              <span className="text-cyan-400 font-semibold">Nota:</span> Trabajamos con materiales de calidad certificada. 
-              Si necesitas información específica sobre propiedades técnicas o compatibilidad para tu proyecto, 
-              no dudes en consultarnos.
+              <span className="text-cyan-400 font-semibold">Nota:</span> Si necesitas información específica sobre propiedades técnicas o compatibilidad para tu proyecto, no dudes en consultarnos.
+            
+
             </p>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default MaterialsSection;
