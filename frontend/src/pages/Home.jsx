@@ -2,8 +2,9 @@ import React from 'react';
 import HeroSection from '../components/HeroSection';
 import StatsSection from '../components/StatsSection';
 import ServicesSection from '../components/ServicesSection';
-import PortfolioSection from '../components/PortfolioSection';
 import MaterialsSection from '../components/MaterialsSection';
+import ProductCatalogSection from '../components/ProductCatalogSection';
+import PortfolioSection from '../components/PortfolioSection';
 import ProcessSection from '../components/ProcessSection';
 import GoogleReviewsSection from '../components/GoogleReviewsSection';
 import ContactSection from '../components/ContactSection';
@@ -13,12 +14,13 @@ import WhatsAppButton from '../components/WhatsAppButton';
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950">
+    <div className="min-h-screen bg-gray-950">
       <Header />
       <HeroSection />
       <StatsSection />
       <ServicesSection />
       <MaterialsSection />
+      <ProductCatalogSection />
       <PortfolioSection />
       <ProcessSection />
       <GoogleReviewsSection />

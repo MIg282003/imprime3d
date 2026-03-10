@@ -1,8 +1,15 @@
 import React, { useState } from 'react';
 import { Eye, Sparkles } from 'lucide-react';
+import useEmblaCarousel from 'embla-carousel-react';
 
 const PortfolioSection = () => {
   const [activeFilter, setActiveFilter] = useState('Todos');
+  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    loop: true, 
+    align: 'start',
+    skipSnaps: false,
+    dragFree: false
+  });
 
   const projects = [
     {
@@ -54,6 +61,14 @@ const PortfolioSection = () => {
   const filteredProjects = activeFilter === 'Todos' 
     ? projects 
     : projects.filter(project => project.category === activeFilter);
+
+  const scrollPrev = React.useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = React.useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
 
   const colorClasses = {
     cyan: {
@@ -125,7 +140,7 @@ const PortfolioSection = () => {
         </div>
 
         {/* Filter Buttons */}
-        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-8">
           {filters.map((filter) => (
             <button
               key={filter}
@@ -141,15 +156,23 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {filteredProjects.map((project, index) => {
+        {/* Carousel Instructions */}
+        <p className="text-center text-sm text-gray-400 mb-8">
+          ← Desliza para ver más proyectos →
+        </p>
+
+        {/* Projects Carousel */}
+        <div className="relative">
+          <div className="overflow-hidden" ref={emblaRef}>
+            <div className="flex gap-8">
+              {filteredProjects.map((project, index) => {
             const colors = colorClasses[project.color];
             return (
               <div
                 key={index}
-                className={`group relative overflow-hidden rounded-2xl border ${colors.border} bg-gray-900/50 backdrop-blur-sm hover:scale-105 transition-all duration-500 ${colors.shadow} hover:shadow-2xl`}
+                className="flex-[0_0_100%] min-w-0 md:flex-[0_0_45%] lg:flex-[0_0_30%]"
               >
+                <div className={`group relative overflow-hidden rounded-2xl border ${colors.border} bg-gray-900/50 backdrop-blur-sm hover:scale-105 transition-all duration-500 ${colors.shadow} hover:shadow-2xl h-full`}>
                 {/* Image Container */}
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
                   {/* Placeholder */}
@@ -190,9 +213,32 @@ const PortfolioSection = () => {
 
                 {/* Animated Border */}
                 <div className={`absolute inset-0 border-2 border-transparent group-hover:border-gradient-to-r ${colors.gradient} opacity-0 group-hover:opacity-30 transition-opacity duration-300 rounded-2xl pointer-events-none`}></div>
+                </div>
               </div>
             );
           })}
+            </div>
+          </div>
+
+          {/* Navigation Arrows */}
+          <button
+            onClick={scrollPrev}
+            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-gray-800/90 hover:bg-cyan-500/90 backdrop-blur-sm border border-gray-700 hover:border-cyan-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg z-10"
+            aria-label="Anterior"
+          >
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button
+            onClick={scrollNext}
+            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-gray-800/90 hover:bg-cyan-500/90 backdrop-blur-sm border border-gray-700 hover:border-cyan-500 rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-lg z-10"
+            aria-label="Siguiente"
+          >
+            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
         </div>
       </div>
     </section>
