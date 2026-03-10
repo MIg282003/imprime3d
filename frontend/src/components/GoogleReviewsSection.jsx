@@ -2,46 +2,50 @@ import React from 'react';
 import { Star } from 'lucide-react';
 
 const GoogleReviewsSection = () => {
+  // ⚠️ INSTRUCCIONES: Copia tus reseñas reales de Google Maps y reemplaza estos datos
+  // Ve a: https://www.google.com/maps y busca "Matrix3D Impresion 3D"
+  // Copia el texto de cada reseña, el nombre del cliente y la fecha
+  
   const reviews = [
     {
       id: 1,
       stars: 5,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      author: 'Cliente 1',
-      date: 'Hace 1 mes',
-      avatar: 'C1'
+      text: 'Copia aquí el texto de tu primera reseña de Google Maps. Mantén las comillas y el formato.',
+      author: 'Nombre Cliente 1',
+      date: 'Hace X meses',
+      avatar: 'NC1' // Cambia por las iniciales del cliente
     },
     {
       id: 2,
       stars: 5,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      author: 'Cliente 2',
-      date: 'Hace 2 meses',
-      avatar: 'C2'
+      text: 'Copia aquí el texto de tu segunda reseña de Google Maps. El texto puede ser tan largo como necesites.',
+      author: 'Nombre Cliente 2',
+      date: 'Hace X meses',
+      avatar: 'NC2'
     },
     {
       id: 3,
       stars: 5,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      author: 'Cliente 3',
-      date: 'Hace 3 meses',
-      avatar: 'C3'
+      text: 'Copia aquí el texto de tu tercera reseña de Google Maps.',
+      author: 'Nombre Cliente 3',
+      date: 'Hace X meses',
+      avatar: 'NC3'
     },
     {
       id: 4,
       stars: 5,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      author: 'Cliente 4',
-      date: 'Hace 4 meses',
-      avatar: 'C4'
+      text: 'Copia aquí el texto de tu cuarta reseña de Google Maps.',
+      author: 'Nombre Cliente 4',
+      date: 'Hace X meses',
+      avatar: 'NC4'
     },
     {
       id: 5,
       stars: 5,
-      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      author: 'Cliente 5',
-      date: 'Hace 5 meses',
-      avatar: 'C5'
+      text: 'Copia aquí el texto de tu quinta reseña de Google Maps.',
+      author: 'Nombre Cliente 5',
+      date: 'Hace X meses',
+      avatar: 'NC5'
     }
   ];
 
@@ -110,7 +114,7 @@ const GoogleReviewsSection = () => {
         {/* Google Badge */}
         <div className="mt-12 text-center">
           <a
-            href="#"
+            href="https://www.google.com/search?q=Matrix3D+Impresion+3D+Colmenar+Viejo"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
@@ -133,6 +137,16 @@ const GoogleReviewsSection = () => {
               <p className="text-gray-600 text-xs">Ver más en Google</p>
             </div>
           </a>
+        </div>
+
+        {/* Instructions Note (remove this in production) */}
+        <div className="mt-8 max-w-2xl mx-auto">
+          <div className="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 text-center">
+            <p className="text-blue-300 text-sm">
+              💡 <strong>Para actualizar:</strong> Edita el archivo <code className="bg-blue-900/30 px-2 py-1 rounded">GoogleReviewsSection.jsx</code> y 
+              reemplaza los textos placeholder con tus reseñas reales de Google Maps.
+            </p>
+          </div>
         </div>
       </div>
     </section>
