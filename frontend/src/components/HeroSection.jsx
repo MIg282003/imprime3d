@@ -15,7 +15,7 @@ const HeroSection = () => {
       {/* Background Placeholder */}
       <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900">
         {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-10" style={{backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)', backgroundSize: '40px 40px'}}></div>
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, rgba(255,255,255,0.15) 1px, transparent 0)', backgroundSize: '40px 40px' }}></div>
       </div>
 
       {/* Animated Background Elements */}
@@ -51,8 +51,8 @@ const HeroSection = () => {
           {/* Stats */}
           <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
             <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent mb-2">
-                8+
+              <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent mb-2">10+
+
               </div>
               <div className="text-gray-300 text-sm sm:text-base">Materiales Disponibles</div>
             </div>
@@ -75,8 +75,8 @@ const HeroSection = () => {
             <Button
               onClick={scrollToContact}
               size="lg"
-              className="bg-gradient-to-r from-cyan-400 to-orange-400 hover:from-cyan-300 hover:to-orange-300 text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-2xl shadow-cyan-400/40 transition-all duration-300 hover:shadow-cyan-400/60 hover:scale-105 group"
-            >
+              className="bg-gradient-to-r from-cyan-400 to-orange-400 hover:from-cyan-300 hover:to-orange-300 text-white font-semibold px-8 py-6 text-lg rounded-xl shadow-2xl shadow-cyan-400/40 transition-all duration-300 hover:shadow-cyan-400/60 hover:scale-105 group">
+
               Solicitar Presupuesto
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -87,8 +87,8 @@ const HeroSection = () => {
               }}
               size="lg"
               variant="outline"
-              className="border-2 border-cyan-400/40 text-cyan-300 hover:bg-cyan-400/10 hover:border-cyan-400 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all duration-300"
-            >
+              className="border-2 border-cyan-400/40 text-cyan-300 hover:bg-cyan-400/10 hover:border-cyan-400 px-8 py-6 text-lg rounded-xl backdrop-blur-sm transition-all duration-300">
+
               Ver Servicios
             </Button>
           </div>
@@ -101,8 +101,8 @@ const HeroSection = () => {
           <div className="w-1.5 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default HeroSection;
