@@ -9,7 +9,8 @@ const ProcessSection = () => {
       title: 'Envío de Archivo/Idea',
       description: 'Sube tu archivo 3D (STL, OBJ, STEP) o comparte tu idea con nuestro equipo',
       color: 'cyan',
-      details: ['Formatos: STL, OBJ, STEP, IGES', 'Consultoría inicial gratuita', 'NDA disponible']
+      details: ['Formatos: STL, OBJ, STEP, IGES', 'Consultoría inicial gratuita', 'NDA disponible'],
+      hasLink: true
     },
     {
       number: '02',
@@ -117,7 +118,7 @@ const ProcessSection = () => {
                     </p>
 
                     {/* Details List */}
-                    <ul className="space-y-2">
+                    <ul className="space-y-2 mb-4">
                       {step.details.map((detail, idx) => (
                         <li key={idx} className="flex items-start text-gray-500 text-xs">
                           <div className={`w-1 h-1 rounded-full ${colors.text.replace('text', 'bg')} mt-1.5 mr-2 flex-shrink-0`}></div>
@@ -125,6 +126,19 @@ const ProcessSection = () => {
                         </li>
                       ))}
                     </ul>
+
+                    {/* Link for Step 01 */}
+                    {step.hasLink && (
+                      <button
+                        onClick={() => {
+                          const element = document.getElementById('servicios');
+                          if (element) element.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        className={`text-xs ${colors.text} hover:underline flex items-center mt-2 font-medium`}
+                      >
+                        ¿No tienes el archivo 3D? Nuestro equipo lo modela por ti →
+                      </button>
+                    )}
                   </div>
 
                   {/* Arrow (Mobile) */}

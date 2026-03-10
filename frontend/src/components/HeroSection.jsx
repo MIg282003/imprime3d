@@ -56,7 +56,7 @@ const HeroSection = () => {
           <div className="grid grid-cols-3 gap-6 max-w-2xl mx-auto mb-12">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent mb-2">
-                10+
+                15+
               </div>
               <div className="text-gray-300 text-sm sm:text-base">Materiales Técnicos</div>
             </div>
@@ -68,9 +68,9 @@ const HeroSection = () => {
             </div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent mb-2">
-                100%
+                ±0.1mm
               </div>
-              <div className="text-gray-300 text-sm sm:text-base">Precisión</div>
+              <div className="text-gray-300 text-sm sm:text-base">Precisión Industrial</div>
             </div>
           </div>
 

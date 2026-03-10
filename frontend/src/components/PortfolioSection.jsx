@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Eye, Sparkles } from 'lucide-react';
 
 const PortfolioSection = () => {
+  const [activeFilter, setActiveFilter] = useState('Todos');
+
   const projects = [
     {
       title: 'Prototipos Funcionales',
@@ -34,7 +36,7 @@ const PortfolioSection = () => {
     {
       title: 'Herramientas Custom',
       image: 'https://images.unsplash.com/photo-1761454165168-cfdf007c6a31',
-      category: 'Fabricación',
+      category: 'Industrial',
       material: 'PETG',
       color: 'purple'
     },
@@ -46,6 +48,12 @@ const PortfolioSection = () => {
       color: 'green'
     }
   ];
+
+  const filters = ['Todos', 'Ingeniería', 'Industrial', 'Diseño', 'Arte', 'Consumo'];
+
+  const filteredProjects = activeFilter === 'Todos' 
+    ? projects 
+    : projects.filter(project => project.category === activeFilter);
 
   const colorClasses = {
     cyan: {
@@ -102,7 +110,7 @@ const PortfolioSection = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="inline-flex items-center px-4 py-2 rounded-full bg-lime-400/10 border border-lime-400/30 mb-4">
             <Eye className="w-4 h-4 text-lime-300 mr-2" />
             <span className="text-lime-300 text-sm font-medium">Nuestros Trabajos</span>
@@ -116,9 +124,26 @@ const PortfolioSection = () => {
           </p>
         </div>
 
+        {/* Filter Buttons */}
+        <div className="flex flex-wrap items-center justify-center gap-3 mb-12">
+          {filters.map((filter) => (
+            <button
+              key={filter}
+              onClick={() => setActiveFilter(filter)}
+              className={`px-6 py-2.5 rounded-xl font-medium transition-all duration-300 ${
+                activeFilter === filter
+                  ? 'bg-gradient-to-r from-cyan-400 to-orange-400 text-white shadow-lg shadow-cyan-400/30 scale-105'
+                  : 'bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300'
+              }`}
+            >
+              {filter}
+            </button>
+          ))}
+        </div>
+
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {projects.map((project, index) => {
+          {filteredProjects.map((project, index) => {
             const colors = colorClasses[project.color];
             return (
               <div
@@ -165,37 +190,6 @@ const PortfolioSection = () => {
               </div>
             );
           })}
-        </div>
-
-        {/* Stats Section */}
-        <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
-          <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-cyan-400/10 to-cyan-600/5 border border-cyan-400/30 backdrop-blur-sm hover:border-cyan-400/50 transition-all duration-300">
-            <div className="text-4xl font-bold bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent mb-2">
-              500+
-            </div>
-            <div className="text-gray-300 text-sm">Proyectos Completados</div>
-          </div>
-
-          <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-lime-400/10 to-lime-600/5 border border-lime-400/30 backdrop-blur-sm hover:border-lime-400/50 transition-all duration-300">
-            <div className="text-4xl font-bold bg-gradient-to-r from-lime-300 to-lime-400 bg-clip-text text-transparent mb-2">
-              98%
-            </div>
-            <div className="text-gray-300 text-sm">Satisfacción Cliente</div>
-          </div>
-
-          <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-orange-400/10 to-orange-600/5 border border-orange-400/30 backdrop-blur-sm hover:border-orange-400/50 transition-all duration-300">
-            <div className="text-4xl font-bold bg-gradient-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent mb-2">
-              15+
-            </div>
-            <div className="text-gray-300 text-sm">Materiales Disponibles</div>
-          </div>
-
-          <div className="text-center p-6 rounded-2xl bg-gradient-to-br from-purple-400/10 to-purple-600/5 border border-purple-400/30 backdrop-blur-sm hover:border-purple-400/50 transition-all duration-300">
-            <div className="text-4xl font-bold bg-gradient-to-r from-purple-300 to-purple-400 bg-clip-text text-transparent mb-2">
-              24h
-            </div>
-            <div className="text-gray-300 text-sm">Entrega Express</div>
-          </div>
         </div>
       </div>
     </section>

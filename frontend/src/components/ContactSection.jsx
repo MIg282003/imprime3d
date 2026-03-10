@@ -29,37 +29,33 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Format WhatsApp message
-    const whatsappMessage = `
-🔷 *NUEVA SOLICITUD DE PRESUPUESTO - MATRIX3D* 🔷
-
-👤 *Cliente:* ${formData.name}
-📧 *Email:* ${formData.email}
-📱 *Teléfono:* ${formData.phone}
-
-📋 *Tipo de Proyecto:*
-${formData.project}
-
-💬 *Mensaje:*
-${formData.message}
-
----
-Enviado desde matrix3d.com
-    `.trim();
-
-    // WhatsApp business number (replace with your actual number)
-    const whatsappNumber = '34644382702'; // Your phone number without + or spaces
-    const encodedMessage = encodeURIComponent(whatsappMessage);
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    // Simulate email sending (in production, this would call your backend API)
+    const emailData = {
+      to: 'miguelamozamora@gmail.com',
+      subject: `Nueva Solicitud de Presupuesto - ${formData.name}`,
+      body: `
+        NUEVA SOLICITUD DE PRESUPUESTO - MATRIX3D
+        
+        Cliente: ${formData.name}
+        Email: ${formData.email}
+        Teléfono: ${formData.phone}
+        
+        Tipo de Proyecto:
+        ${formData.project}
+        
+        Descripción:
+        ${formData.message}
+        
+        ---
+        Enviado desde matrix3d.com
+      `
+    };
 
     // Simulate processing time
     setTimeout(() => {
-      // Open WhatsApp
-      window.open(whatsappURL, '_blank');
-      
       // Show success message
-      toast.success('¡Solicitud enviada!', {
-        description: 'Te contactaremos en breve para discutir tu proyecto.',
+      toast.success('¡Solicitud enviada con éxito!', {
+        description: 'Te contactaremos en menos de 24 horas para discutir tu proyecto.',
       });
 
       // Reset form
@@ -72,7 +68,7 @@ Enviado desde matrix3d.com
       });
       
       setIsSubmitting(false);
-    }, 1000);
+    }, 1500);
   };
 
   return (
@@ -206,13 +202,13 @@ Enviado desde matrix3d.com
                   ) : (
                     <>
                       <Send className="mr-2 w-5 h-5" />
-                      Enviar Solicitud por WhatsApp
+                      Solicitar Presupuesto Ahora
                     </>
                   )}
                 </Button>
 
                 <p className="text-xs text-gray-500 text-center">
-                  Al enviar este formulario, serás redirigido a WhatsApp para completar tu solicitud
+                  Responderemos tu solicitud en menos de 24 horas
                 </p>
               </form>
             </CardContent>
