@@ -134,6 +134,56 @@
             opacity:1;
         }
         
+        /* Material card advanced hover effect */
+        .material-card-advanced{
+            position:relative;
+            overflow:hidden;
+        }
+        
+        .material-card-advanced::before{
+            content:'';
+            position:absolute;
+            bottom:0;
+            left:50%;
+            transform:translateX(-50%);
+            width:40px;
+            height:3px;
+            background:currentColor;
+            transition:width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index:20;
+        }
+        
+        .material-card-advanced:hover::before{
+            width:100%;
+        }
+        
+        .material-card-advanced .material-image{
+            transition:opacity 0.5s ease;
+        }
+        
+        .material-card-advanced:hover .material-image{
+            opacity:0;
+        }
+        
+        .material-card-advanced::after{
+            content:'';
+            position:absolute;
+            inset:0;
+            background:#000;
+            opacity:0;
+            transition:opacity 0.5s ease;
+            z-index:1;
+        }
+        
+        .material-card-advanced:hover::after{
+            opacity:1;
+        }
+        
+        .material-card-advanced .material-content{
+            position:relative;
+            z-index:10;
+        }
+        
         /* Product card special hover effect */
         .product-card{
             position:relative;
@@ -350,39 +400,35 @@
             <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Materiales que <span class="gradient-text">Trabajamos</span></h2>
         </div>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
-            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700 hover:border-cyan-400 transition-all card-hover" data-aos="flip-left" data-aos-delay="100">
-                <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=400" alt="PLA" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4">
-                    <h3 class="text-white font-bold mb-1">PLA</h3>
+            <div class="material-card-advanced group relative rounded-2xl aspect-[4/3] border border-gray-700 hover:border-cyan-400 transition-all cursor-pointer" style="color:#06b6d4" data-aos="flip-left" data-aos-delay="100">
+                <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=400" alt="PLA" class="material-image absolute inset-0 w-full h-full object-cover rounded-2xl">
+                <div class="material-content absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                    <h3 class="text-white font-bold text-lg mb-1">PLA</h3>
                     <p class="text-gray-400 text-xs">Biodegradable</p>
                 </div>
             </div>
-            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700 hover:border-green-400 transition-all card-hover" data-aos="flip-left" data-aos-delay="200">
-                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="PETG" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4">
-                    <h3 class="text-white font-bold mb-1">PETG</h3>
+            <div class="material-card-advanced group relative rounded-2xl aspect-[4/3] border border-gray-700 hover:border-green-400 transition-all cursor-pointer" style="color:#10b981" data-aos="flip-left" data-aos-delay="200">
+                <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=400" alt="PETG" class="material-image absolute inset-0 w-full h-full object-cover rounded-2xl">
+                <div class="material-content absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                    <h3 class="text-white font-bold text-lg mb-1">PETG</h3>
                     <p class="text-gray-400 text-xs">Resistente</p>
                 </div>
             </div>
-            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700 hover:border-purple-400 transition-all card-hover" data-aos="flip-left" data-aos-delay="300">
-                <img src="https://images.unsplash.com/photo-1620843002805-05a08cb72f57?w=400" alt="TPU" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4">
-                    <h3 class="text-white font-bold mb-1">TPU</h3>
+            <div class="material-card-advanced group relative rounded-2xl aspect-[4/3] border border-gray-700 hover:border-purple-400 transition-all cursor-pointer" style="color:#a855f7" data-aos="flip-left" data-aos-delay="300">
+                <img src="https://images.unsplash.com/photo-1620843002805-05a08cb72f57?w=400" alt="TPU" class="material-image absolute inset-0 w-full h-full object-cover rounded-2xl">
+                <div class="material-content absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                    <h3 class="text-white font-bold text-lg mb-1">TPU</h3>
                     <p class="text-gray-400 text-xs">Flexible</p>
                 </div>
             </div>
-            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700 hover:border-orange-400 transition-all card-hover" data-aos="flip-left" data-aos-delay="400">
-                <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400" alt="ABS" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 right-4">
-                    <h3 class="text-white font-bold mb-1">ABS</h3>
+            <div class="material-card-advanced group relative rounded-2xl aspect-[4/3] border border-gray-700 hover:border-orange-400 transition-all cursor-pointer" style="color:#f97316" data-aos="flip-left" data-aos-delay="400">
+                <img src="https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=400" alt="ABS" class="material-image absolute inset-0 w-full h-full object-cover rounded-2xl">
+                <div class="material-content absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+                    <h3 class="text-white font-bold text-lg mb-1">ABS</h3>
                     <p class="text-gray-400 text-xs">Alta resistencia</p>
                 </div>
             </div>
-            <div onclick="openWhatsApp('¡Hola! Necesito consultar sobre un material especial para mi proyecto de impresión 3D.')" class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700 hover:border-cyan-400 transition-all cursor-pointer card-hover bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center p-4 text-center" data-aos="flip-left" data-aos-delay="500">
+            <div onclick="openWhatsApp('¡Hola! Necesito consultar sobre un material especial para mi proyecto de impresión 3D.')" class="group relative rounded-2xl aspect-[4/3] border border-gray-700 hover:border-cyan-400 transition-all cursor-pointer bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center p-4 text-center card-hover" data-aos="flip-left" data-aos-delay="500">
                 <div class="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-400 via-lime-400 to-orange-400 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
                     <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                 </div>
