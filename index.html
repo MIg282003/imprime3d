@@ -4,41 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Matrix3D - Taller de impresión 3D en Colmenar Viejo, Madrid. PLA, PETG, TPU, ABS.">
-    <title>Matrix3D - Impresión 3D en Colmenar Viejo</title> 
+    <title>Matrix3D - Impresión 3D en Colmenar Viejo</title>  
     
     <meta property="og:site_name" content="Matrix3D" />
+    <meta property="og:title" content="Matrix3D - Taller de Impresión 3D y Diseño" />
+    <meta property="og:description" content="Fabricación precisa con materiales técnicos en Colmenar Viejo. Prototipos, series cortas y diseño." />
+    <meta property="og:image" content="https://matrix3d-impresion3d.github.io/img/impresion-pro.webp" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebSite",
+      "@type": "WebSite", 
       "name": "Matrix3D",
       "url": "https://matrix3d-impresion3d.github.io/"
     }
-    </script>
+    </script>  
+
+    <link rel="stylesheet" href="estilos-final.css">
     
-    <!-- Preconectar servidores para acelerar peticiones -->
-    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="estilos.css">
+
     <link rel="preconnect" href="https://unpkg.com">
 
-    <!-- Precargar el logo principal para el LCP -->
     <link rel="preload" as="image" href="img/logobueno.webp">
 
     <link rel="icon" href="img/logotraspapagina.png" type="image/png">
     
-    <link rel="stylesheet" href="estilos.css">
-    
-    <!-- Cargar CSS de AOS de forma asíncrona para no bloquear el renderizado -->
     <link rel="preload" href="https://unpkg.com/aos@2.3.1/dist/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"></noscript>
     
     <style>
         /* Bloqueo estricto de desbordamiento móvil */
-    html, body {
-        max-width: 100vw;
-        overflow-x: hidden;
-        width: 100%;
-        position: relative;
-    }
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
         @keyframes gradient-shift{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
         @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-20px)}}
         @keyframes pulse-glow{0%,100%{box-shadow:0 0 20px rgba(6,182,212,0.3)}50%{box-shadow:0 0 40px rgba(6,182,212,0.6)}}
@@ -79,7 +80,6 @@
             background-size:40px 40px;
         }
         
-        /* Enhanced hover effects */
         .hover-lift{
             transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -141,12 +141,6 @@
             50%{opacity:0.8;transform:scale(1.05)}
         }
         
-        /* Smooth carousel transitions */
-        .carousel-container{
-            transition:scroll 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        /* Material card effect */
         .material-card{
             transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position:relative;
@@ -165,136 +159,61 @@
             opacity:1;
         }
         
-        /* Material card advanced hover effect */
-        .material-card-advanced{
-            position:relative;
-            overflow:hidden;
+        .grad-cyan {
+            background: linear-gradient(to right, #67e8f9, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .grad-lime {
+            background: linear-gradient(to right, #d9f99d, #84cc16);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .grad-orange {
+            background: linear-gradient(to right, #fdba74, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
-        .material-card-advanced::before{
-            content:'';
-            position:absolute;
-            bottom:0;
-            left:50%;
-            transform:translateX(-50%);
-            width:40px;
-            height:3px;
-            background:currentColor;
-            transition:width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index:20;
-        }
+        .bg-whatsapp { background: linear-gradient(to right, #22c55e, #16a34a); }
+        .bg-whatsapp-ping { background-color: #22c55e; } 
+
+        .bg-avatar-1 { background: linear-gradient(to right, #22d3ee, #fb923c); }
+        .bg-avatar-2 { background: linear-gradient(to right, #a3e635, #4ade80); }
+        .bg-avatar-3 { background: linear-gradient(to right, #754d2c, #f87171); }
+        .bg-avatar-4 { background: linear-gradient(to right, #c084fc, #f472b6); }
+        .bg-avatar-5 { background: linear-gradient(to right, #60a5fa, #818cf8); }
+
+        .btn-purple { background: linear-gradient(to right, #a855f7, #9333ea); }
+        .btn-purple:hover { background: linear-gradient(to right, #9333ea, #7e22ce); box-shadow: 0 10px 15px -3px rgba(168, 85, 247, 0.5); }
         
-        .material-card-advanced:hover::before{
-            width:100%;
-        }
+        .btn-pink { background: linear-gradient(to right, #ec4899, #db2777); }
+        .btn-pink:hover { background: linear-gradient(to right, #db2777, #be185d); box-shadow: 0 10px 15px -3px rgba(236, 72, 153, 0.5); }
         
-        .material-card-advanced .material-image{
-            transition:opacity 0.5s ease;
-        }
+        .btn-green { background: linear-gradient(to right, #10b981, #059669); }
+        .btn-green:hover { background: linear-gradient(to right, #059669, #047857); box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.5); }
         
-        .material-card-advanced:hover .material-image{
-            opacity:0;
-        }
-        
-        .material-card-advanced::after{
-            content:'';
-            position:absolute;
-            inset:0;
-            background:#000;
-            opacity:0;
-            transition:opacity 0.5s ease;
-            z-index:1;
-        }
-        
-        .material-card-advanced:hover::after{
-            opacity:1;
-        }
-        
-        .material-card-advanced .material-content{
-            position:relative;
-            z-index:10;
-        }
-        
-        /* Product card special hover effect */
-        .product-card{
-            position:relative;
-            overflow:hidden;
-            transition:all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .product-card::before{
-            content:'';
-            position:absolute;
-            top:0;
-            left:0;
-            right:0;
-            height:4px;
-            background:inherit;
-            transition:height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index:10;
-        }
-        
-        .product-card:hover::before{
-            height:70px;
-        }
-        
-        .product-image-container{
-            position:relative;
-            transition:opacity 0.5s ease, transform 0.5s ease;
-            z-index:1;
-        }
-        
-        .product-card:hover .product-image-container{
-            opacity:1;
-            transform:scale(1.1);
-        }
-        
-        .product-content{
-            position:relative;
-            z-index:2;
-            transition:transform 0.5s ease;
-        }
-        
-        .product-card:hover .product-content{
-            transform:translateY(-50px);
-        }
-        
-        /* Logos strip animation */
-        .logo-strip{
-            display:flex;
-            animation:scroll-left 30s linear infinite;
-        }
-        
-        .logo-strip:hover{
-            animation-play-state:paused;
-        }
-        
-        .company-logo{
-            filter:grayscale(100%) brightness(0) invert(1);
-            opacity:0.5;
-            transition:all 0.3s ease;
-            mix-blend-mode:lighten;
-        }
-        
-        .company-logo:hover{
-            opacity:1;
-            filter:grayscale(0%) brightness(1) invert(0);
-            transform:scale(1.1);
-        }
+        .btn-amber { background: linear-gradient(to right, #f59e0b, #d97706); }
+        .btn-amber:hover { background: linear-gradient(to right, #d97706, #b45309); box-shadow: 0 10px 15px -3px rgba(245, 158, 11, 0.5); }
+    
+        .line-cyan { background: linear-gradient(to right, #22d3ee, #06b6d4); }
+        .line-green { background: linear-gradient(to right, #4ade80, #22c55e); }
+        .line-purple { background: linear-gradient(to right, #c084fc, #a855f7); }
+        .line-orange { background: linear-gradient(to right, #fb923c, #f97316); }
+        .bg-mix { background: linear-gradient(to right, #22d3ee, #a3e635, #fb923c); }
     </style>
 </head>
 <body class="bg-gray-950 text-white overflow-x-hidden w-full">
 
 <script>
 const datosWeb = {
-    // 1. PORTFOLIO (Proyectos Realizados)
     portfolio: [
         { 
-            imagen: "img/diseno3dbueno.webp", // PON TU FOTO AQUÍ
-            titulo: "Dieseño 3D", 
+            imagen: "img/diseno3dbueno.webp",
+            titulo: "Diseño 3D", 
             material: "PETG", 
             categoria: "Ingeniería",
-            colorCSS: "cyan" // No tocar
+            colorCSS: "cyan"
         },
         { 
             imagen: "img/edificioe3.webp",
@@ -303,50 +222,47 @@ const datosWeb = {
             categoria: "Ingeniería",
             colorCSS: "orange"
         },
-  
         { 
-            imagen: "img/felixble.webp", // PON TU FOTO AQUÍ
+            imagen: "img/felixble.webp",
             titulo: "Flexible", 
             material: "TPU", 
             categoria: "Industrial",
-            colorCSS: "lime" // No tocar
+            colorCSS: "lime"
         },
-    
-              { 
+        { 
             imagen: "img/bici.webp",
             titulo: "Soportes a medida", 
             material: "PETG", 
             categoria: "Diseño",
             colorCSS: "purple"
         },
-              { 
+        { 
             imagen: "img/muro.webp",
             titulo: "Organizador", 
             material: "PLA", 
             categoria: "Diseño",
             colorCSS: "red"
         },
-            { 
-            imagen: "img/dragon.webp", // PON TU FOTO AQUÍ
+        { 
+            imagen: "img/dragon.webp",
             titulo: "Diseño", 
             material: "PLA", 
             categoria: "Diseño",
-            colorCSS: "blue" // No tocar
+            colorCSS: "blue"
         },
         { 
-            imagen: "img/maceta feliz.webp", // PON TU FOTO AQUÍ
+            imagen: "img/maceta feliz.webp",
             titulo: "Maceta", 
             material: "PETG", 
             categoria: "Arte",
-            colorCSS: "purple" // No tocar
+            colorCSS: "purple"
         }
     ],
 
-    // 2. CATÁLOGO DE PRODUCTOS
     productos: [
         { 
-            imagen: "img/llaveres.webp", // PON TU FOTO AQUÍ
-            nombre: "Llaveros ", 
+            imagen: "img/llaveres.webp",
+            nombre: "Llaveros", 
             descripcion: "Diseños únicos con tu logo o nombre", 
             precio: "Desde 5€", 
             categoria: "Accesorios", 
@@ -354,25 +270,25 @@ const datosWeb = {
             colorHex: "#a855f7", baseColor: "purple"
         },
         { 
-            imagen: "img/lamparasbuenoo.webp", // PON TU FOTO AQUÍ
+            imagen: "img/lamparasbuenoo.webp",
             nombre: "Lámparas Personalizadas", 
             descripcion: "Tus fotos iluminadas en 3D", 
             precio: "Desde 15€", 
             categoria: "Decoración", 
-            mensajeWhatsapp: "¡Hola! Estoy interesado/a en las *Lámparas Persoanalizadas*. ¿Cómo funciona el proceso? Gracias.",
+            mensajeWhatsapp: "¡Hola! Estoy interesado/a en las *Lámparas Personalizadas*. ¿Cómo funciona el proceso? Gracias.",
             colorHex: "#ec4899", baseColor: "pink"
         },
         { 
-            imagen: "img/maceteros.webp", // PON TU FOTO AQUÍ
-            nombre: "Macetas ", 
+            imagen: "img/maceteros.webp",
+            nombre: "Macetas", 
             descripcion: "Diseños modernos y minimalistas", 
             precio: "Desde 8€", 
             categoria: "Hogar", 
-            mensajeWhatsapp: "¡Hola! Me interesan las *Macetas Persoalizadas*. ¿Qué tamaños tenéis? Gracias.",
+            mensajeWhatsapp: "¡Hola! Me interesan las *Macetas Personalizadas*. ¿Qué tamaños tenéis? Gracias.",
             colorHex: "#10b981", baseColor: "green"
         },
         { 
-            imagen: "img/organizador.webp", // PON TU FOTO AQUÍ
+            imagen: "img/organizador.webp",
             nombre: "Organizadores", 
             descripcion: "Orden con estilo profesional", 
             precio: "Desde 5€", 
@@ -382,7 +298,6 @@ const datosWeb = {
         }
     ],
 
-    // 3. RESEÑAS DE GOOGLE
     resenas: [
         { 
             nombre: "Rufus Dawes", 
@@ -417,41 +332,52 @@ const datosWeb = {
     ]
 };
 </script>
+
 <header class="fixed top-0 left-0 right-0 z-50 bg-gray-950/95 backdrop-blur-lg border-b border-cyan-500/10 shadow-lg">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[1600px]">
         <div class="flex items-center justify-between h-20">
-            <div class="flex items-center space-x-3 cursor-pointer hover-lift" onclick="scrollToSection('hero')">
-                <img src="img/logobueno.webp" alt="Matrix3D" class="h-14 w-14 object-contain pt-[7px] pb-[7px] pl-[5px] pr-[2px]">
+            
+            <div class="flex items-center space-x-3 cursor-pointer hover-lift flex-shrink-0" onclick="scrollToSection('hero')">
+                <img src="img/logobueno.webp" alt="Taller de impresión 3D Matrix3D en Colmenar Viejo" class="h-14 w-14 object-contain pt-[7px] pb-[7px] pl-[5px] pr-[2px]">
                 <span class="text-2xl font-bold gradient-text">Matrix3D</span>
             </div>
-            <nav class="hidden lg:flex items-center space-x-8">
+            
+            <nav class="hidden lg:flex flex-1 justify-center items-center space-x-3 xl:space-x-6 lg:text-sm xl:text-base px-2">
                 <button onclick="scrollToSection('hero')" class="text-gray-300 hover:text-cyan-300 transition-all duration-300 font-medium hover:scale-110">Inicio</button>
                 <button onclick="scrollToSection('servicios')" class="text-gray-300 hover:text-cyan-300 transition-all duration-300 font-medium hover:scale-110">Servicios</button>
                 <button onclick="scrollToSection('materiales')" class="text-gray-300 hover:text-orange-300 transition-all duration-300 font-medium hover:scale-110">Materiales</button>
+                <button onclick="scrollToSection('productos')" class="text-gray-300 hover:text-purple-400 transition-all duration-300 font-medium hover:scale-110">Catálogo</button>
+                <button onclick="scrollToSection('tarifas')" class="text-gray-300 hover:text-cyan-300 transition-all duration-300 font-medium hover:scale-110">Presupuestos</button>
+                <button onclick="scrollToSection('cotizador')" class="text-gray-300 hover:text-cyan-300 transition-all duration-300 font-medium hover:scale-110">Calculadora</button>
+                
                 <button onclick="scrollToSection('portfolio')" class="text-gray-300 hover:text-lime-300 transition-all duration-300 font-medium hover:scale-110">Portfolio</button>
+                <button onclick="scrollToSection('reseñas')" class="text-gray-300 hover:text-yellow-400 transition-all duration-300 font-medium hover:scale-110">Reseñas</button>
                 <button onclick="scrollToSection('contacto')" class="text-gray-300 hover:text-cyan-300 transition-all duration-300 font-medium hover:scale-110">Contacto</button>
             </nav>
-            <div class="hidden lg:flex items-center space-x-4">
-                <a href="tel:+34644382702" class="flex items-center text-gray-400 hover:text-orange-400 transition-all duration-300 text-sm hover:scale-105">
+            
+            <div class="hidden lg:flex items-center space-x-4 flex-shrink-0">
+                <a href="tel:+34644382702" class="hidden xl:flex items-center text-gray-400 hover:text-orange-400 transition-all duration-300 text-sm hover:scale-105">
                     <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                     +34 644 382 702
                 </a>
-                <button onclick="scrollToSection('contacto')" class="btn-gradient text-white font-semibold px-6 py-2 rounded-lg shadow-lg hover-shine">Solicitar Presupuesto</button>
+                <button onclick="scrollToSection('cotizador')" class="btn-gradient text-white font-semibold px-4 xl:px-6 py-2 rounded-lg shadow-lg hover-shine lg:text-sm xl:text-base">Solicitar Presupuesto</button>
             </div>
+            
             <button class="lg:hidden text-gray-300 hover:text-cyan-400 transition-colors" onclick="toggleMobileMenu()" aria-label="Abrir menú móvil">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
             </button>
         </div>
-        <div id="mobileMenu" class="mobile-menu lg:hidden py-4 space-y-4 border-t border-cyan-500/10">
-            <button onclick="scrollToSection('hero');toggleMobileMenu()" class="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-300 rounded transition-colors">Inicio</button>
-            <button onclick="scrollToSection('servicios');toggleMobileMenu()" class="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-300 rounded transition-colors">Servicios</button>
-            <button onclick="scrollToSection('materiales');toggleMobileMenu()" class="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-300 rounded transition-colors">Materiales</button>
-            <button onclick="scrollToSection('portfolio');toggleMobileMenu()" class="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-300 rounded transition-colors">Portfolio</button>
-            <button onclick="scrollToSection('contacto');toggleMobileMenu()" class="block w-full text-left px-4 py-2 text-gray-300 hover:text-cyan-300 rounded transition-colors">Contacto</button>
-            
-            <div class="px-4 pt-4 border-t border-gray-800">
-                <button onclick="scrollToSection('contacto');toggleMobileMenu()" class="w-full btn-gradient text-white font-semibold px-6 py-3 rounded-lg shadow-lg hover-shine">Solicitar Presupuesto</button>
-            </div>
+        
+        <div id="mobileMenu" class="mobile-menu lg:hidden py-4 space-y-2 border-t border-cyan-500/10">
+            <button onclick="scrollToSection('hero');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Inicio</button>
+            <button onclick="scrollToSection('servicios');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Servicios</button>
+            <button onclick="scrollToSection('materiales');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-orange-300 rounded transition-colors font-medium">Materiales</button>
+            <button onclick="scrollToSection('productos');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-purple-400 rounded transition-colors font-medium">Catálogo</button>
+            <button onclick="scrollToSection('tarifas');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Presupuestos</button>
+            <button onclick="scrollToSection('cotizador');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Calculadora</button>
+            <button onclick="scrollToSection('portfolio');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-lime-300 rounded transition-colors font-medium">Portfolio</button>
+            <button onclick="scrollToSection('reseñas');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-yellow-400 rounded transition-colors font-medium">Reseñas</button>
+            <button onclick="scrollToSection('contacto');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Contacto</button>
         </div>
     </div>
 </header>
@@ -459,34 +385,36 @@ const datosWeb = {
 <main>
 
 <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-        <div class="absolute inset-0 opacity-10 pattern-bg"></div>
-    </div>
+    <div class="absolute inset-0 opacity-10 pattern-bg"></div>
     <div class="absolute inset-0">
         <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
         <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
     </div>
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 z-10 relative">
         <div class="max-w-4xl mx-auto text-center">
+            
+            <!-- Etiqueta 1: Hero -->
             <div class="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-8" data-aos="fade-down">
-                <svg class="w-4 h-4 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-                <span class="text-cyan-400 text-sm font-medium">Tecnología de Impresión 3D Industrial</span>
+                <svg class="w-4 h-4 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                <span class="text-cyan-400 text-sm font-medium tracking-wide">Impresión 3D y Diseño de Ideas</span>
             </div>
+            
             <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-aos="fade-up" data-aos-delay="100">
-                <span class="gradient-text animate-gradient">Transformamos Ideas</span><br>
-                <span class="text-white">en Objetos Físicos</span>
+                <span class="gradient-text animate-gradient">Transformamos Ideas en </span><br>
+                <span class="text-white">Objetos Físicos</span>
             </h1>
-            <p class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">Fabricación aditiva de precisión con materiales técnicos avanzados. Desde prototipos hasta series cortas de producción.</p>
+            <p class="text-xl sm:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed" data-aos="fade-up" data-aos-delay="200">Fabricación precisa con materiales técnicos avanzados. Desde prototipos hasta series de producción.</p>
             <div class="grid grid-cols-3 gap-2 sm:gap-6 max-w-2xl mx-auto mb-12 px-1 sm:px-0" data-aos="fade-up" data-aos-delay="300">
                 <div class="text-center">
-                    <div class="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent mb-1 sm:mb-2">10+</div>
+                    <div class="text-2xl sm:text-4xl font-bold grad-cyan mb-1 sm:mb-2">10+</div>
                     <div class="text-gray-300 text-xs sm:text-base leading-tight">Materiales<br class="block sm:hidden"> Disponibles</div>
                 </div>
                 <div class="text-center flex flex-col justify-center">
-                    <div class="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-lime-300 to-lime-400 bg-clip-text text-transparent mb-1 sm:mb-2">24-48h</div>
+                    <div class="text-2xl sm:text-4xl font-bold grad-lime mb-1 sm:mb-2">24-48h</div>
                     <div class="text-gray-300 text-xs sm:text-base leading-tight">Entrega</div>
                 </div>
-                  <div class="text-center">
-                    <div class="text-2xl sm:text-4xl font-bold bg-gradient-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent mb-1 sm:mb-2">±0.1mm</div>
+                <div class="text-center">
+                    <div class="text-2xl sm:text-4xl font-bold grad-orange mb-1 sm:mb-2">±0.1mm</div>
                     <div class="text-gray-300 text-xs sm:text-base leading-tight">Precisión<br class="block sm:hidden"> Industrial</div>
                 </div>
             </div>
@@ -498,48 +426,20 @@ const datosWeb = {
     </div>
 </section>
 
-<section class="py-16 bg-gradient-to-b from-gray-900 to-gray-950 relative overflow-hidden">
-    <div class="absolute inset-0 opacity-30">
-        <div class="absolute top-0 left-1/4 w-64 h-64 bg-cyan-400/10 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 right-1/4 w-64 h-64 bg-orange-400/10 rounded-full blur-3xl"></div>
-    </div>
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div class="text-center p-6 rounded-2xl bg-gradient-to-br bg-cyan-400/10 backdrop-blur-sm border border-cyan-400/30 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-cyan-400/20" data-aos="zoom-in" data-aos-delay="100">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-cyan-400/10 text-cyan-300 mb-4">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
-                </div>
-                <div class="text-4xl font-bold bg-gradient-to-r from-cyan-300 to-cyan-400 bg-clip-text text-transparent mb-2">50+</div>
-                <div class="text-gray-300 text-sm font-medium">Proyectos Realizados</div>
-            </div>
-            <div class="text-center p-6 rounded-2xl bg-gradient-to-br bg-lime-400/10 backdrop-blur-sm border border-lime-400/30 hover:border-lime-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-lime-400/20" data-aos="zoom-in" data-aos-delay="200">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-lime-400/10 text-lime-300 mb-4">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-                </div>
-                <div class="text-4xl font-bold bg-gradient-to-r from-lime-300 to-lime-400 bg-clip-text text-transparent mb-2">10+</div>
-                <div class="text-gray-300 text-sm font-medium">Materiales Disponibles</div>
-            </div>
-            <div class="text-center p-6 rounded-2xl bg-gradient-to-br bg-orange-400/10 backdrop-blur-sm border border-orange-400/30 hover:border-orange-400/50 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-orange-400/20" data-aos="zoom-in" data-aos-delay="300">
-                <div class="inline-flex items-center justify-center w-16 h-16 rounded-xl bg-orange-400/10 text-orange-300 mb-4">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-                </div>
-                <div class="text-4xl font-bold bg-gradient-to-r from-orange-300 to-orange-400 bg-clip-text text-transparent mb-2">24-48h</div>
-                <div class="text-gray-300 text-sm font-medium">Tiempo de Entrega</div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section id="servicios" class="py-24 bg-gray-950">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <div class="text-center mb-16" data-aos="fade-up">
-            <div class="inline-block px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-4">
-                <span class="text-cyan-400 text-sm font-medium">Nuestros Servicios</span>
+            
+            <!-- Etiqueta 2: Servicios -->
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-4">
+                <svg class="w-4 h-4 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                <span class="text-cyan-400 text-sm font-medium tracking-wide">Nuestros Servicios</span>
             </div>
+            
             <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Soluciones de Fabricación <span class="gradient-text">Avanzada</span></h2>
             <p class="text-xl text-gray-400 max-w-2xl mx-auto">Tecnología punta para llevar tus proyectos de la idea a la realidad</p>
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div class="group bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 backdrop-blur-sm border border-cyan-500/20 hover:border-cyan-500/50 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20" data-aos="fade-up" data-aos-delay="100">
                <div class="relative aspect-video w-full overflow-hidden">
                 <img src="img/impresion-pro.webp" alt="Impresión 3D Pro" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
@@ -562,7 +462,7 @@ const datosWeb = {
                 </div>
             </div>
             <div class="group bg-gradient-to-br from-green-500/10 to-green-600/5 backdrop-blur-sm border border-green-500/20 hover:border-green-500/50 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20" data-aos="fade-up" data-aos-delay="200">
-                <div class="relative h-48 overflow-hidden">
+                <div class="relative aspect-video w-full overflow-hidden">
                     <img src="img/diseno-modelado.webp" alt="Diseño y Modelado" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-950 to-transparent"></div>
                     <div class="absolute top-4 right-4 p-3 rounded-xl bg-gray-950/80 backdrop-blur-sm text-green-400">
@@ -583,7 +483,7 @@ const datosWeb = {
                 </div>
             </div>
             <div class="group bg-gradient-to-br from-orange-500/10 to-orange-600/5 backdrop-blur-sm border border-orange-500/20 hover:border-orange-500/50 rounded-2xl overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-orange-500/20" data-aos="fade-up" data-aos-delay="300">
-                <div class="relative h-48 overflow-hidden">
+                <div class="relative aspect-video w-full overflow-hidden">
                     <img src="img/soluciones.webp" alt="Soluciones a Medida" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-950 to-transparent"></div>
                     <div class="absolute top-4 right-4 p-3 rounded-xl bg-gray-950/80 backdrop-blur-sm text-orange-400">
@@ -607,101 +507,330 @@ const datosWeb = {
     </div>
 </section>
 
-<section id="materiales" class="py-24 bg-gradient-to-b from-gray-950 to-gray-900">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<section id="materiales" class="py-24 bg-[#121212] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-20 pointer-events-none" style="background-image: radial-gradient(#333 1px, transparent 1px); background-size: 24px 24px;"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center mb-16" data-aos="fade-up">
+            
+            <!-- Etiqueta 3: Materiales (El modelo maestro) -->
             <div class="inline-flex items-center px-4 py-2 rounded-full bg-orange-500/10 border border-orange-500/20 mb-4">
-                <svg class="w-4 h-4 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
-                <span class="text-orange-400 text-sm font-medium">Materiales Disponibles</span>
+                <svg class="w-4 h-4 text-orange-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/></svg>
+                <span class="text-orange-400 text-sm font-medium tracking-wide">Fichas Técnicas</span>
             </div>
-            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Materiales que <span class="gradient-text">Trabajamos</span></h2>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto">Selección de materiales de calidad para tus proyectos</p>
+            
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Materiales de <span class="gradient-text">Ingeniería</span></h2>
+            <p class="text-gray-400 max-w-2xl mx-auto">Propiedades mecánicas y térmicas para cada exigencia de diseño.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12 max-w-6xl mx-auto">
-            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300" data-aos="flip-left" data-aos-delay="100">
-                <div class="absolute inset-0">
-                    <img src="img/pla.webp" alt="PLA" loading="lazy" class="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
-                </div>
-                <div class="relative h-full flex flex-col justify-end p-4">
-                    <div class="w-12 h-1 rounded-full bg-gradient-to-r from-cyan-400 to-cyan-500 mb-3 group-hover:w-full transition-all duration-300"></div>
-                    <h3 class="text-white font-bold text-lg mb-1">PLA</h3>
-                    <p class="text-gray-400 text-xs">Biodegradable, ideal para prototipos</p>
-                </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700/50 hover:border-green-400/50 transition-all duration-300" data-aos="flip-left" data-aos-delay="200">
-                <div class="absolute inset-0">
-                    <img src="img/petg.webp" alt="PETG" class="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
-                </div>
-                <div class="relative h-full flex flex-col justify-end p-4">
-                    <div class="w-12 h-1 rounded-full bg-gradient-to-r from-green-400 to-green-500 mb-3 group-hover:w-full transition-all duration-300"></div>
-                    <h3 class="text-white font-bold text-lg mb-1">PETG</h3>
-                    <p class="text-gray-400 text-xs">Resistente y duradero</p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
+            
+            <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-2xl p-8 flex flex-col hover:border-green-400/50 hover:bg-[#1e1e1e] transition-all duration-300 group" data-aos="fade-up" data-aos-delay="100">
+                <svg class="w-12 h-12 mb-8 text-green-400/80 group-hover:text-green-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline stroke-linecap="round" stroke-linejoin="round" points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line stroke-linecap="round" stroke-linejoin="round" x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                <h3 class="text-white text-xl font-bold tracking-wide mb-1">PLA</h3>
+                <span class="text-green-400 text-xs font-mono mb-4">220°C</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">General, rígido. Ideal para prototipos rápidos y maquetas.</p>
+                <div class="border-t border-[#2e2e2e] pt-4 mt-auto">
+                    <span class="text-gray-500 text-xs font-mono tracking-widest uppercase">60 MPa</span>
                 </div>
             </div>
-            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700/50 hover:border-purple-400/50 transition-all duration-300" data-aos="flip-left" data-aos-delay="300">
-                <div class="absolute inset-0">
-                    <img src="img/tpu.webp" alt="TPU" class="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
-                </div>
-                <div class="relative h-full flex flex-col justify-end p-4">
-                    <div class="w-12 h-1 rounded-full bg-gradient-to-r from-purple-400 to-purple-500 mb-3 group-hover:w-full transition-all duration-300"></div>
-                    <h3 class="text-white font-bold text-lg mb-1">TPU (Flexible 95A)</h3>
-                    <p class="text-gray-400 text-xs">Material flexible y elástico</p>
-                </div>
-            </div>
-            <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700/50 hover:border-orange-400/50 transition-all duration-300" data-aos="flip-left" data-aos-delay="400">
-                <div class="absolute inset-0">
-                    <img src="img/abs.webp" alt="ABS" class="w-full h-full object-cover group-hover:opacity-0 transition-opacity duration-500">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent"></div>
-                </div>
-                <div class="relative h-full flex flex-col justify-end p-4">
-                    <div class="w-12 h-1 rounded-full bg-gradient-to-r from-orange-400 to-orange-500 mb-3 group-hover:w-full transition-all duration-300"></div>
-                    <h3 class="text-white font-bold text-lg mb-1">ABS</h3>
-                    <p class="text-gray-400 text-xs">Alta resistencia al impacto</p>
+
+            <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-2xl p-8 flex flex-col hover:border-cyan-400/50 hover:bg-[#1e1e1e] transition-all duration-300 group" data-aos="fade-up" data-aos-delay="150">
+                <svg class="w-12 h-12 mb-8 text-cyan-400/80 group-hover:text-cyan-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+                <h3 class="text-white text-xl font-bold tracking-wide mb-1">PETG</h3>
+                <span class="text-cyan-400 text-xs font-mono mb-4">240°C</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">Funcional, resistente. Para piezas que requieren durabilidad.</p>
+                <div class="border-t border-[#2e2e2e] pt-4 mt-auto">
+                    <span class="text-gray-500 text-xs font-mono tracking-widest uppercase">50 MPa</span>
                 </div>
             </div>
-           <div onclick="openWhatsApp('¡Hola! Necesito consultar sobre un material especial para mi proyecto de impresión 3D.')" class="group relative overflow-hidden rounded-2xl aspect-[4/3] border border-gray-700/50 hover:border-cyan-400/50 transition-all duration-300 cursor-pointer hover:scale-105" data-aos="flip-left" data-aos-delay="500">
-            <div class="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-900 flex flex-col items-center justify-center p-6 lg:p-3 text-center">
-                <div class="w-16 h-16 lg:w-10 lg:h-10 rounded-full bg-gradient-to-r from-cyan-400 via-lime-400 to-orange-400 flex items-center justify-center mb-4 lg:mb-2 group-hover:scale-110 transition-transform flex-shrink-0">
-                    <svg class="w-8 h-8 lg:w-5 lg:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+
+            <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-2xl p-8 flex flex-col hover:border-orange-400/50 hover:bg-[#1e1e1e] transition-all duration-300 group" data-aos="fade-up" data-aos-delay="200">
+                <svg class="w-12 h-12 mb-8 text-orange-400/80 group-hover:text-orange-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                    <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round"></circle>
+                </svg>
+                <h3 class="text-white text-xl font-bold tracking-wide mb-1">ABS</h3>
+                <span class="text-orange-400 text-xs font-mono mb-4">240°C</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">Técnico, alta temperatura. Automoción e industria.</p>
+                <div class="border-t border-[#2e2e2e] pt-4 mt-auto">
+                    <span class="text-gray-500 text-xs font-mono tracking-widest uppercase">42 MPa</span>
                 </div>
-            <h3 class="text-white font-bold text-xl lg:text-base mb-2 lg:mb-1">¿Otro Material?</h3>
-            <p class="text-gray-400 text-sm lg:text-xs leading-tight">Consúltanos para materiales especiales</p>
-        <div class="mt-4 lg:mt-2 text-cyan-400 text-xs font-semibold">Click para consultar →</div>
-    </div>
-</div>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-2xl p-8 flex flex-col hover:border-amber-400/50 hover:bg-[#1e1e1e] transition-all duration-300 group" data-aos="fade-up" data-aos-delay="250">
+                <svg class="w-12 h-12 mb-8 text-amber-400/80 group-hover:text-amber-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 21v-2.25m-6.364-.386l1.591-1.591M3 12h2.25m.386-6.364l1.591 1.591M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0z"></path>
+                </svg>
+                <h3 class="text-white text-xl font-bold tracking-wide mb-1">ASA</h3>
+                <span class="text-amber-400 text-xs font-mono mb-4">245°C</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">Exterior, resistente a UV. Piezas al aire libre.</p>
+                <div class="border-t border-[#2e2e2e] pt-4 mt-auto">
+                    <span class="text-gray-500 text-xs font-mono tracking-widest uppercase">44 MPa</span>
+                </div>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-2xl p-8 flex flex-col hover:border-purple-400/50 hover:bg-[#1e1e1e] transition-all duration-300 group" data-aos="fade-up" data-aos-delay="300">
+                <svg class="w-12 h-12 mb-8 text-purple-400/80 group-hover:text-purple-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                    <polygon stroke-linecap="round" stroke-linejoin="round" points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                    <circle cx="12" cy="12" r="3" stroke-linecap="round" stroke-linejoin="round"></circle>
+                </svg>
+                <h3 class="text-white text-xl font-bold tracking-wide mb-1">PETG-CF</h3>
+                <span class="text-purple-400 text-xs font-mono mb-4">250°C</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">Fibra de carbono. Rigidez elevada con bajo peso.</p>
+                <div class="border-t border-[#2e2e2e] pt-4 mt-auto">
+                    <span class="text-gray-500 text-xs font-mono tracking-widest uppercase">60 MPa</span>
+                </div>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-2xl p-8 flex flex-col hover:border-pink-400/50 hover:bg-[#1e1e1e] transition-all duration-300 group" data-aos="fade-up" data-aos-delay="350">
+                <svg class="w-12 h-12 mb-8 text-pink-400/80 group-hover:text-pink-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.83-5.83M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <h3 class="text-white text-xl font-bold tracking-wide mb-1">PA Nylon</h3>
+                <span class="text-pink-400 text-xs font-mono mb-4">260°C</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">Ingeniería, desgaste. Engranajes y piezas mecánicas.</p>
+                <div class="border-t border-[#2e2e2e] pt-4 mt-auto">
+                    <span class="text-gray-500 text-xs font-mono tracking-widest uppercase">70 MPa</span>
+                </div>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-2xl p-8 flex flex-col hover:border-purple-300/50 hover:bg-[#1e1e1e] transition-all duration-300 group" data-aos="fade-up" data-aos-delay="400">
+                <svg class="w-12 h-12 mb-8 text-purple-300/80 group-hover:text-purple-200 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                    <polygon stroke-linecap="round" stroke-linejoin="round" points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                    <polygon stroke-linecap="round" stroke-linejoin="round" points="12 6 18 9.5 18 14.5 12 18 6 14.5 6 9.5 12 6"></polygon>
+                </svg>
+                <h3 class="text-white text-xl font-bold tracking-wide mb-1">PA6-CF</h3>
+                <span class="text-purple-300 text-xs font-mono mb-4">270°C</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">Carbono reforzado. La máxima resistencia mecánica.</p>
+                <div class="border-t border-[#2e2e2e] pt-4 mt-auto">
+                    <span class="text-gray-500 text-xs font-mono tracking-widest uppercase">180 MPa</span>
+                </div>
+            </div>
+
+            <div class="bg-[#1a1a1a] border border-[#2e2e2e] rounded-2xl p-8 flex flex-col hover:border-lime-400/50 hover:bg-[#1e1e1e] transition-all duration-300 group" data-aos="fade-up" data-aos-delay="450">
+                <svg class="w-12 h-12 mb-8 text-lime-400/80 group-hover:text-lime-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12s2.5-3 6-3 6 3 6 3 2.5-3 6-3"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 18s2.5-3 6-3 6 3 6 3 2.5-3 6-3"></path>
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 6s2.5-3 6-3 6 3 6 3 2.5-3 6-3"></path>
+                </svg>
+                <h3 class="text-white text-xl font-bold tracking-wide mb-1">TPU</h3>
+                <span class="text-lime-400 text-xs font-mono mb-4">230°C</span>
+                <p class="text-gray-400 text-sm mb-6 flex-grow leading-relaxed">Flexible, tipo caucho. Juntas, amortiguadores, grips.</p>
+                <div class="border-t border-[#2e2e2e] pt-4 mt-auto">
+                    <span class="text-gray-500 text-xs font-mono tracking-widest uppercase">Flexible</span>
+                </div>
+            </div>
+
         </div>
-        <div class="max-w-3xl mx-auto text-center">
-            <div class="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6">
-                <p class="text-gray-400 text-sm leading-relaxed"><span class="text-cyan-400 font-semibold">Nota:</span> Si necesitas información específica sobre propiedades técnicas o compatibilidad para tu proyecto, no dudes en consultarnos.</p>
+
+        <div class="max-w-3xl mx-auto text-center mt-12">
+            <div class="bg-gray-800/30 border border-gray-700/50 rounded-xl p-6 cursor-pointer hover:bg-gray-800/50 transition-colors" onclick="openWhatsApp('¡Hola! Necesito consultar si trabajáis con un material especial para mi proyecto.')">
+                <p class="text-gray-400 text-sm leading-relaxed"><span class="text-orange-400 font-semibold">¿Necesitas otro material?</span> Consúltanos disponibilidad de resinas, metales u otros polímeros técnicos bajo demanda. <span class="text-white font-medium ml-2">Contactar →</span></p>
             </div>
         </div>
     </div>
 </section>
 
 <section id="productos" class="py-24 bg-gray-900">
-    <!-- Títulos dentro de su contenedor (la jaula) -->
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12" data-aos="fade-up">
-            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Ideas Listas para <span class="gradient-text">Imprimir</span></h2>
+            
+            <!-- Etiqueta 4: Catálogo -->
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-4">
+                <svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                <span class="text-purple-400 text-sm font-medium tracking-wide">Tienda y Accesorios</span>
+            </div>
+            
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Catálogo <span class="gradient-text">Personalizado</span></h2>
             <p class="text-sm text-gray-400">← Desliza para ver más productos →</p>
         </div>
-    </div> <!-- Aquí cerramos el contenedor -->
+    </div>
 
-    <!-- Carrusel FUERA del contenedor para que toque los bordes físicos del móvil -->
     <div class="relative w-full" data-aos="fade-up" data-aos-delay="200">
-        <div id="productCarousel" class="carousel-container flex gap-6 pb-8 px-4 sm:px-6 lg:px-8 overflow-x-auto">
+       <div id="productCarousel" class="carousel-container flex items-stretch gap-6 pb-8 px-4 sm:px-6 lg:px-8 overflow-x-auto">
         </div>
         
-        <!-- Botones ajustados a los nuevos márgenes -->
         <button onclick="scrollCarousel('productCarousel',-1)" aria-label="Ver productos anteriores" class="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-800/90 hover:bg-purple-500 rounded-full flex items-center justify-center z-10 transition-all duration-300 hover:scale-110 hover:shadow-lg">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
         </button>
         <button onclick="scrollCarousel('productCarousel',1)" aria-label="Ver productos siguientes" class="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-800/90 hover:bg-purple-500 rounded-full flex items-center justify-center z-10 transition-all duration-300 hover:scale-110 hover:shadow-lg">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
         </button>
+    </div>
+</section>
+
+<!-- SECCIÓN DE TARIFAS: MÓDULOS DE PRODUCCIÓN -->
+<section id="tarifas" class="py-24 bg-[#0d0f12] relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(#06b6d4 1px, transparent 1px), linear-gradient(90deg, #06b6d4 1px, transparent 1px); background-size: 40px 40px;"></div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="text-center mb-16" data-aos="fade-up">
+            
+            <!-- Etiqueta 5: Tarifas -->
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-4">
+                <svg class="w-4 h-4 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z"/></svg>
+                <span class="text-cyan-400 text-sm font-medium tracking-wide">Estimaciones de Producción</span>
+            </div>
+            
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Presupuestos a <span class="gradient-text">Medida</span></h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-base">Costes ajustados a geometría, material y volumen. Respuesta rápida en menos de 24 horas.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
+            
+            <div class="bg-[#14171f] border border-cyan-500/20 rounded-2xl p-8 flex flex-col justify-between hover:border-cyan-400/50 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-cyan-500/40"></div>
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-white font-bold text-xl tracking-wide">Starter</h3>
+                        <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-3 py-1 rounded">Básico</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-bold text-white mb-6 font-mono flex items-baseline gap-2">
+                        8€ <span class="text-xs font-normal text-gray-400 font-sans">/ desde</span>
+                    </div>
+                    
+                    <ul class="space-y-3.5 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-3 flex-shrink-0"></span>Volumen máx: 10×10×10 cm</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-3 flex-shrink-0"></span>Material: PLA / PETG</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-cyan-400 mr-3 flex-shrink-0"></span>Plazo: Entrega en 72h</li>
+                    </ul>
+                </div>
+                <button onclick="openWhatsApp('¡Hola! Me interesa iniciar un encargo con el plan Starter (desde 8€). ¿Cómo lo gestionamos?')" class="w-full py-3.5 rounded-xl bg-gray-900 hover:bg-cyan-500/20 border border-cyan-500/30 text-cyan-300 font-semibold transition-all text-sm tracking-wide text-center">
+                    Iniciar Starter →
+                </button>
+            </div>
+
+            <div class="bg-[#14171f] border-2 border-orange-500/70 rounded-2xl p-8 flex flex-col justify-between shadow-[0_0_40px_rgba(249,115,22,0.15)] relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-orange-500"></div>
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-white font-bold text-xl tracking-wide">Professional</h3>
+                        <span class="text-xs font-mono text-orange-400 bg-orange-500/10 px-3 py-1 rounded">Pro</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-bold text-white mb-6 font-mono flex items-baseline gap-2">
+                        25€ <span class="text-xs font-normal text-gray-400 font-sans">/ desde</span>
+                    </div>
+                    
+                    <ul class="space-y-3.5 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-orange-400 mr-3 flex-shrink-0"></span>Materiales: ABS y ASA</li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-orange-400 mr-3 flex-shrink-0"></span>Plazo Express: 48h</li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-orange-400 mr-3 flex-shrink-0"></span>Verificación de tolerancias</li>
+                        <li class="flex items-center"><span class="w-2 h-2 rounded-full bg-orange-400 mr-3 flex-shrink-0"></span>Informe fotográfico de post-procesado</li>
+                    </ul>
+                </div>
+                <button onclick="openWhatsApp('¡Hola! Me interesa el plan Professional (desde 25€). ¿Podemos revisar los detalles técnicos de mi pieza?')" class="w-full py-3.5 rounded-xl bg-gray-900 hover:bg-orange-500/20 border border-orange-500/30 text-orange-300 font-semibold transition-all text-sm tracking-wide text-center">
+                    Solicitar Professional →
+                </button>
+            </div>
+
+            <div class="bg-[#14171f] border border-lime-500/20 rounded-2xl p-8 flex flex-col justify-between hover:border-lime-400/50 transition-all duration-300 group relative overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                <div class="absolute top-0 left-0 right-0 h-1 bg-lime-500/40"></div>
+                <div>
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-white font-bold text-xl tracking-wide">Industrial</h3>
+                        <span class="text-xs font-mono text-lime-400 bg-lime-500/10 px-3 py-1 rounded">A Medida</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-bold text-white mb-6 font-mono">
+                        Personalizado
+                    </div>
+                    
+                    <ul class="space-y-3.5 mb-8 text-sm text-gray-300">
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-lime-400 mr-3 flex-shrink-0"></span>Series cortas de producción</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-lime-400 mr-3 flex-shrink-0"></span>Utillajes y Jigs customizados</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-lime-400 mr-3 flex-shrink-0"></span>Polímeros avanzados (PA / CF)</li>
+                        <li class="flex items-center"><span class="w-1.5 h-1.5 rounded-full bg-lime-400 mr-3 flex-shrink-0"></span>Soporte de ingeniería CAD</li>
+                    </ul>
+                </div>
+                <button onclick="openWhatsApp('¡Hola! Necesito consultar un proyecto de tipo Industrial / Serie corta para mi empresa.')" class="w-full py-3.5 rounded-xl bg-gray-900 hover:bg-lime-500/20 border border-lime-500/30 text-lime-300 font-semibold transition-all text-sm tracking-wide text-center">
+                    Contactar Ingeniería →
+                </button>
+            </div>
+
+        </div>
+    </div>
+</section>
+ 
+<!-- SECCIÓN DE COTIZACIÓN RÁPIDA: SUBIR STL -->
+<section id="cotizador" class="py-24 bg-[#0d0f12] relative overflow-hidden border-t border-b border-cyan-500/15">
+    <div class="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[250px] bg-cyan-500/10 blur-[100px] pointer-events-none rounded-full"></div>
+    <div class="absolute top-1/2 right-1/4 translate-x-1/4 -translate-y-1/2 w-[400px] h-[250px] bg-green-500/10 blur-[100px] pointer-events-none rounded-full"></div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-5xl text-center">
+        
+        <div class="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-6" data-aos="fade-down">
+            <svg class="w-4 h-4 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/></svg>
+            <span class="text-cyan-400 text-sm font-medium tracking-wide">Calculadora y Diseño a Medida</span>
+        </div>
+
+        <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4" data-aos="fade-up">
+            Calcula tu <span class="gradient-text">pieza</span> o créala desde cero
+        </h2>
+        <p class="text-gray-400 max-w-2xl mx-auto text-base mb-12" data-aos="fade-up" data-aos-delay="100">
+            Tanto si ya tienes el modelo 3D preparado como si solo tienes una idea o unas fotos, estamos aquí para fabricarlo. Selecciona tu caso:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 items-stretch" data-aos="fade-up" data-aos-delay="200">
+            
+            <label for="stlFileInput" class="relative group block cursor-pointer h-full">
+                <div style="border-radius: 28px;" class="border-2 border-dashed border-cyan-500/50 group-hover:border-cyan-400 bg-[#14171f] group-hover:bg-[#1a1f2c] p-8 sm:p-10 transition-all duration-300 shadow-2xl relative overflow-hidden h-full flex flex-col justify-center">
+                    <div class="relative z-10 flex flex-col items-center justify-center space-y-4">
+                        <div class="w-16 h-16 rounded-2xl bg-cyan-500/15 border border-cyan-500/30 flex items-center justify-center text-cyan-400 group-hover:scale-110 group-hover:bg-cyan-500/25 transition-all duration-300 shadow-lg">
+                            <svg class="w-8 h-8 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-white font-semibold text-xl">
+                                Tengo un <span class="text-cyan-400 font-mono">Archivo 3D</span>
+                            </h3>
+                            <p class="text-gray-400 text-sm px-4">
+                                Ya tengo el archivo (.STL, .STEP, .OBJ). Haz clic para seleccionarlo y cotizar.
+                            </p>
+                        </div>
+                        <div class="pt-4">
+                            <span class="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold text-sm shadow-lg group-hover:scale-105 transition-all">
+                                Subir Archivo →
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <input type="file" id="stlFileInput" class="hidden" accept=".stl,.step,.obj,.3mf" onchange="handleFileSelection(this)">
+            </label>
+
+            <div class="relative group block cursor-pointer h-full" onclick="handleNoFile()">
+                <div style="border-radius: 28px;" class="border-2 border-dashed border-green-500/50 group-hover:border-green-400 bg-[#14171f] group-hover:bg-[#1a1f2c] p-8 sm:p-10 transition-all duration-300 shadow-2xl relative overflow-hidden h-full flex flex-col justify-center">
+                    <div class="relative z-10 flex flex-col items-center justify-center space-y-4">
+                        <div class="w-16 h-16 rounded-2xl bg-green-500/15 border border-green-500/30 flex items-center justify-center text-green-400 group-hover:scale-110 group-hover:bg-green-500/25 transition-all duration-300 shadow-lg">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div class="space-y-2">
+                            <h3 class="text-white font-semibold text-xl">
+                                No tengo archivo <span class="text-green-400 font-mono">(Diseño)</span>
+                            </h3>
+                            <p class="text-gray-400 text-sm px-4">
+                                Tengo fotos, un croquis o medidas. Envíanoslo y nosotros lo modelamos por ti.
+                            </p>
+                        </div>
+                        <div class="pt-4">
+                            <span class="inline-block px-6 py-3 rounded-xl bg-gradient-to-r from-green-500 to-teal-500 text-white font-semibold text-sm shadow-lg group-hover:scale-105 transition-all">
+                                Enviar Idea / Fotos →
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
 
@@ -713,10 +842,13 @@ const datosWeb = {
     
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div class="text-center mb-12" data-aos="fade-up">
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-lime-400/10 border border-lime-400/30 mb-4">
-                <svg class="w-4 h-4 text-lime-300 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                <span class="text-lime-300 text-sm font-medium">Nuestros Trabajos</span>
+            
+            <!-- Etiqueta 7: Portfolio -->
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-lime-400/10 border border-lime-400/20 mb-4">
+                <svg class="w-4 h-4 text-lime-300 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <span class="text-lime-300 text-sm font-medium tracking-wide">Nuestros Trabajos</span>
             </div>
+            
             <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Proyectos <span class="gradient-text">Realizados</span></h2>
             <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Descubre la calidad y precisión de nuestras impresiones 3D</p>
         </div>
@@ -728,14 +860,12 @@ const datosWeb = {
             <button onclick="filterPortfolio('Arte')" id="filter-Arte" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300">Arte</button>
         </div>
         <p class="text-center text-sm text-gray-400 mb-8">← Desliza para ver más proyectos →</p>
-    </div> <!-- Aquí cerramos el contenedor -->
+    </div>
 
-    <!-- Carrusel FUERA del contenedor para que toque los bordes físicos del móvil -->
     <div class="relative w-full z-10" data-aos="fade-up" data-aos-delay="200">
-        <div id="portfolioCarousel" class="carousel-container flex gap-8 pb-8 px-4 sm:px-6 lg:px-8 overflow-x-auto">
+        <div id="portfolioCarousel" class="carousel-container flex items-start gap-8 pb-8 px-4 sm:px-6 lg:px-8 overflow-x-auto">
         </div>
         
-        <!-- Botones ajustados -->
         <button onclick="scrollCarousel('portfolioCarousel',-1)" aria-label="Ver proyectos anteriores" class="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-800/90 hover:bg-cyan-500 rounded-full flex items-center justify-center z-10 transition-all duration-300 hover:scale-110 hover:shadow-lg">
             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
         </button>
@@ -748,100 +878,93 @@ const datosWeb = {
 <section id="reseñas" class="py-24 bg-gradient-to-b from-gray-900 to-gray-950">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-16" data-aos="fade-up">
+            
+            <!-- Etiqueta 8: Reseñas -->
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/20 mb-4">
+                <svg class="w-4 h-4 text-yellow-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+                <span class="text-yellow-400 text-sm font-medium tracking-wide">Opiniones de Clientes</span>
+            </div>
+            
             <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Nuestras Reseñas en <span class="gradient-text">Google</span></h2>
         </div>
         <div id="reviewsContainer" class="grid md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-7xl mx-auto mb-12">
-             </div>
-        <div class="text-center" data-aos="zoom-in" data-aos-delay="600">
-            <a href="https://www.google.com/search?q=Matrix3D+Impresion+3D+Colmenar+Viejo" target="_blank" class="inline-flex items-center gap-3 px-6 py-3 bg-white rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105">
-                <span class="text-gray-900 font-bold">5.0 ⭐⭐⭐⭐⭐</span>
-                <span class="text-gray-600 text-xs">Ver más en Google</span>
+        </div>
+        
+        <div class="text-center mt-10 px-4" data-aos="zoom-in" data-aos-delay="600">
+            <a href="https://www.google.com/maps/search/?api=1&query=Matrix3D+Impresion+3D+Colmenar+Viejo" 
+               target="_blank" 
+               rel="noopener noreferrer"
+               class="inline-flex flex-col items-center justify-center px-8 py-4 bg-white rounded-2xl sm:rounded-full shadow-2xl transition-all active:scale-95 max-w-full text-center cursor-pointer">
+                <span class="text-yellow-500 font-bold text-lg mb-1 tracking-wider pointer-events-none">⭐⭐⭐⭐⭐</span>
+                <div class="pointer-events-none">
+                    <span class="text-gray-900 font-bold text-base block leading-tight">Ver todas las reseñas y fotos</span>
+                    <span class="text-gray-500 text-xs font-medium">Abrir perfil oficial en Google Maps →</span>
+                </div>
             </a>
         </div>
     </div>
 </section>
 
-<section id="contacto" class="py-24 bg-gradient-to-b from-gray-900 to-gray-950">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<!-- SECCIÓN DE CONTACTO DIRECTO Y LOCALIZACIÓN -->
+<section id="contacto" class="py-24 bg-gradient-to-b from-[#12161f] to-gray-950 border-t border-cyan-500/10">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Hablemos de tu <span class="gradient-text">Proyecto</span></h2>
-        </div>
-        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-            <div class="bg-gray-800/50 border border-cyan-500/20 rounded-2xl p-8 hover-glow" data-aos="fade-right">
-                <h3 class="text-2xl text-white mb-6">Solicitar Presupuesto</h3>
-                <form onsubmit="handleFormSubmit(event)" class="space-y-6">
-                    <div>
-                        <label for="nombre" class="text-gray-300 block mb-2">Nombre completo *</label>
-                        <input type="text" id="nombre" required class="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-gray-700 text-white focus:border-cyan-500 focus:outline-none transition-all">
-                    </div>
-                    <div>
-                        <label for="email" class="text-gray-300 block mb-2">Email *</label>
-                        <input type="email" id="email" required class="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-gray-700 text-white focus:border-cyan-500 focus:outline-none transition-all">
-                    </div>
-                    <div>
-                        <label for="telefono" class="text-gray-300 block mb-2">Teléfono</label>
-                        <input type="tel" id="telefono" class="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-gray-700 text-white focus:border-cyan-500 focus:outline-none transition-all">
-                    </div>
-                    <div>
-                        <label for="proyecto" class="text-gray-300 block mb-2">Tipo de proyecto *</label>
-                        <input type="text" id="proyecto" required class="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-gray-700 text-white focus:border-cyan-500 focus:outline-none transition-all">
-                    </div>
-                    <div>
-                        <label for="mensaje" class="text-gray-300 block mb-2">Descripción *</label>
-                        <textarea id="mensaje" required rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-900/50 border border-gray-700 text-white focus:border-cyan-500 focus:outline-none resize-none transition-all"></textarea>
-                    </div>
-                    <button type="submit" class="w-full btn-gradient text-white font-semibold py-4 rounded-xl shadow-lg hover-shine">Solicitar Presupuesto Ahora</button>
-                    <p class="text-xs text-gray-500 text-center">Responderemos tu solicitud en menos de 24 horas</p>
-                </form>
+            
+            <!-- Etiqueta 9: Contacto -->
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-cyan-500/10 border border-cyan-500/20 mb-4">
+                <svg class="w-4 h-4 text-cyan-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21c4.97-4.97 8-9.03 8-12a8 8 0 10-16 0c0 2.97 3.03 7.03 8 12z"/><circle cx="12" cy="9" r="3"/></svg>
+                <span class="text-cyan-400 text-sm font-medium tracking-wide">Localización y Soporte Directo</span>
             </div>
-            <div class="space-y-6" data-aos="fade-left">
-                <div class="bg-cyan-400/10 border border-cyan-400/30 rounded-xl p-6 hover:border-cyan-400/50 transition-all card-hover">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-cyan-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-white font-semibold mb-1">Teléfono</h3>
-                            <a href="tel:+34644382702" class="text-cyan-400 hover:text-cyan-300 transition-colors">+34 644 382 702</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-green-400/10 border border-green-400/30 rounded-xl p-6 hover:border-green-400/50 transition-all card-hover">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-green-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-white font-semibold mb-1">Email</h3>
-                            <a href="mailto:contacto.matrix3d@gmail.com" class="text-green-400 hover:text-green-300 break-all transition-colors">contacto.matrix3d@gmail.com</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-orange-400/10 border border-orange-400/30 rounded-xl p-6 hover:border-orange-400/50 transition-all card-hover">
-                    <div class="flex items-start gap-4">
-                        <div class="w-12 h-12 bg-orange-500/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                            <svg class="w-6 h-6 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-white font-semibold mb-1">Dirección</h3>
-                            <p class="text-orange-400">Av. de los Toros<br>Colmenar Viejo, Madrid 28770</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gray-800/50 border border-gray-700 rounded-xl overflow-hidden card-hover">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.9858772584735!2d-3.767368!3d40.6656373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd417d4d5ad419d3%3A0x32cf823de4bbac91!2sMatrix3D%20(Impresion%203D)!5e0!3m2!1ses!2ses!4v1709813800000" width="100%" height="250" style="border:0" loading="lazy" allowfullscreen></iframe>
-                </div>
-            </div>
+            
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">¿Hablamos o nos <span class="gradient-text">visitas?</span></h2>
+            <p class="text-gray-400 max-w-xl mx-auto text-base">Operamos en Colmenar Viejo (Madrid). No disponemos de tienda física, pero podemos quedar en persona o concertar una cita para ver los proyectos.</p>
         </div>
+
+        <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up" data-aos-delay="200">
+            
+            <a href="tel:+34644382702" class="bg-[#171b26] border border-cyan-500/20 hover:border-cyan-400/60 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 group">
+                <div class="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 mb-6 group-hover:bg-cyan-500/20 transition-colors">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <h3 class="text-white font-bold text-lg mb-2">Teléfono / WhatsApp</h3>
+                <p class="text-cyan-400 text-sm font-mono">+34 644 382 702</p>
+                <span class="text-xs text-gray-500 mt-4">Lunes a Viernes: 9:00 - 19:00</span>
+            </a>
+
+            <a href="mailto:contacto.matrix3d@gmail.com" class="bg-[#171b26] border border-green-500/20 hover:border-green-400/60 rounded-2xl p-8 flex flex-col items-center text-center transition-all duration-300 hover:scale-105 group">
+                <div class="w-14 h-14 bg-green-500/10 rounded-xl flex items-center justify-center text-green-400 mb-6 group-hover:bg-green-500/20 transition-colors">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <h3 class="text-white font-bold text-lg mb-2">Correo Electrónico</h3>
+                <p class="text-green-400 text-sm break-all font-mono">contacto.matrix3d@gmail.com</p>
+                <span class="text-xs text-gray-500 mt-4">Respuesta en menos de 2 horas</span>
+            </a>
+
+            <div class="bg-[#171b26] border border-orange-500/20 rounded-2xl p-8 flex flex-col items-center text-center">
+                <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 mb-6">
+                    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <h3 class="text-white font-bold text-lg mb-2">Reuniones y Entregas</h3>
+                <p class="text-orange-400 text-sm">Colmenar Viejo, Madrid<br><span class="text-xs text-gray-400 font-normal">Sin tienda física (quedamos en persona)</span></p>
+                <span class="text-xs text-gray-500 mt-4">Disponibles previa cita</span>
+            </div>
+
+        </div>
+
+        <div style="margin-top: 50px;" class="bg-[#171b26] border border-cyan-500/20 rounded-2xl overflow-hidden shadow-2xl" data-aos="fade-up" data-aos-delay="300">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3034.9858772584735!2d-3.767368!3d40.6656373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd417d4d5ad419d3%3A0x32cf823de4bbac91!2sMatrix3D%20(Impresion%203D)!5e0!3m2!1ses!2ses!4v1709813800000" width="100%" height="320" style="border:0;" loading="lazy" allowfullscreen></iframe>
+        </div>
+
     </div>
 </section>
+
 </main>
 <footer class="bg-gray-950 border-t border-cyan-500/10 py-16">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-4 gap-12 mb-12">
             <div class="md:col-span-2">
                 <div class="flex items-center space-x-3 mb-6">
-                    <img src="img/logobueno.webp" alt="Matrix3D" class="h-14 w-14 object-contain">
+                    <img src="img/logobueno.webp" alt="Taller de impresión 3D Matrix3D en Colmenar Viejo" class="h-14 w-14 object-contain">
                     <span class="text-2xl font-bold gradient-text">Matrix3D</span>
                 </div>
                 <p class="text-gray-300 mb-6">Taller de impresión 3D. Transformamos tus ideas en realidad con tecnología de calidad y materiales fiables.</p>
@@ -872,16 +995,23 @@ const datosWeb = {
                 </ul>
             </div>
         </div>
-        <div class="border-t border-cyan-500/10 pt-6 text-center">
+
+        <div class="border-t border-cyan-500/10 pt-8 flex flex-col items-center">
+            <div class="flex flex-wrap justify-center gap-4 text-xs text-gray-500 mb-4">
+                <a href="#" class="hover:text-cyan-400 transition-colors">Aviso Legal</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Política de Privacidad</a>
+                <a href="#" class="hover:text-cyan-400 transition-colors">Términos y Condiciones</a>
+            </div>
             <p class="text-gray-400 text-sm">© 2026 Matrix3D. Todos los derechos reservados.</p>
         </div>
+        
     </div>
-</footer>
+</footer> 
 
 <div id="whatsappButton" class="fixed bottom-6 right-6 z-50" style="opacity:0;transform:translateY(20px)">
     <button onclick="openWhatsApp('¡Hola! Me gustaría obtener más información sobre sus servicios de impresión 3D.')" class="relative group" aria-label="Abrir chat de WhatsApp">
-        <div class="absolute inset-0 bg-green-500 rounded-full animate-ping opacity-20"></div>
-        <div class="relative w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 whatsapp-pulse">
+        <div class="absolute inset-0 bg-whatsapp-ping rounded-full animate-ping opacity-20"></div>
+        <div class="relative w-16 h-16 bg-whatsapp hover:brightness-110 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 whatsapp-pulse">
             <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         </div>
         <div class="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold border-2 border-gray-950 animate-pulse">1</div>
@@ -890,26 +1020,26 @@ const datosWeb = {
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
-// --- MOTOR DE RENDERIZADO (NO TOCAR) ---
 document.addEventListener("DOMContentLoaded", () => {
-    
     // Generar Productos
     const prodContainer = document.getElementById('productCarousel');
     prodContainer.innerHTML = datosWeb.productos.map(p => `
-      <div class="carousel-item flex-shrink-0 w-[90%] sm:w-[45%] lg:w-[30%] max-w-[380px] snap-center" style="max-width: 380px;">
-            <div class="product-card bg-gray-800/50 border border-gray-700/50 rounded-2xl overflow-hidden shadow-xl w-full" style="background:linear-gradient(to bottom, ${p.colorHex} 0%, ${p.colorHex} 4px, rgba(17, 24, 39, 0.8) 4px);">
-                <div class="product-image-container relative aspect-[4/3] w-full bg-gradient-to-br from-${p.baseColor}-900/20 to-gray-900 flex items-center justify-center p-6">
-                    <img src="${p.imagen}" alt="${p.nombre}" loading="lazy" class="w-full h-full object-cover drop-shadow-2xl">
-                    <div class="absolute top-4 right-4 px-3 py-1 rounded-full bg-${p.baseColor}-500/30 backdrop-blur-sm border border-${p.baseColor}-400/50 text-xs text-${p.baseColor}-200 font-semibold">${p.categoria}</div>
+        <div class="carousel-item flex-shrink-0 w-[90%] sm:w-[45%] lg:w-[30%] mx-auto snap-center flex flex-col h-auto" style="max-width: 380px;">
+            <div class="product-card bg-gray-800/50 border border-gray-700/50 rounded-2xl overflow-hidden shadow-xl w-full flex flex-col flex-1" style="background:linear-gradient(to bottom, ${p.colorHex} 0%, ${p.colorHex} 4px, rgba(17, 24, 39, 0.8) 4px);">
+                
+                <div class="product-image-container relative aspect-[4/3] w-full bg-gray-900 overflow-hidden flex-shrink-0">
+                    <img src="${p.imagen}" alt="${p.nombre}" loading="lazy" class="absolute inset-0 w-full h-full object-cover">
+                    <div class="absolute top-4 right-4 z-10 px-3 py-1 rounded-full bg-${p.baseColor}-500/30 backdrop-blur-sm border border-${p.baseColor}-400/50 text-xs text-${p.baseColor}-200 font-semibold">${p.categoria}</div>
                 </div>
-                <div class="product-content p-6 bg-gradient-to-b from-gray-800/90 to-gray-900/90 backdrop-blur-sm">
-                    <h3 class="text-2xl font-bold text-white mb-2">${p.nombre}</h3>
+                
+                <div class="product-content p-6 bg-gradient-to-b from-gray-800/90 to-gray-900/90 backdrop-blur-sm flex flex-col flex-1">
+                    <h3 class="text-xl font-bold text-white mb-2">${p.nombre}</h3>
                     <p class="text-gray-400 text-sm mb-4">${p.descripcion}</p>
-                    <div class="flex items-center justify-between gap-3">
+                    <div class="flex items-center justify-between gap-3 pt-4 border-t border-gray-700/30 mt-auto">
                         <span class="text-2xl font-bold gradient-text">${p.precio}</span>
-                        <button onclick="openWhatsApp('${p.mensajeWhatsapp}')" class="bg-gradient-to-r from-${p.baseColor}-500 to-${p.baseColor}-600 hover:from-${p.baseColor}-600 hover:to-${p.baseColor}-700 text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-${p.baseColor}-500/50 hover-shine whitespace-nowrap">Lo quiero →</button>
+                        <button onclick="openWhatsApp('${p.mensajeWhatsapp}')" class="btn-${p.baseColor} text-white font-semibold px-5 py-2.5 rounded-lg transition-all duration-300 hover:scale-105 hover-shine whitespace-nowrap">Lo quiero →</button>
                     </div>
-                </div>
+                </div> 
             </div>
         </div>
     `).join('');
@@ -917,7 +1047,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Generar Portfolio
     const portContainer = document.getElementById('portfolioCarousel');
     portContainer.innerHTML = datosWeb.portfolio.map(p => `
-        <div class="carousel-item flex-shrink-0 w-[90%] sm:w-[45%] lg:w-[30%] max-w-[380px] snap-center" data-category="${p.categoria}" style="max-width: 380px;">
+        <div class="carousel-item flex-shrink-0 w-[90%] sm:w-[45%] lg:w-[30%] mx-auto snap-center" data-category="${p.categoria}" style="max-width: 380px;">
             <div class="group relative overflow-hidden rounded-2xl border border-${p.colorCSS}-400/40 bg-gray-900/50 backdrop-blur-sm hover:scale-105 transition-all duration-500 hover:shadow-${p.colorCSS}-400/40 hover:shadow-2xl w-full">
                 <div class="relative aspect-[4/3] w-full overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
                     <img src="${p.imagen}" alt="${p.titulo}" loading="lazy" class="w-full h-full object-cover">
@@ -938,26 +1068,27 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
     `).join('');
 
-    // Generar Reseñas
+    // Generar Reseñas unificadas y simétricas
     const revContainer = document.getElementById('reviewsContainer');
     const stars = `<svg class="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>`.repeat(5);
-    const colorCombos = ["from-cyan-400 to-orange-400", "from-lime-400 to-green-400", "from-orange-400 to-red-400", "from-purple-400 to-pink-400", "from-blue-400 to-indigo-400"];
+    const colorCombos = ["bg-avatar-1", "bg-avatar-2", "bg-avatar-3", "bg-avatar-4", "bg-avatar-5"];
     
     revContainer.innerHTML = datosWeb.resenas.map((r, i) => `
-        <div class="bg-white rounded-2xl p-6 card-hover" data-aos="fade-up" data-aos-delay="${100 + (i*100)}">
-            <div class="flex items-center gap-3 mb-4">
-                <div class="w-12 h-12 rounded-full bg-gradient-to-r ${colorCombos[i]} flex items-center justify-center text-white font-bold">${r.inicial}</div>
-                <div>
-                    <h3 class="text-gray-900 font-semibold">${r.nombre}</h3>
-                    <p class="text-gray-500 text-xs">${r.fecha}</p>
+        <div class="bg-white rounded-2xl p-6 card-hover flex flex-col justify-between h-full" data-aos="fade-up" data-aos-delay="${100 + (i*100)}">
+            <div>
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="w-12 h-12 rounded-full ${colorCombos[i]} flex items-center justify-center text-white font-bold flex-shrink-0">${r.inicial}</div>
+                    <div>
+                        <h3 class="text-gray-900 font-semibold leading-snug">${r.nombre}</h3>
+                        <p class="text-gray-500 text-xs">${r.fecha}</p>
+                    </div>
                 </div>
+                <div class="flex gap-1 mb-3">${stars}</div>
+                <p class="text-gray-700 text-sm leading-relaxed">${r.texto}</p>
             </div>
-            <div class="flex gap-1 mb-3">${stars}</div>
-            <p class="text-gray-700 text-sm">${r.texto}</p>
         </div>
     `).join('');
 
-    // Iniciar Animaciones (AOS)
     AOS.init({ duration: 800, easing: 'ease-in-out', once: true, offset: 100 });
 });
 
@@ -971,12 +1102,27 @@ function filterPortfolio(cat){
     document.querySelectorAll('#portfolioCarousel .carousel-item').forEach(i => i.style.display = (cat==='Todos'||i.dataset.category===cat)?'block':'none');
 }
 function openWhatsApp(msg){ window.open('https://wa.me/34644382702?text='+encodeURIComponent(msg),'_blank'); }
-function handleFormSubmit(e){
-    e.preventDefault();
-    const [n,em,t,p,m] = ['nombre','email','telefono','proyecto','mensaje'].map(id=>document.getElementById(id).value);
-    openWhatsApp(`¡Hola! Mi nombre es ${n}.\n\nEmail: ${em}\nTeléfono: ${t}\n\nTipo de proyecto: ${p}\n\nDescripción:\n${m}\n\n---\nEnviado desde matrix3d.com`);
-    e.target.reset();
-    alert('Serás redirigido a WhatsApp para completar tu solicitud.');
+function handleFileSelection(input) {
+    if (input.files && input.files[0]) {
+        const fileName = input.files[0].name;
+        // Creamos el mensaje predeterminado
+        const msg = `¡Hola! Quiero solicitar un presupuesto de impresión para el archivo: "${fileName}". Te lo adjunto por aquí a continuación...`;
+        
+        // 1. Avisamos al usuario de que tiene que adjuntarlo a mano (obligación técnica de WhatsApp)
+        alert(`¡Importante!\n\nPor privacidad, WhatsApp no permite auto-adjuntar archivos desde las webs.\n\nSerás redirigido al chat: por favor, ADJUNTA MANUALMENTE el archivo "${fileName}" en la conversación para que podamos verlo.`);
+        
+        // 2. Abrimos WhatsApp
+        window.open('https://wa.me/34644382702?text=' + encodeURIComponent(msg), '_blank');
+        
+        // 3. Limpiamos el input para que pueda subir el mismo archivo otra vez si se equivoca
+        input.value = ""; 
+    }
+}
+
+// NUEVA FUNCIÓN: Para los que pulsan el recuadro Verde (No tienen STL)
+function handleNoFile() {
+    const msg = `¡Hola! No tengo el archivo 3D, pero tengo una idea/fotos de una pieza que me gustaría modelar e imprimir. ¿Me podéis ayudar?`;
+    window.open('https://wa.me/34644382702?text=' + encodeURIComponent(msg), '_blank');
 }
 window.addEventListener('scroll',()=>{
     const btn=document.getElementById('whatsappButton');
@@ -985,8 +1131,6 @@ window.addEventListener('scroll',()=>{
     btn.style.transition = 'all 0.3s ease-in-out';
 });
 </script>
-
-<div class="hidden bg-cyan-400/20 border-cyan-400/40 text-cyan-300 from-cyan-400 to-cyan-600 hover:shadow-cyan-400/40 bg-orange-400/20 border-orange-400/40 text-orange-300 from-orange-400 to-orange-600 hover:shadow-orange-400/40 bg-lime-400/20 border-lime-400/40 text-lime-300 from-lime-400 to-lime-600 hover:shadow-lime-400/40 bg-purple-400/20 border-purple-400/40 text-purple-300 from-purple-400 to-purple-600 hover:shadow-purple-400/40 from-purple-900/20 bg-purple-500/30 border-purple-400/50 text-purple-200 from-purple-500 to-purple-600 hover:from-purple-600 hover:to-purple-700 hover:shadow-purple-500/50 from-pink-900/20 bg-pink-500/30 border-pink-400/50 text-pink-200 from-pink-500 to-pink-600 hover:from-pink-600 hover:to-pink-700 hover:shadow-pink-500/50 from-green-900/20 bg-green-500/30 border-green-400/50 text-green-200 from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 hover:shadow-green-500/50 from-amber-900/20 bg-amber-500/30 border-amber-400/50 text-amber-200 from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 hover:shadow-amber-500/50"></div>
 
 </body>
 </html>
