@@ -372,17 +372,17 @@ const datosWeb = {
             </button>
         </div>
         
-        <!-- Menú Móvil Desplegable -->
-        <div id="mobileMenu" class="mobile-menu xl:hidden py-4 space-y-2 border-t border-cyan-500/10">
-            <button onclick="scrollToSection('hero');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Inicio</button>
-            <button onclick="scrollToSection('servicios');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Servicios</button>
-            <button onclick="scrollToSection('materiales');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-orange-300 rounded transition-colors font-medium">Materiales</button>
-            <button onclick="scrollToSection('productos');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-purple-400 rounded transition-colors font-medium">Catálogo</button>
-            <button onclick="scrollToSection('tarifas');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Presupuestos</button>
-            <button onclick="scrollToSection('cotizador');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Calculadora</button>
-            <button onclick="scrollToSection('portfolio');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-lime-300 rounded transition-colors font-medium">Portfolio</button>
-            <button onclick="scrollToSection('reseñas');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-yellow-400 rounded transition-colors font-medium">Reseñas</button>
-            <button onclick="scrollToSection('contacto');toggleMobileMenu()" class="block w-full text-center px-4 py-2.5 text-gray-300 hover:text-cyan-300 rounded transition-colors font-medium">Contacto</button>
+          <!-- Menú Móvil Desplegable Estilo Tarjeta Flotante a la Derecha -->
+        <div id="mobileMenu" class="mobile-menu absolute top-20 right-4 w-64 bg-gray-900/95 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl p-4 space-y-2">
+            <button onclick="scrollToSection('hero');toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 rounded-xl transition-colors font-medium">Inicio</button>
+            <button onclick="scrollToSection('servicios');toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 rounded-xl transition-colors font-medium">Servicios</button>
+            <button onclick="scrollToSection('materiales');toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 text-gray-300 hover:text-orange-300 hover:bg-orange-500/10 rounded-xl transition-colors font-medium">Materiales</button>
+            <button onclick="scrollToSection('productos');toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 text-gray-300 hover:text-purple-400 hover:bg-purple-500/10 rounded-xl transition-colors font-medium">Catálogo</button>
+            <button onclick="scrollToSection('tarifas');toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 rounded-xl transition-colors font-medium">Presupuestos</button>
+            <button onclick="scrollToSection('cotizador');toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 rounded-xl transition-colors font-medium">Calculadora</button>
+            <button onclick="scrollToSection('portfolio');toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 text-gray-300 hover:text-lime-300 hover:bg-lime-500/10 rounded-xl transition-colors font-medium">Portfolio</button>
+            <button onclick="scrollToSection('reseñas');toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 text-gray-300 hover:text-yellow-400 hover:bg-yellow-500/10 rounded-xl transition-colors font-medium">Reseñas</button>
+            <button onclick="scrollToSection('contacto');toggleMobileMenu()" class="block w-full text-left px-4 py-2.5 text-gray-300 hover:text-cyan-300 hover:bg-cyan-500/10 rounded-xl transition-colors font-medium">Contacto</button>
         </div>
     </div>
 </header>
