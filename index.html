@@ -645,30 +645,35 @@ const datosWeb = {
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12" data-aos="fade-up">
             
-            <!-- Etiqueta 4: Catálogo -->
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 mb-4">
-                <svg class="w-4 h-4 text-purple-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                <span class="text-purple-400 text-sm font-medium tracking-wide">Tienda y Accesorios</span>
+<!-- PORTFOLIO CORREGIDO -->
+<section id="portfolio" class="py-24 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 relative">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-lime-400/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-orange-400/5 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center mb-12" data-aos="fade-up">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-lime-400/10 border border-lime-400/20 mb-4">
+                <svg class="w-4 h-4 text-lime-300 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <span class="text-lime-300 text-sm font-medium tracking-wide">Nuestros Trabajos</span>
             </div>
             
-            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Catálogo <span class="gradient-text">Personalizado</span></h2>
-            <p class="text-sm text-gray-400">← Desliza para ver más productos →</p>
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Proyectos <span class="gradient-text">Realizados</span></h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Descubre la calidad y precisión de nuestras impresiones 3D</p>
         </div>
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
+            <button onclick="filterPortfolio('Todos')" id="filter-Todos" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gradient-to-r from-cyan-400 to-orange-400 text-white shadow-lg shadow-cyan-400/30 scale-105">Todos</button>
+            <button onclick="filterPortfolio('Ingeniería')" id="filter-Ingeniería" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300">Ingeniería</button>
+            <button onclick="filterPortfolio('Industrial')" id="filter-Industrial" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300">Industrial</button>
+            <button onclick="filterPortfolio('Diseño')" id="filter-Diseño" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300">Diseño</button>
+            <button onclick="filterPortfolio('Arte')" id="filter-Arte" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300">Arte</button>
+        </div>
+        <p class="text-center text-sm text-gray-400 mb-8">← Desliza para ver más proyectos →</p>
     </div>
 
-    <div class="relative w-full" data-aos="fade-up" data-aos-delay="200">
-       <div id="productCarousel" class="carousel-container flex items-stretch gap-6 pb-8 px-4 sm:px-6 lg:px-8 overflow-x-auto">
-        </div>
+    <div class="relative w-full z-10" data-aos="fade-up" data-aos-delay="200">
         
-        <button onclick="scrollCarousel('productCarousel',-1)" aria-label="Ver productos anteriores" class="absolute left-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-800/90 hover:bg-purple-500 rounded-full flex items-center justify-center z-10 transition-all duration-300 hover:scale-110 hover:shadow-lg">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-        <button onclick="scrollCarousel('productCarousel',1)" aria-label="Ver productos siguientes" class="absolute right-2 top-1/2 -translate-y-1/2 w-12 h-12 bg-gray-800/90 hover:bg-purple-500 rounded-full flex items-center justify-center z-10 transition-all duration-300 hover:scale-110 hover:shadow-lg">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-        </button>
-    </div>
-</section>
-
 <!-- SECCIÓN DE TARIFAS: MÓDULOS DE PRODUCCIÓN -->
 <section id="tarifas" class="py-24 bg-[#0d0f12] relative overflow-hidden">
     <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(#06b6d4 1px, transparent 1px), linear-gradient(90deg, #06b6d4 1px, transparent 1px); background-size: 40px 40px;"></div>
@@ -856,34 +861,7 @@ const datosWeb = {
     </div>
 </section>
 
-<!-- PORTFOLIO CORREGIDO -->
-<section id="portfolio" class="py-24 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 relative">
-    <div class="absolute inset-0 overflow-hidden pointer-events-none">
-        <div class="absolute top-1/3 left-1/4 w-96 h-96 bg-lime-400/5 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-1/3 right-1/4 w-96 h-96 bg-orange-400/5 rounded-full blur-3xl"></div>
-    </div>
-    
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-12" data-aos="fade-up">
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-lime-400/10 border border-lime-400/20 mb-4">
-                <svg class="w-4 h-4 text-lime-300 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-                <span class="text-lime-300 text-sm font-medium tracking-wide">Nuestros Trabajos</span>
-            </div>
-            
-            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">Proyectos <span class="gradient-text">Realizados</span></h2>
-            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-8">Descubre la calidad y precisión de nuestras impresiones 3D</p>
-        </div>
-        <div class="flex flex-wrap items-center justify-center gap-3 mb-8">
-            <button onclick="filterPortfolio('Todos')" id="filter-Todos" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gradient-to-r from-cyan-400 to-orange-400 text-white shadow-lg shadow-cyan-400/30 scale-105">Todos</button>
-            <button onclick="filterPortfolio('Ingeniería')" id="filter-Ingeniería" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300">Ingeniería</button>
-            <button onclick="filterPortfolio('Industrial')" id="filter-Industrial" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300">Industrial</button>
-            <button onclick="filterPortfolio('Diseño')" id="filter-Diseño" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300">Diseño</button>
-            <button onclick="filterPortfolio('Arte')" id="filter-Arte" class="filter-btn px-6 py-2.5 rounded-xl font-medium transition-all duration-300 bg-gray-800/50 text-gray-400 border border-gray-700/50 hover:border-cyan-400/50 hover:text-cyan-300">Arte</button>
-        </div>
-        <p class="text-center text-sm text-gray-400 mb-8">← Desliza para ver más proyectos →</p>
-    </div>
 
-    <div class="relative w-full z-10" data-aos="fade-up" data-aos-delay="200">
         <!-- Carrusel corregido sin etiqueta de cierre sobrante -->
         <div id="portfolioCarousel" class="carousel-container flex items-start gap-8 py-8 px-4 sm:px-6 lg:px-8 overflow-x-auto"></div>
         
